@@ -312,7 +312,7 @@ Also, remember that to be able to provide a payment method to your customer, fir
 
 In order to process credit card payments in your store using AdyenV3, besides performing the previous configurations already described in this article, you must open a ticket at [VTEX support](https://help.vtex.com/en/support), with the following request: "Provider review - Add Endpoint SecureProxy - AdyenV3".
 
-In the ticket you must also send the URL that will be authorized by Adyen to carry out the credit card transaction in your store. The URL format must be `https://{live URL prefix}-checkout-live.adyenpayments.com`, where the information "{live URL prefix}" must be the same as that entered by you in the Adyen settings in the VTEX Admin.
+In the ticket you must also send the URL that will be authorized by Adyen to carry out the credit card transaction in your store. The URL format must be `https://{live URL prefix}-checkout-live.adyenpayments.com`, where the information "`{live URL prefix}`" must be the same as that entered by you in the Adyen settings in the VTEX Admin.
 
 → The full URL address must be written in lowercase letters only, even if the "Live URL prefix" configured in the VTEX Admin has some capital letters.
 
@@ -326,18 +326,18 @@ In the ticket you must also send the URL that will be authorized by Adyen to car
 
 Also you will need to set up Apple Pay in your Adyen Customer Area in Payment Methods. To do that, follow the steps below:
 
-1 - In your Adyen Customer Area, go to “Settings”<br>
-2 - Click on “Payment Methods”<br>
-3 - On the right side, click on “Request Payment Method”<br>
+1 - In your Adyen Customer Area, go to “Settings”<br/>
+2 - Click on “Payment Methods”<br/>
+3 - On the right side, click on “Request Payment Method”<br/>
 4 - In the “Select Payment Method screen”, select “Apple Pay”
 ![SelectPaymentScreen](https://i.imgur.com/9TWDm36.png)
-5 - Select the Merchant<br>
+5 - Select the Merchant<br/>
 ![SelectMerchant](https://i.imgur.com/r5M1jNF.png)
-6 - Setup the acquirer account<br>
+6 - Setup the acquirer account<br/>
 ![SelectAcquirerAccount](https://i.imgur.com/NxE5Wlb.png)
-7 - Select the certificate type: “Use Adyen Certificate”.<br>
+7 - Select the certificate type: “Use Adyen Certificate”.<br/>
 ![UseAdyenCertificate](https://i.imgur.com/obApo0m.png)
-8 - In the “Review and Finish” screen insert the full website domain<br>
+8 - In the “Review and Finish” screen insert the full website domain<br/>
 ![FullWebsiteDomanin](https://i.imgur.com/r2taBn5.png)
 
 #### 4.4.1.2 Validating the configuration
@@ -351,7 +351,7 @@ If the setup is correct, you should see “Apple Pay” when you search for it i
 
 2 - Install the certificate into the VTEX server. To do that, do a POST using Postman or similar tool to the following endpoint: `https://{{PublicStoreDomain}}/.well-known/raw/apple-developer-merchantid-domain-association?persistent=true`
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;"](https://www.postman.com/suportecorebiz/adyen-apple-pay/collection/2y1c8n1/apple-pay?action=share&creator=41098825)
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" />](https://www.postman.com/suportecorebiz/adyen-apple-pay/collection/2y1c8n1/apple-pay?action=share&creator=41098825)
 
 3 - Check if the certificate was correctly installed. To check if the certificate was correctly installed into VTEX servers, use the following url: `https://{{PublicStoreDomain}}/.well-known/apple-developer-merchantid-domain-association`
 
