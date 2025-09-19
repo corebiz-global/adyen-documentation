@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&display=swap');
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -6,25 +8,65 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Adyen Green */
+  --ifm-color-primary: #0ABF53;
+  --ifm-color-primary-dark: #09a84a;
+  --ifm-color-primary-darker: #08913f;
+  --ifm-color-primary-darkest: #077a34;
+  --ifm-color-primary-light: #0bc65a;
+  --ifm-color-primary-lighter: #0cda61;
+  --ifm-color-primary-lightest: #0eef68;
+
+  /* Custom Adyen Palette */
+  --adyen-green: #0ABF53;
+  --adyen-dark-blue: #00112C;
+  --adyen-interactive-blue: #4990E2;
+  --adyen-light-gray-bg: #F5F7F9;
+  --adyen-light-gray-border: #E5E9EB;
+  --adyen-text-secondary: #6C7A89;
+
+  /* Font Families */
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', monospace;
+
+  /* Base Styles */
+  --ifm-font-color-base: var(--adyen-dark-blue);
+  --ifm-background-color: #fff; /* White background for content area */
+  --ifm-link-color: var(--adyen-interactive-blue);
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
+}
+
+body {
+  background-color: var(--adyen-light-gray-bg); /* Light gray for the overall page background */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Adyen Green */
+  --ifm-color-primary: #0ABF53;
+  --ifm-color-primary-dark: #09a84a;
+  --ifm-color-primary-darker: #08913f;
+  --ifm-color-primary-darkest: #077a34;
+  --ifm-color-primary-light: #0bc65a;
+  --ifm-color-primary-lighter: #0cda61;
+  --ifm-color-primary-lightest: #0eef68;
+
+  /* Custom Adyen Palette - Dark Mode */
+  --adyen-green: #0ABF53;
+  --adyen-dark-blue: #FFFFFF; /* Text becomes white */
+  --adyen-interactive-blue: #66bfff; /* Lighter blue for links */
+  --adyen-light-gray-bg: #00112C; /* Dark blue becomes background */
+  --adyen-light-gray-border: #334257; /* Darker border */
+  --adyen-text-secondary: #a9b8c7; /* Lighter secondary text */
+
+  /* Base Styles - Dark Mode */
+  --ifm-font-color-base: var(--adyen-dark-blue);
+  --ifm-background-color: #011638; /* Slightly lighter than the body for content area */
+  --ifm-link-color: var(--adyen-interactive-blue);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] body {
+  background-color: var(--adyen-light-gray-bg);
 }

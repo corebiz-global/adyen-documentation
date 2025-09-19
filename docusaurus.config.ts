@@ -36,6 +36,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -54,24 +55,14 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Adyen V3 Docs',
+      style: 'dark',
+      title: '',
       logo: {
         alt: 'Corebiz Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo.svg',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-        {
-          href: 'https://github.com/corebiz-global/adyen-documentation',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      items: [], // No navbar items
     },
     footer: {
       style: 'dark',
@@ -99,7 +90,7 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.vsDark,
     },
   } satisfies Preset.ThemeConfig,
 };
