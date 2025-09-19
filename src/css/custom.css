@@ -70,3 +70,22 @@ body {
 [data-theme='dark'] body {
   background-color: var(--adyen-light-gray-bg);
 }
+
+/* Custom styling for blockquotes to be used as disclaimers/admonitions */
+blockquote {
+  background-color: #fffbe6; /* Light yellow */
+  border-left: 8px solid #ffc107; /* Amber/Orange */
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  margin: 1.5rem 0;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* Dark mode version */
+[data-theme='dark'] blockquote {
+  background-color: #332e1b;
+  border-left-color: #ffc107;
+}

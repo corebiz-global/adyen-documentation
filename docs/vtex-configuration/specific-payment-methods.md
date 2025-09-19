@@ -6,9 +6,9 @@ title: Specific Payment Methods
 
 ### Specific Payment Methods Configurations
 
-#### 4.4.1 Apple Pay
+#### Apple Pay
 
-#### 4.4.1.1 Set up Apple Pay in the Adyen Customer Area
+##### Set up Apple Pay in the Adyen Customer Area
 
 Also you will need to set up Apple Pay in your Adyen Customer Area in Payment Methods. To do that, follow the steps below:
 
@@ -26,12 +26,12 @@ Also you will need to set up Apple Pay in your Adyen Customer Area in Payment Me
 8 - In the “Review and Finish” screen insert the full website domain<br/>
 ![FullWebsiteDomanin](https://i.imgur.com/r2taBn5.png)
 
-#### 4.4.1.2 Validating the configuration
+##### Validating the configuration
 
 If the setup is correct, you should see “Apple Pay” when you search for it in the “Payment Methods” screen.
 ![PaymentMethods](https://i.imgur.com/ryeBp6m.png)
 
-#### 4.4.1.3 Install the certificate
+##### Install the certificate
 
 1 - Generate your certificate following the documentation. To generate the certificate, please refer to the following documentation: [Apple Pay Component | Adyen Docs](https://docs.adyen.com/payment-methods/apple-pay/web-component/?tab=adyen-certificate-live_1)
 
@@ -41,7 +41,7 @@ If the setup is correct, you should see “Apple Pay” when you search for it i
 
 3 - Check if the certificate was correctly installed. To check if the certificate was correctly installed into VTEX servers, use the following url: `https://{{PublicStoreDomain}}/.well-known/apple-developer-merchantid-domain-association`
 
-#### 4.4.2 Google Pay
+#### Google Pay
 
 To process payments with Google Pay on Adyen, set the product or merchant ID of the Google Account on the Adyen platform (it does not apply to the test environment).
 
@@ -53,9 +53,9 @@ _OR_BIBED_11 This merchant has not completed registration to use Google Pay API.
 
 For further information, please refer to [Google Pay Component](https://docs.adyen.com/payment-methods/google-pay/web-component/#before-you-go-live).
 
-#### 4.4.3 Boletos (Bank Slips)
+#### Boletos (Bank Slips)
 
-#### Configuring Bank Slips - Boleto
+##### Configuring Bank Slips - Boleto
 
 1. In VTEX Admin, navigate to Store Settings > Payments > Providers, or enter **Providers** in the top search bar.
 2. On the Providers screen, click the **New Provider** button.
@@ -63,7 +63,7 @@ For further information, please refer to [Google Pay Component](https://docs.ady
 4. Complete the form fields using the data provided by your provider or bank.
 5. Click **Save**.
 
-#### Setting Up the Payment Condition
+##### Setting Up the Payment Condition
 
 1. In VTEX Admin, go to Store Settings > Payment > Settings, or type **Settings** in the top search bar.
 2. In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
@@ -73,7 +73,7 @@ For further information, please refer to [Google Pay Component](https://docs.ady
 6. Optionally, configure special payment conditions as needed.
 7. Click **Save**.
 
-#### Configuring Boleto Expiration Days
+##### Configuring Boleto Expiration Days
 
 1. In VTEX Admin, navigate to Store Settings > Payments > Providers, or enter Providers in the top search bar.
 2. On the Providers screen, select the Adyen provider.
@@ -82,7 +82,7 @@ For further information, please refer to [Google Pay Component](https://docs.ady
 
 ![boleto Expiration Days](https://i.imgur.com/mA3VmHy.png)
 
-#### 4.4.4 Bancontact
+#### Bancontact
 
 - For this payment method to work, you need to make some specific configurations in the VTEX Admin Panel:
   - **Payment Method Configuration**: Go to the VTEX admin panel and access the payment methods section `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` or type **payments** in the Admin search box and click on **Custom Payments** tab.
@@ -100,9 +100,9 @@ For further information, please refer to [Google Pay Component](https://docs.ady
   - Click **Save** at the bottom right of the screen
   - After saving the Payment Condition,**"Bancontact"** will be available for use under the **"Credit Card"** and **"Debit Card"** options in the checkout.
 
-#### 4.4.5 Klarna
+#### Klarna
 
-#### 4.4.5.1 Klarna Pay Over Time
+##### Klarna Pay Over Time
 
 Allows customers to pay for their purchase in installments. To configure Klarna Pay Over Time, follow these steps:
 
@@ -119,7 +119,7 @@ Allows customers to pay for their purchase in installments. To configure Klarna 
   - Save the configuration
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
-#### 4.4.5.2 Klarna Pay Now
+##### Klarna Pay Now
 
 Allows customers to pay for their purchase immediately via bank transfer. To configure Klarna Pay Now, follow these steps:
 
@@ -136,7 +136,7 @@ Allows customers to pay for their purchase immediately via bank transfer. To con
   - Save the configuration
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
-#### 4.4.5.3 Klarna Pay Later
+##### Klarna Pay Later
 
 Allows customers to pay for their purchase in 30 days without interest. To configure Klarna Pay Later, follow these steps:
 
@@ -153,7 +153,7 @@ Allows customers to pay for their purchase in 30 days without interest. To confi
   - Save the configuration
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
-#### 4.4.6 Ideal
+#### Ideal
 
 The important information about Ideal is that in the VTEX payment method configuration step, you will find two payment methods when you search for Ideal. Please select “**Ideal V3**". After that follow the steps detailed in the Configuring the Payment Provider in VTEX
 

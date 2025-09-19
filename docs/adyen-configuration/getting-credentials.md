@@ -4,9 +4,9 @@ title: Getting Credentials
 ---
 
 
-## Getting Company and Merchant account credentials
+## How to get your Company and Merchant account credentials
 
 1. Access your [Customer Area](https://ca-test.adyen.com/ca/ca/overview/default.shtml) on Adyen.
-2. From the left sidebar, locate and copy the details displayed above "Company." This represents your Company account.
-3. In the section beneath "Company," find the Merchant Account intended for use (highlighted in white).
-4. Copy and save this information to be used later in the set up process.
+2. In the top-left corner, find your **Company account** name (located above the "Merchant Account" selector).
+3. From the account selector, choose the **Merchant Account** you intend to use.
+4. Copy both your **Company account** and **Merchant Account** names. You will need them later when configuring the payment provider in VTEX.

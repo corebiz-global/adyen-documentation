@@ -8,7 +8,7 @@ title: API Key
 
 Generate and configure your API key as described in the [Adyen Platforms Documentation](https://docs.adyen.com/development-resources/api-credentials/). Ensure that you store your API key securely and use it for authenticating requests from VTEX to Adyen.
 
-#### 3.3.1 Configure API Credential Screen Details
+#### Configure API Credential Screen Details
 
 1. In your [Adyen Customer Area](https://ca-test.adyen.com/ca/ca/overview/default.shtml), in the sidebar menu click on **Developers** and, then, click **API credentials**;
 2. Click on the button **Create new credential** on the right side of the screen;
@@ -20,7 +20,7 @@ Generate and configure your API key as described in the [Adyen Platforms Documen
 5. Under **Server Settings**, in the **Authentication** area, select **API Key** and then click on the **Generate API Key** button to create a new key and **store** this information safely.
 6. Under **Client Settings**, in the **Authentication** area, select **Client Key** and click on the **Generate Client Key** button.
 
-#### 3.3.1.1 Additional configurations
+##### Additional configurations
 
 - **Add allowed origin**: Add all domains that will make client-side requests to Adyen. This includes your VTEX environment and your store's production domain. You must add each domain separately.
   - **Example (VTEX Environment)**: `https://{{account}}.myvtex.com`

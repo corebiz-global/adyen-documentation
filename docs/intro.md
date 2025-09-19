@@ -7,10 +7,6 @@ slug: /
 
 > **Attention:** This is the only official and valid documentation for the Adyen V3 connector configuration. To ensure a correct setup and avoid errors, please use only the instructions contained here and disregard other sources.
 
-## Payment Provider Integration with VTEX
+## Welcome
 
-This documentation provides a comprehensive guide to integrate the Adyen V3 Payment provider with VTEX. It includes detailed steps for setup and configuration, as well as troubleshooting insights for both VTEX and Adyen.
-
-## 1. Introduction
-
-This guide aims to assist users in integrating the Adyen V3 Payment provider with the VTEX platform. By following the steps outlined, you can ensure a seamless payment processing experience for your customers.
+This guide provides everything you need to integrate the Adyen V3 payment connector with the VTEX platform. Follow these comprehensive steps for a seamless setup, from initial Adyen and VTEX configuration to validation and troubleshooting.

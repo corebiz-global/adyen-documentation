@@ -6,9 +6,8 @@ title: Prerequisites
 
 # Prerequisites
 
-Before you begin, ensure you have the following:
+To follow this guide, you will need:
 
-- A VTEX account
-- An Adyen account
-- Access to VTEX admin panel
-- API credentials from Adyen (see section 3.3 for instructions)
+- A VTEX account with admin access.
+- An Adyen account.
+- Your Adyen API credentials. If you don't have them yet, see how to [generate your API key](./adyen-configuration/api-key.md).
