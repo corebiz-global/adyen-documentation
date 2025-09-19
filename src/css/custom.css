@@ -89,3 +89,18 @@ blockquote p {
   background-color: #332e1b;
   border-left-color: #ffc107;
 }
+
+/* Custom footer adjustments */
+.footer {
+  padding-top: 20px; /* Adjust from default, e.g., 30px - 10px */
+  padding-bottom: 20px; /* Adjust from default, e.g., 30px - 10px */
+}
+
+/* Remove opacity mask from all footer links */
+.footer a {
+  opacity: 1 !important; /* Ensure full opacity */
+}
+
+.footer a:hover {
+  opacity: 1 !important; /* Ensure full opacity on hover */
+}

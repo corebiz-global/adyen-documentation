@@ -58,7 +58,7 @@ const config: Config = {
       style: 'dark',
       title: '',
       logo: {
-        alt: 'Corebiz Logo',
+        alt: 'Adyen Logo',
         src: 'img/logo.svg',
         srcDark: 'img/logo.svg',
       },
@@ -66,27 +66,14 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Documentation',
-              to: '/',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/corebiz-global/adyen-documentation',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Corebiz. Built with Docusaurus.`,
+      logo: {
+        alt: 'Corebiz Logo',
+        src: 'img/corebiz_logo_footer.svg',
+        href: 'https://corebiz.ag',
+        width: 105,
+        height: 23.635,
+      },
+      copyright: `Built by Corebiz.`,
     },
     prism: {
       theme: prismThemes.github,
