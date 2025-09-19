@@ -27,8 +27,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
@@ -40,8 +40,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/corebiz-global/adyen-documentation/tree/main/',
+          // editUrl:
+          //   'https://github.com/corebiz-global/adyen-documentation/tree/main/',
         },
         blog: false,
         theme: {
