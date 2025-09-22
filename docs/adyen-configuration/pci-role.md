@@ -28,4 +28,4 @@ Select the username being used;
 Under the “General Settings” section you will find the full Username, copy this information and share it with the Adyen Support team in the ticket you’re creating.
 
 ![Configure API Credential](https://i.imgur.com/X4EKrk0.png)
-**Important**: This step applies to Test and Live environments. Every time a new credential is created, the permission will need to be granted for that specific username as well.
+> **Important**: This step applies to Test and Live environments. Every time a new credential is created, the permission will need to be granted for that specific username as well.
