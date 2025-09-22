@@ -20,4 +20,4 @@ To receive extra data in transaction details (such as the acquirer response), yo
 
 ![Additional Data](https://i.imgur.com/0Q7HpuN.png)
 
-It is important to say that if you need the data to be sent in Test and Production you have to do this same configuration in both environments.
+> **Important**: It is required to configure both Test and Production environments for this data to be sent.
