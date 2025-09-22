@@ -26,4 +26,4 @@ To configure the webhook, please follow the steps listed below:
 8. Go to the **Additional settings** section, select all checkboxes, and then click **Apply** in each one of the tabs.
 9. Finally, click **Save changes**.
 
-**Important**: It is required to configure one webhook for each store, so if you have more than one store, repeat the configuration steps for each one of them.
+> **Important**: It is required to configure one webhook for each store, so if you have more than one store, repeat the configuration steps for each one of them.
