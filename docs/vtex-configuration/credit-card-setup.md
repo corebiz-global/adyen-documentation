@@ -4,8 +4,6 @@ title: Credit Card Setup
 ---
 
 
-### Setting up Credit Card
-
 In order to process credit card payments in your store using AdyenV3, besides performing the previous configurations already described in this article, you must open a ticket at [VTEX support](https://help.vtex.com/en/support), with the following request: "Provider review - Add Endpoint SecureProxy - AdyenV3".
 
 In the ticket you must also send the URL that will be authorized by Adyen to carry out the credit card transaction in your store. The URL format must be `https://{live URL prefix}-checkout-live.adyenpayments.com`, where the information "`{live URL prefix}`" must be the same as that entered by you in the Adyen settings in the VTEX Admin (see [Live URL](../adyen-configuration/live-url.md)).

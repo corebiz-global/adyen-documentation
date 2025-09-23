@@ -4,8 +4,6 @@ title: Configuring the Provider
 ---
 
 
-### Configuring the Payment Provider in VTEX
-
 Once you have completed all the steps listed in the **Adyen Configuration section** you should have all the information needed to be able to activate the Adyen V3 as a payment provider in VTEX.
 
 The **VTEX Payments** module allows several payment providers (gateways, acquirers, sub-acquirers, orchestrators, PSPs, among others) to be configured in your store. This way, you can offer different payment methods and conditions to your customers.

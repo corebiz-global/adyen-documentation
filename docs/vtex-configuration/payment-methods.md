@@ -4,8 +4,6 @@ title: Configuring Payment Methods
 ---
 
 
-### Configuring Payment Methods in VTEX
-
 1. **Navigate to Payment Methods**: Go to the VTEX admin panel and access the payment methods section `https://{{account}}.myvtex.com/admin/pci-gateway/#/rules` or type **payments** in the Admin search box.
 2. **Add Payment Conditions**: Click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button at the top right corner of the page to add a new Payment Condition.
 3. **Set Payment Provider that will process the Conditions**: Configure the payment condition selecting the [Provider created in the previous step](../configuring-provider.md) ![provider selection](https://i.imgur.com/xqMT3Ak.png).
