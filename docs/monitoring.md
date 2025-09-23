@@ -4,9 +4,7 @@ title: Monitoring
 ---
 
 
-## Monitoring Payment Flow
-
-### Following Payment Flow in VTEX Admin
+## Following Payment Flow in VTEX Admin
 
 1. **Access VTEX Admin Panel**: Log in to your VTEX admin account.
 2. **Navigate to Orders**: Go to the 'Orders' section where you can see all customer orders.
@@ -16,7 +14,7 @@ title: Monitoring
 
 For more details, refer to the VTEX [Order Tracking](https://help.vtex.com/tutorial/order-tracking--et0Ei7F3bjcrEmVAR2kKS) documentation.
 
-### Following Payment Flow in Adyen Account Admin
+## Following Payment Flow in Adyen Account Admin
 
 1. **Log in to Adyen**: Access your Adyen account admin panel.
 2. **Navigate to Transactions**: Go to the 'Transactions' section to view all payment transactions.
