@@ -4,8 +4,6 @@ title: Getting Credentials
 ---
 
 
-## How to get your Company and Merchant account credentials
-
 1. Access your [Customer Area](https://ca-test.adyen.com/ca/ca/overview/default.shtml) on Adyen.
 2. In the top-left corner, find your **Company account** name (located above the "Merchant Account" selector).
 3. From the account selector, choose the **Merchant Account** you intend to use.

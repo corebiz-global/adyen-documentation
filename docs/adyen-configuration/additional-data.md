@@ -4,8 +4,6 @@ title: Additional Data
 ---
 
 
-### Activating Additional Data
-
 To receive extra data in transaction details (such as the acquirer response), you must enable specific fields in your Adyen Customer Area. While some basic fields are enabled by default, the following are essential for reconciliation and support:
 
 - **Acquirer**

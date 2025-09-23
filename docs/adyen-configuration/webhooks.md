@@ -4,8 +4,6 @@ title: Webhooks
 ---
 
 
-### Configure the Webhook
-
 The webhook configuration is needed so Adyen can send Adyen payment status updates to your VTEX account.
 
 For further information, please refer to the Adyen Webhooks [documentation](https://docs.adyen.com/development-resources/webhooks/).

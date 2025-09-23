@@ -4,8 +4,6 @@ title: PCI Role
 ---
 
 
-### Request the “API PCI Payments role” for the Web Service User
-
 For credit card payments to be processed correctly, the Web Service User requires a specific permission called **API PCI Payments role**. If this role is not enabled, transactions will fail with a 403 error.
 
 This role must be requested from the Adyen support team by opening a ticket.
@@ -17,7 +15,7 @@ This role must be requested from the Adyen support team by opening a ticket.
     *   **Subject**: `Enable API PCI Payments role`
     *   **Description**: Inform that you are configuring Adyen V3 on VTEX and provide the **Web Service User** you are using (this is the value from the **Username** field in the Adyen panel, e.g., `ws_123456@Company.YourCompany`).
 
-This ID was created in section **3.3.1 Configure API Credential Screen Details**.
+This is the same user created in the [API Key](./api-key.md) step.
 
 ![User Role](https://i.imgur.com/yGKCsOH.png)
 
