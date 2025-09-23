@@ -4,8 +4,6 @@ title: References
 ---
 
 
-## References
-
 - [VTEX Registering Gateway Affiliations](https://help.vtex.com/tutorial/registering-gateway-affiliations--tutorials_444)
 - [VTEX Payments Track](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/7pAEMAo4iqNHwYOarZ3zgm)
 - [VTEX Payments Configuration](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3)
