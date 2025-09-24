@@ -1,25 +1,25 @@
 ---
 sidebar_position: 8
-title: Monitoring
+title: Monitoramento
 ---
 
 
-## Following Payment Flow in VTEX Admin
+## Acompanhando o Fluxo de Pagamento no Admin da VTEX
 
-1. **Access VTEX Admin Panel**: Log in to your VTEX admin account.
-2. **Navigate to Orders**: Go to the 'Orders' section where you can see all customer orders.
-3. **Order Details**: Click on a specific order to view detailed information.
-4. **Payment Status**: In the order details, check the payment status which will show whether the payment is approved, pending, or failed.
-5. **Transaction History**: For each order, you can view the transaction history, which includes timestamps and details of each payment event.
+1. **Acessar Painel Admin da VTEX**: Faça login na sua conta admin da VTEX.
+2. **Navegar para Pedidos**: Vá para a seção 'Pedidos', onde você pode ver todos os pedidos dos clientes.
+3. **Detalhes do Pedido**: Clique em um pedido específico para visualizar informações detalhadas.
+4. **Status do Pagamento**: Nos detalhes do pedido, verifique o status do pagamento, que mostrará se o pagamento foi aprovado, pendente ou falhou.
+5. **Histórico de Transações**: Para cada pedido, você pode visualizar o histórico de transações, que inclui carimbos de data/hora e detalhes de cada evento de pagamento.
 
-For more details, refer to the VTEX [Order Tracking](https://help.vtex.com/tutorial/order-tracking--et0Ei7F3bjcrEmVAR2kKS) documentation.
+Para mais detalhes, consulte a documentação de [Rastreamento de Pedidos](https://help.vtex.com/tutorial/order-tracking--et0Ei7F3bjcrEmVAR2kKS) da VTEX.
 
-## Following Payment Flow in Adyen Account Admin
+## Acompanhando o Fluxo de Pagamento no Admin da Conta Adyen
 
-1. **Log in to Adyen**: Access your Adyen account admin panel.
-2. **Navigate to Transactions**: Go to the 'Transactions' section to view all payment transactions.
-3. **Transaction Details**: Click on a specific transaction to view detailed information, including payment method, amount, and status.
-4. **Payment Lifecycle**: Check the lifecycle of the payment, which shows all the stages the payment went through from authorization to settlement.
-5. **Reports and Analytics**: Use Adyen’s reporting tools to get insights into your payment processing, including successful payments, declines, and chargebacks.
+1. **Fazer Login na Adyen**: Acesse o painel admin da sua conta Adyen.
+2. **Navegar para Transações**: Vá para a seção 'Transações' para visualizar todas as transações de pagamento.
+3. **Detalhes da Transação**: Clique em uma transação específica para visualizar informações detalhadas, incluindo método de pagamento, valor e status.
+4. **Ciclo de Vida do Pagamento**: Verifique o ciclo de vida do pagamento, que mostra todas as etapas pelas quais o pagamento passou, desde a autorização até a liquidação.
+5. **Relatórios e Análises**: Utilize as ferramentas de relatório da Adyen para obter insights sobre o processamento de seus pagamentos, incluindo pagamentos bem-sucedidos, recusas e chargebacks.
 
-For more information, refer to the Adyen [Customer Area Guide](https://docs.adyen.com/account/customer-area).
+Para mais informações, consulte o [Guia da Área do Cliente](https://docs.adyen.com/account/customer-area) da Adyen.

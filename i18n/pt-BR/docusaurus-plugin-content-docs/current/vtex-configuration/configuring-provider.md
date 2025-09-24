@@ -1,41 +1,41 @@
 ---
 sidebar_position: 1
-title: Configuring the Provider
+title: Configurando o Provedor
 ---
 
 
-Once you have completed all the steps listed in the **Adyen Configuration section** you should have all the information needed to be able to activate the Adyen V3 as a payment provider in VTEX.
+Depois de concluir todas as etapas listadas na seção **Configuração da Adyen**, você deverá ter todas as informações necessárias para ativar o Adyen V3 como provedor de pagamento na VTEX.
 
-The **VTEX Payments** module allows several payment providers (gateways, acquirers, sub-acquirers, orchestrators, PSPs, among others) to be configured in your store. This way, you can offer different payment methods and conditions to your customers.
+O módulo **Pagamentos VTEX** permite que vários provedores de pagamento (gateways, adquirentes, subadquirentes, orquestradores, PSPs, entre outros) sejam configurados em sua loja. Dessa forma, você pode oferecer diferentes métodos e condições de pagamento aos seus clientes.
 
-When a purchase is made in your store and the customer makes a payment, data transmission between VTEX and the chosen provider occurs through communication protocols configured in the VTEX Admin.
+Quando uma compra é feita em sua loja e o cliente efetua o pagamento, a transmissão de dados entre a VTEX e o provedor escolhido ocorre por meio de protocolos de comunicação configurados no Admin VTEX.
 
-The payment provider is responsible for processing the payment and returning the result to VTEX. The payment provider can also be responsible for the anti-fraud analysis of the transaction.
+O provedor de pagamento é responsável por processar o pagamento e retornar o resultado para a VTEX. O provedor de pagamento também pode ser responsável pela análise antifraude da transação.
 
-Ensure you have the necessary permissions and details of the Adyen payment gateway. To register Adyen gateway affiliation in VTEX, follow the steps below:
+Certifique-se de ter as permissões e os detalhes necessários do gateway de pagamento Adyen. Para registrar a afiliação do gateway Adyen na VTEX, siga as etapas abaixo:
 
-1. Go to the store's Admin page `https://{{account}}.myvtex.com/admin/`.
-2. In the VTEX Admin, go to **Store Settings > Payments > Providers**, or type **Providers** in the search bar at the top of the page.
-3. On the providers screen, click the New provider button.
-   ![Providers](https://i.imgur.com/mjkoQTi.png)
-4. Look for **Adyen**.
+1. Acesse a página de administração da loja `https://{{account}}.myvtex.com/admin/`.
+2. No Admin VTEX, acesse **Configurações da Loja > Pagamentos > Provedores**, ou digite **Provedores** na barra de pesquisa no topo da página.
+3. Na tela de provedores, clique no botão Novo provedor.
+   ![Provedores](https://i.imgur.com/mjkoQTi.png)
+4. Procure por **Adyen**.
    ![Adyen](https://i.imgur.com/kIo1GBC.png)
-5. Select **AdyenV3** from the list of available payment providers.
-6. In **App Key** (your Merchant Account Name) field, fill in the name of your Merchant account you grabbed during the [Getting Company and Merchant account credentials](../adyen-configuration/getting-credentials.md) step.
-7. In the **App Token** (API Key) field, paste the API Key generated in the [API Key](../adyen-configuration/api-key.md) step.
-   ![API Credentials](https://i.imgur.com/Ih85Tus.png)
-8. Optionally, set an identification name by filling the **Name** field in **Basic Information**.
-9. If your store is not yet in production and you are running tests, you may **Enable test mode** in Payment Control.
-10. In the **Live URL** field, fill in the URL prefix you’ve gotten in the [Live URL](../adyen-configuration/live-url.md) section.
-    > **Note:** This field should only be filled for production environments. For testing, it must be left blank.
-11. In the **Company name**, enter the Company name as set in the Adyen account, the one you saved in the [Getting Company and Merchant account credentials](../adyen-configuration/getting-credentials.md) step.
-12. The **Live POS URL** field is used only for Sales APP.
-13. In **Client key** field, fill in the Client key you got on Step 6 of the [API Key](../adyen-configuration/api-key.md) section.
-    ![API Credentials](https://i.imgur.com/1W8F8FE.png)
-14. Click **Save**.
+5. Selecione **AdyenV3** na lista de provedores de pagamento disponíveis.
+6. No campo **Chave do Aplicativo** (nome da sua conta de comerciante), preencha o nome da sua conta de comerciante que você obteve na etapa [Obtendo credenciais da conta da empresa e do comerciante](../adyen-configuration/getting-credentials.md).
+7. No campo **Token do Aplicativo** (chave de API), cole a chave de API gerada na etapa [Chave de API](../adyen-configuration/api-key.md).
+   ![Credenciais de API](https://i.imgur.com/Ih85Tus.png)
+8. Opcionalmente, defina um nome de identificação preenchendo o campo **Nome** em **Informações Básicas**.
+9. Se sua loja ainda não estiver em produção e você estiver realizando testes, poderá **Habilitar modo de teste** em Controle de Pagamentos.
+10. No campo **URL Live**, preencha o prefixo da URL que você obteve na seção [URL Live](../adyen-configuration/live-url.md).
+    > **Nota:** Este campo deve ser preenchido apenas para ambientes de produção. Para testes, ele deve ser deixado em branco.
+11. No campo **Nome da empresa**, insira o nome da empresa conforme definido na conta Adyen, aquele que você salvou na etapa [Obtendo credenciais da conta da empresa e do comerciante](../adyen-configuration/getting-credentials.md).
+12. O campo **URL do POS Live** é usado apenas para o Sales APP.
+13. No campo **Chave do cliente**, preencha a chave do cliente que você obteve na Etapa 6 da seção [Chave de API](../adyen-configuration/api-key.md).
+    ![Credenciais de API](https://i.imgur.com/1W8F8FE.png)
+14. Clique em **Salvar**.
 
 ![AdyenV3](https://i.imgur.com/uleOsY1.png)
 
-For further information on the data to be filled in, please refer to the [Adyen API Credentials](https://docs.adyen.com/development-resources/api-credentials/) documentation.
+Para mais informações sobre os dados a serem preenchidos, consulte a documentação de [Credenciais de API da Adyen](https://docs.adyen.com/development-resources/api-credentials/).
 
-If you need extra help, check the steps outlined in the [VTEX tutorial](https://help.vtex.com/tutorial/registering-gateway-affiliations--tutorials_444) or [VTEX Payments Track](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/7pAEMAo4iqNHwYOarZ3zgm)
+Se precisar de ajuda extra, verifique as etapas descritas no [tutorial da VTEX](https://help.vtex.com/tutorial/registering-gateway-affiliations--tutorials_444) ou na [Trilha de Pagamentos da VTEX](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/7pAEMAo4iqNHwYOarZ3zgm)

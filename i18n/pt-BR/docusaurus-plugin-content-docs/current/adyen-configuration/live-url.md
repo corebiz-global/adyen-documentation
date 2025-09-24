@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-title: Live URL
+title: URL Live
 ---
 
 
-1. Navigate to Developers > API URLs in the sidebar. Click the Copy button next to the Prefix field and save this information securely.
+1. Navegue até Desenvolvedores > URLs de API na barra lateral. Clique no botão Copiar ao lado do campo Prefixo e salve esta informação com segurança.
 
-> **Note**: This prefix is only required for the live (production) environment. For test transactions, this field should be left blank.
+> **Nota**: Este prefixo é necessário apenas para o ambiente live (produção). Para transações de teste, este campo deve ser deixado em branco.

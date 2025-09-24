@@ -4,6 +4,6 @@ title: Feedback
 ---
 
 
-We welcome your feedback on this documentation. If you have any suggestions or comments, please feel free to reach out to us through the form below.
+Agradecemos o seu feedback sobre esta documentação. Se tiver alguma sugestão ou comentário, sinta-se à vontade para nos contatar através do formulário abaixo.
 
-[Feedback Form](https://forms.gle/PffFimdjU15Hte8N7)
+[Formulário de Feedback](https://forms.gle/PffFimdjU15Hte8N7)

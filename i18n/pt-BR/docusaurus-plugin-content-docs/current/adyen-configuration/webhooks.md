@@ -4,24 +4,24 @@ title: Webhooks
 ---
 
 
-The webhook configuration is needed so Adyen can send Adyen payment status updates to your VTEX account.
+A configuração do webhook é necessária para que a Adyen possa enviar atualizações de status de pagamento da Adyen para sua conta VTEX.
 
-For further information, please refer to the Adyen Webhooks [documentation](https://docs.adyen.com/development-resources/webhooks/).
+Para mais informações, consulte a [documentação](https://docs.adyen.com/development-resources/webhooks/) de Webhooks da Adyen.
 
-To configure the webhook, please follow the steps listed below:
+Para configurar o webhook, siga os passos listados abaixo:
 
-1. Open your [Adyen Customer area](https://ca-test.adyen.com/ca/ca/overview/default.shtml);
-2. In the left side menu, go to **Developers** and then **Webhooks**
-3. Click on the button **“Create new webhook”** on the right side of the screen.
-4. Select **Standard Webhook** and then click on **Add**.
-5. Add some description to your Webhook in **General** > **Description**.
-6. Go to the **Server configuration** section. In the **URL** field, paste the full webhook endpoint URL for your store. Use the following format, replacing `{{account}}` with your VTEX account name:
+1. Abra sua [área do Cliente Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml);
+2. No menu do lado esquerdo, vá para **Desenvolvedores** e depois **Webhooks**
+3. Clique no botão **“Criar novo webhook”** no lado direito da tela.
+4. Selecione **Webhook Padrão** e depois clique em **Adicionar**.
+5. Adicione uma descrição ao seu Webhook em **Geral** > **Descrição**.
+6. Vá para a seção de **configuração do Servidor**. No campo **URL**, cole a URL completa do endpoint do webhook para sua loja. Use o seguinte formato, substituindo `{{account}}` pelo nome da sua conta VTEX:
    `https://{{account}}.myvtex.com/_v3/api/webhook/notification`
 
-![Server configuration](https://i.imgur.com/T9LXJK9.png)
+![Configuração do servidor](https://i.imgur.com/T9LXJK9.png)
 
-7. Click in **Apply**
-8. Go to the **Additional settings** section, select all checkboxes, and then click **Apply** in each one of the tabs.
-9. Finally, click **Save changes**.
+7. Clique em **Aplicar**
+8. Vá para a seção de **configurações Adicionais**, selecione todas as caixas de seleção e clique em **Aplicar** em cada uma das abas.
+9. Finalmente, clique em **Salvar alterações**.
 
-> **Important**: It is required to configure one webhook for each store, so if you have more than one store, repeat the configuration steps for each one of them.
+> **Importante**: É necessário configurar um webhook para cada loja, então se você tiver mais de uma loja, repita os passos de configuração para cada uma delas.

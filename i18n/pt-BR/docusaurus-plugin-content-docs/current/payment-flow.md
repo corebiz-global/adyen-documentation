@@ -1,58 +1,58 @@
 ---
 sidebar_position: 5
-title: Payment Flow
+title: Fluxo de Pagamento
 ---
 
 
-## Authorizing
+## Autorizando
 
-The payment flow begins with the **Authorizing** stage, which occurs right after checkout. At this moment, the customer selects the payment method and confirms the purchase by clicking **"Complete Purchase."** VTEX then gathers all necessary information—such as card details, order information, and other credentials—and the payment connector securely sends it to Adyen. This transmission marks the beginning of essential communication between platforms, ensuring that all transaction elements are correctly recorded for the next steps.
+O fluxo de pagamento começa com a etapa de **Autorização**, que ocorre logo após o checkout. Neste momento, o cliente seleciona o método de pagamento e confirma a compra clicando em **"Finalizar Compra."** A VTEX então coleta todas as informações necessárias — como detalhes do cartão, informações do pedido e outras credenciais — e o conector de pagamento as envia de forma segura para a Adyen. Essa transmissão marca o início da comunicação essencial entre as plataformas, garantindo que todos os elementos da transação sejam corretamente registrados para as próximas etapas.
 
-## Authorized
+## Autorizado
 
-At this stage, Adyen forwards the received information to issuing banks, which perform a series of verifications. They check the authenticity of the data, the availability of funds, and apply security protocols, such as **PCI DSS** standards, to prevent fraud. The success of this step is crucial for the transaction to proceed smoothly, ensuring that the payment can be securely processed.
+Nesta etapa, a Adyen encaminha as informações recebidas aos bancos emissores, que realizam uma série de verificações. Eles checam a autenticidade dos dados, a disponibilidade de fundos e aplicam protocolos de segurança, como os padrões **PCI DSS**, para prevenir fraudes. O sucesso desta etapa é crucial para que a transação prossiga sem problemas, garantindo que o pagamento possa ser processado com segurança.
 
-## Approved
+## Aprovado
 
-Once the issuing bank authorizes the transaction, it reaches the **Approved** stage. This means the payment has been officially accepted, and all security and validation criteria have been met. The customer is then redirected to the **"Order Placed"** page, confirming that the order has been registered. Additionally, the system may send email or SMS notifications to reinforce that the purchase was successfully completed.
+Uma vez que o banco emissor autoriza a transação, ela atinge a etapa de **Aprovado**. Isso significa que o pagamento foi oficialmente aceito, e todos os critérios de segurança e validação foram atendidos. O cliente é então redirecionado para a página **"Pedido Realizado"**, confirmando que o pedido foi registrado. Além disso, o sistema pode enviar notificações por e-mail ou SMS para reforçar que a compra foi concluída com sucesso.
 
-## Denied
+## Negado
 
-If the transaction is not authorized by the issuing bank, the payment is declined. This can happen for various reasons, such as:
-- Insufficient funds
-- Suspected fraud
-- Incorrect details
-- Restrictions on the customer's card
+Se a transação não for autorizada pelo banco emissor, o pagamento é recusado. Isso pode acontecer por várias razões, tais como:
+- Fundos insuficientes
+- Suspeita de fraude
+- Detalhes incorretos
+- Restrições no cartão do cliente
 
-When this occurs, the system immediately notifies the customer, suggesting they try a different payment method or contact their bank for further details.
+Quando isso ocorre, o sistema notifica imediatamente o cliente, sugerindo que ele tente um método de pagamento diferente ou entre em contato com seu banco para mais detalhes.
 
-## Capture
+## Captura
 
-In the **Capture** stage, the previously authorized amount is either held or debited from the customer's account, depending on the configured capture period. This process can occur immediately or within the timeframe set for each payment method. Here, the **pre-authorization** is converted into a real financial commitment. The system monitors the transaction to ensure that the debited amount matches the exact purchase value, preventing discrepancies and ensuring the integrity of the payment flow.
+Na etapa de **Captura**, o valor previamente autorizado é retido ou debitado da conta do cliente, dependendo do período de captura configurado. Esse processo pode ocorrer imediatamente ou dentro do prazo estabelecido para cada método de pagamento. Aqui, a **pré-autorização** é convertida em um compromisso financeiro real. O sistema monitora a transação para garantir que o valor debitado corresponda ao valor exato da compra, prevenindo discrepâncias e assegurando a integridade do fluxo de pagamento.
 
-## Canceled
+## Cancelado
 
-A transaction can be canceled before or after capture for several reasons:
-- At the customer's request (if they decide to cancel before payment confirmation).
-- By the merchant (in cases of suspected fraud, order errors, or operational issues).
-- Due to process failures (such as technical errors or irregularities at any stage).
+Uma transação pode ser cancelada antes ou depois da captura por diversas razões:
+- A pedido do cliente (se ele decidir cancelar antes da confirmação do pagamento).
+- Pelo lojista (em casos de suspeita de fraude, erros de pedido ou problemas operacionais).
+- Devido a falhas no processo (como erros técnicos ou irregularidades em qualquer etapa).
 
-When a transaction is canceled, the system prevents the amount from being debited or immediately reverses the authorization, ensuring the customer is not charged.
+Quando uma transação é cancelada, o sistema impede que o valor seja debitado ou reverte imediatamente a autorização, garantindo que o cliente não seja cobrado.
 
-## Settlement
+## Liquidação
 
-After capture, the payment moves to the **Settlement** stage, where the debited amount is prepared for transfer to the merchant. Settlement may occur immediately or only after the invoice is issued, depending on business rules. During this stage, financial reconciliations are carried out, and any applicable fees or discounts are applied, ensuring the final amount is accurate before the transfer.
+Após a captura, o pagamento passa para a etapa de **Liquidação**, onde o valor debitado é preparado para transferência ao lojista. A liquidação pode ocorrer imediatamente ou somente após a emissão da fatura, dependendo das regras de negócio. Durante esta etapa, são realizadas conciliações financeiras e aplicadas quaisquer taxas ou descontos aplicáveis, garantindo que o valor final seja preciso antes da transferência.
 
-## Settling
+## Liquidando
 
-At this point, the settlement process is officially initiated. Adyen transfers the captured amount to the merchant's account, following all contractual and regulatory requirements. This stage involves a detailed verification of amounts, along with the correct application of commissions and deductions as outlined in the contract. This conclusion reinforces the reliability of the integrated system between VTEX and Adyen, providing security for both the merchant and the customer.
+Neste ponto, o processo de liquidação é oficialmente iniciado. A Adyen transfere o valor capturado para a conta do lojista, seguindo todos os requisitos contratuais e regulatórios. Esta etapa envolve uma verificação detalhada dos valores, juntamente com a correta aplicação de comissões e deduções conforme descrito no contrato. Essa conclusão reforça a confiabilidade do sistema integrado entre VTEX e Adyen, proporcionando segurança tanto para o lojista quanto para o cliente.
 
-## Settled
+## Liquidado
 
-In the final **Settled** stage, the payment settlement is successfully completed. All procedures—from initial authorization to the transfer of funds—have been correctly executed. As a result, the amount due to the merchant becomes available for use, effectively and securely finalizing the payment process.
+Na etapa final de **Liquidado**, a liquidação do pagamento é concluída com sucesso. Todos os procedimentos — desde a autorização inicial até a transferência de fundos — foram executados corretamente. Como resultado, o valor devido ao lojista torna-se disponível para uso, finalizando de forma eficaz e segura o processo de pagamento.
 
-## Refunded
+## Reembolsado
 
-If necessary, a captured transaction can go through the **Refunded** stage, where the debited amount is returned to the customer. The refund can be **full or partial**, depending on the merchant's policy and the type of purchase. This process can be initiated by either the customer or the merchant, typically in cases of product returns, service cancellations, or payment errors. Once the refund is processed, the customer receives the amount back through the same payment method used for the purchase.
+Se necessário, uma transação capturada pode passar pela etapa de **Reembolsado**, onde o valor debitado é devolvido ao cliente. O reembolso pode ser **total ou parcial**, dependendo da política do lojista e do tipo de compra. Esse processo pode ser iniciado tanto pelo cliente quanto pelo lojista, tipicamente em casos de devoluções de produtos, cancelamentos de serviços ou erros de pagamento. Uma vez processado o reembolso, o cliente recebe o valor de volta através do mesmo método de pagamento utilizado na compra.
 
 ![paymentflow](https://i.imgur.com/yWGGPkR.png)

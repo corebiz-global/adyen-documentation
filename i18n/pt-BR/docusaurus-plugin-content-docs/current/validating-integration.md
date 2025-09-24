@@ -1,44 +1,44 @@
 ---
 sidebar_position: 7
-title: Validating Integration
+title: Validando a Integração
 ---
 
 
-## Validation Checklist
+## Checklist de Validação
 
-Before proceeding with testing, ensure that the following steps have been completed:
+Antes de prosseguir com os testes, garanta que os seguintes passos foram concluídos:
 
-1.  **Adyen Configuration**:
-    *   [ ] Adyen account is set up and verified.
-    *   [ ] API key is generated and configured in VTEX. (See: [API Key Configuration](adyen-configuration/api-key))
-    *   [ ] Payment methods are enabled and configured in the Adyen account. (See: [Configuring Payment Methods](vtex-configuration/payment-methods))
-2.  **VTEX Configuration**:
-    *   [ ] AdyenV3 payment provider is registered in VTEX. (See: [Configuring the Provider](vtex-configuration/configuring-provider))
-    *   [ ] Payment methods are configured in VTEX admin. (See: [Configuring Payment Methods](vtex-configuration/payment-methods))
-    *   [ ] Payment conditions are set up with the AdyenV3 provider. (See: [Configuring the Provider](vtex-configuration/configuring-provider))
-3.  **Testing Environment**:
-    *   [ ] Ensure that you are using a test environment to validate the integration.
-    *   [ ] Use test credit card details provided by Adyen for testing purposes.
-4.  **Order Processing**:
-    *   [ ] Place a test order in your VTEX store to verify that the payment process is working correctly.
-5.  **Transaction Status**:
-    *   [ ] Check the transaction status in both VTEX and Adyen admin panels to ensure that the payment is processed successfully.
+1.  **Configuração da Adyen**:
+    *   [ ] A conta Adyen está configurada e verificada.
+    *   [ ] A chave de API é gerada e configurada na VTEX. (Veja: [Configuração da Chave de API](adyen-configuration/api-key))
+    *   [ ] Os métodos de pagamento estão habilitados e configurados na conta Adyen. (Veja: [Configurando Métodos de Pagamento](vtex-configuration/payment-methods))
+2.  **Configuração da VTEX**:
+    *   [ ] O provedor de pagamento AdyenV3 está registrado na VTEX. (Veja: [Configurando o Provedor](vtex-configuration/configuring-provider))
+    *   [ ] Os métodos de pagamento estão configurados no admin da VTEX. (Veja: [Configurando Métodos de Pagamento](vtex-configuration/payment-methods))
+    *   [ ] As condições de pagamento estão configuradas com o provedor AdyenV3. (Veja: [Configurando o Provedor](vtex-configuration/configuring-provider))
+3.  **Ambiente de Teste**:
+    *   [ ] Garanta que você está usando um ambiente de teste para validar a integração.
+    *   [ ] Use detalhes de cartão de crédito de teste fornecidos pela Adyen para fins de teste.
+4.  **Processamento de Pedidos**:
+    *   [ ] Faça um pedido de teste na sua loja VTEX para verificar se o processo de pagamento está funcionando corretamente.
+5.  **Status da Transação**:
+    *   [ ] Verifique o status da transação nos painéis de administração da VTEX e da Adyen para garantir que o pagamento seja processado com sucesso.
 
-## Testing
+## Testando
 
-1.  **Create a Test Order**: Add product(s) to the sopping cart and proceed to checkout in your VTEX store.
-2.  **Select one of the Payment Methods configured to use the Adyen provider**: During checkout, choose the appropriate payment method.
-3.  **Complete the Payment**: Process the payment and verify that the transaction is completed successfully.
+1.  **Criar um Pedido de Teste**: Adicione produto(s) ao carrinho de compras e prossiga para o checkout na sua loja VTEX.
+2.  **Selecione um dos Métodos de Pagamento configurados para usar o provedor Adyen**: Durante o checkout, escolha o método de pagamento apropriado.
+3.  **Concluir o Pagamento**: Processe o pagamento e verifique se a transação é concluída com sucesso.
 
-## Checking the Transaction Status
+## Verificando o Status da Transação
 
-To check the status of the test transaction, follow these steps:
+Para verificar o status da transação de teste, siga estes passos:
 
-1.  **VTEX Admin Panel**: go to `https://{{account}}.myvtex.com/admin/` and navigate to the Orders section or search **orders** in the admin search box. ![orders](https://i.imgur.com/iOPV29h.png)
-2.  **Order Details**: Click on the **Order Id** to view the details of an Order.
-3.  **Payment Status**: In the order details, in the right corner, you can see the payment information for that Order. ![payment](https://i.imgur.com/Is2kZn2.png)
-4.  **Transaction History**: Click **See Details** to go to the **Transaction Details** page. There you can check the details for all the steps of the [Payment Processment Flow](payment-flow) ![transaction](https://i.imgur.com/B2vkZFB.png)
-    *   At the top of the page, you can see the **Payment Information**:
+1.  **Painel de Administração da VTEX**: vá para `https://{{account}}.myvtex.com/admin/` e navegue até a seção Pedidos ou pesquise por **pedidos** na caixa de pesquisa do admin. ![orders](https://i.imgur.com/iOPV29h.png)
+2.  **Detalhes do Pedido**: Clique no **Id do Pedido** para ver os detalhes de um Pedido.
+3.  **Status do Pagamento**: Nos detalhes do pedido, no canto direito, você pode ver as informações de pagamento para aquele Pedido. ![payment](https://i.imgur.com/Is2kZn2.png)
+4.  **Histórico da Transação**: Clique em **Ver Detalhes** para ir para a página de **Detalhes da Transação**. Lá você pode verificar os detalhes de todos os passos do [Fluxo de Processamento de Pagamento](payment-flow) ![transaction](https://i.imgur.com/B2vkZFB.png)
+    *   No topo da página, você pode ver as **Informações de Pagamento**:
         ![payment information](https://i.imgur.com/g24ciyo.png)
-    > **IMPORTANT**: When a payment is Authorized, you can see the **TID**, which is the ID in the Adyen system for that transaction. In Adyen the **TID** is referred as **PSP Reference** and you can search for this ID to check the transaction details at `https://{{account}}.adyen.com/ca/ca/offers/showList.shtml`
+    > **IMPORTANTE**: Quando um pagamento é Autorizado, você pode ver o **TID**, que é o ID no sistema da Adyen para essa transação. Na Adyen, o **TID** é referido como **Referência PSP** e você pode pesquisar por este ID para verificar os detalhes da transação em `https://{{account}}.adyen.com/ca/ca/offers/showList.shtml`
         ![transactions](https://i.imgur.com/in37FYK.png)

@@ -1,29 +1,30 @@
 ---
 sidebar_position: 5
-title: PCI Role
+title: Papel PCI
 ---
 
 
-For credit card payments to be processed correctly, the Web Service User requires a specific permission called **API PCI Payments role**. If this role is not enabled, transactions will fail with a 403 error.
+Para que os pagamentos com cartão de crédito sejam processados corretamente, o Usuário de Serviço da Web requer uma permissão específica chamada **papel de Pagamentos API PCI**. Se este papel não estiver habilitado, as transações falharão com um erro 403.
 
-This role must be requested from the Adyen support team by opening a ticket.
+Este papel deve ser solicitado à equipe de suporte da Adyen abrindo um ticket.
 
-**How to open the support ticket:**
+**Como abrir o ticket de suporte:**
 
-1.  Follow the instructions in the Adyen documentation to [reach Adyen support](https://docs.adyen.com/support/how-to-reach-adyen-support/).
-2.  When creating the ticket, use the following details:
-    *   **Subject**: `Enable API PCI Payments role`
-    *   **Description**: Inform that you are configuring Adyen V3 on VTEX and provide the **Web Service User** you are using (this is the value from the **Username** field in the Adyen panel, e.g., `ws_123456@Company.YourCompany`).
+1.  Siga as instruções na documentação da Adyen para [entrar em contato com o suporte da Adyen](https://docs.adyen.com/support/how-to-reach-adyen-support/).
+2.  Ao criar o ticket, use os seguintes detalhes:
+    *   **Assunto**: `Habilitar papel de Pagamentos API PCI`
+    *   **Descrição**: Informe que você está configurando o Adyen V3 na VTEX e forneça o **Usuário de Serviço da Web** que você está usando (este é o valor do campo **Nome de usuário** no painel da Adyen, por exemplo, `ws_123456@Company.YourCompany`).
 
-This is the same user created in the [API Key](./api-key.md) step.
+Este é o mesmo usuário criado na etapa de [Chave de API](./api-key.md).
 
-![User Role](https://i.imgur.com/yGKCsOH.png)
+![Papel do Usuário](https://i.imgur.com/yGKCsOH.png)
 
-The username can also be found following the steps below:
-Go to your [Adyen Customer Area](https://ca-live.adyen.com/);
-In the left side menu, click on “Developers” and then “API credential”;
-Select the username being used;
-Under the “General Settings” section you will find the full Username, copy this information and share it with the Adyen Support team in the ticket you’re creating.
+O nome de usuário também pode ser encontrado seguindo os passos abaixo:
 
-![Configure API Credential](https://i.imgur.com/X4EKrk0.png)
-> **Important**: This step applies to Test and Live environments. Every time a new credential is created, the permission will need to be granted for that specific username as well.
+Vá para a sua [Área do Cliente Adyen](https://ca-live.adyen.com/);
+No menu do lado esquerdo, clique em “Desenvolvedores” e depois em “Credencial de API”;
+Selecione o nome de usuário que está sendo usado;
+Na seção “Configurações Gerais”, você encontrará o Nome de Usuário completo, copie esta informação e compartilhe com a equipe de Suporte da Adyen no ticket que você está criando.
+
+![Configurar Credencial de API](https://i.imgur.com/X4EKrk0.png)
+> **Importante**: Este passo se aplica aos ambientes de Teste e Produção. Toda vez que uma nova credencial for criada, a permissão precisará ser concedida para aquele nome de usuário específico também.

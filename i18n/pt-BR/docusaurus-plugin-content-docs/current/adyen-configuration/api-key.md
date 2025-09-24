@@ -1,32 +1,32 @@
 ---
 sidebar_position: 3
-title: API Key
+title: Chave de API
 ---
 
 
-## API Credential Configuration
+## Configuração de Credenciais de API
 
-Generate and configure your API key as described in the [Adyen Platforms Documentation](https://docs.adyen.com/development-resources/api-credentials/). Ensure that you store your API key securely and use it for authenticating requests from VTEX to Adyen.
+Gere e configure sua chave de API conforme descrito na [Documentação de Plataformas da Adyen](https://docs.adyen.com/development-resources/api-credentials/). Certifique-se de armazenar sua chave de API com segurança e usá-la para autenticar solicitações da VTEX para a Adyen.
 
-1. In your [Adyen Customer Area](https://ca-test.adyen.com/ca/ca/overview/default.shtml), in the sidebar menu click on **Developers** and, then, click **API credentials**;
-2. Click on the button **Create new credential** on the right side of the screen;
-3. Select **Web service user**
-4. It will open a pop up with General Settings:
-   1. Credential Type
-      1. Username: This is your Adyen **Web Service User**. Store this ID as you will need it to open a ticket to Adyen later (e.g., `ws_123456@Company.YourCompany`).
-      2. Description: A description for the API key
-5. Under **Server Settings**, in the **Authentication** area, select **API Key** and then click on the **Generate API Key** button to create a new key and **store** this information safely.
-6. Under **Client Settings**, in the **Authentication** area, select **Client Key** and click on the **Generate Client Key** button.
+1. Em sua [Área do Cliente Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml), no menu lateral, clique em **Desenvolvedores** e, em seguida, clique em **Credenciais de API**;
+2. Clique no botão **Criar nova credencial** no lado direito da tela;
+3. Selecione **Usuário de serviço da Web**
+4. Abrirá um pop-up com as Configurações Gerais:
+   1. Tipo de Credencial
+      1. Nome de usuário: Este é o seu **Usuário de Serviço da Web** da Adyen. Guarde este ID, pois você precisará dele para abrir um ticket para a Adyen mais tarde (por exemplo, `ws_123456@Company.YourCompany`).
+      2. Descrição: Uma descrição para a chave de API
+5. Em **Configurações do Servidor**, na área de **Autenticação**, selecione **Chave de API** e, em seguida, clique no botão **Gerar Chave de API** para criar uma nova chave e **armazene** esta informação com segurança.
+6. Em **Configurações do Cliente**, na área de **Autenticação**, selecione **Chave do Cliente** e clique no botão **Gerar Chave do Cliente**.
 
-### Additional Configurations
+### Configurações Adicionais
 
-- **Add allowed origin**: Add all domains that will make client-side requests to Adyen. This includes your VTEX environment and your store's production domain. You must add each domain separately.
-  - **Example (VTEX Environment)**: `https://{{account}}.myvtex.com`
-  - **Example (Production Domain)**: `https://www.yourstore.com`
-- **Permissions**: It is recommended to select all available permissions for the Web Service User to ensure full functionality and avoid potential issues with new features or payment methods.
+- **Adicionar origem permitida**: Adicione todos os domínios que farão solicitações do lado do cliente para a Adyen. Isso inclui seu ambiente VTEX e o domínio de produção de sua loja. Você deve adicionar cada domínio separadamente.
+  - **Exemplo (Ambiente VTEX)**: `https://{{account}}.myvtex.com`
+  - **Exemplo (Domínio de Produção)**: `https://www.yourstore.com`
+- **Permissões**: Recomenda-se selecionar todas as permissões disponíveis para o Usuário de Serviço da Web para garantir a funcionalidade completa e evitar possíveis problemas com novos recursos ou métodos de pagamento.
 
-![API Credentials](https://i.imgur.com/2C6J0FS.png)
+![Credenciais de API](https://i.imgur.com/2C6J0FS.png)
 
-7. After configuring all settings for the new credential, scroll to the bottom of the page and click **Save**.
+7. Após configurar todas as configurações para a nova credencial, role até o final da página e clique em **Salvar**.
 
-> **Important:** Failing to save the changes after creating the credential will result in authentication errors (Error 401). Always ensure you save the new credential before proceeding. After saving, it is recommended to reopen the credential settings to confirm that all changes have been persisted correctly.
+> **Importante:** Deixar de salvar as alterações após criar a credencial resultará em erros de autenticação (Erro 401). Sempre garanta que você salve a nova credencial antes de prosseguir. Após salvar, recomenda-se reabrir as configurações da credencial para confirmar que todas as alterações foram persistidas corretamente.

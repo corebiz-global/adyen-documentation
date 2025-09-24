@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-title: Credit Card Setup
+title: Configuração de Cartão de Crédito
 ---
 
 
-In order to process credit card payments in your store using AdyenV3, besides performing the previous configurations already described in this article, you must open a ticket at [VTEX support](https://help.vtex.com/en/support), with the following request: "Provider review - Add Endpoint SecureProxy - AdyenV3".
+Para processar pagamentos com cartão de crédito em sua loja usando o AdyenV3, além de realizar as configurações anteriores já descritas neste artigo, você deve abrir um ticket no [suporte da VTEX](https://help.vtex.com/pt/support), com a seguinte solicitação: "Revisão do provedor - Adicionar Endpoint SecureProxy - AdyenV3".
 
-In the ticket you must also send the URL that will be authorized by Adyen to carry out the credit card transaction in your store. The URL format must be `https://{live URL prefix}-checkout-live.adyenpayments.com`, where the information "`{live URL prefix}`" must be the same as that entered by you in the Adyen settings in the VTEX Admin (see [Live URL](../adyen-configuration/live-url.md)).
+No ticket, você também deve enviar a URL que será autorizada pela Adyen para realizar a transação com cartão de crédito em sua loja. O formato da URL deve ser `https://{prefixo da URL live}-checkout-live.adyenpayments.com`, onde a informação "`{prefixo da URL live}`" deve ser a mesma que a inserida por você nas configurações da Adyen no Admin da VTEX (veja [URL Live](../adyen-configuration/live-url.md)).
 
-> **Important**: The full URL address must be written in lowercase letters only, even if the "Live URL prefix" configured in the VTEX Admin has some capital letters. The Live URL prefix is not necessary in the testing environment.
+> **Importante**: O endereço completo da URL deve ser escrito apenas com letras minúsculas, mesmo que o "prefixo da URL Live" configurado no Admin da VTEX tenha algumas letras maiúsculas. O prefixo da URL Live não é necessário no ambiente de teste.
