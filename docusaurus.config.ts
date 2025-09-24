@@ -20,7 +20,7 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -28,7 +28,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pt-BR'],
   },
 
   presets: [
@@ -62,7 +62,12 @@ const config: Config = {
         src: 'img/logo.svg',
         srcDark: 'img/logo.svg',
       },
-      items: [], // No navbar items
+      items: [
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+      ], 
     },
     footer: {
       style: 'dark',

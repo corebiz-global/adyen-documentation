@@ -1,0 +1,10 @@
+{
+  "copyright": {
+    "message": "Built by Corebiz.",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "Corebiz Logo",
+    "description": "The alt text of footer logo"
+  }
+}
