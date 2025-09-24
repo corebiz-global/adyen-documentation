@@ -114,7 +114,7 @@ Allows customers to pay for their purchase in installments. To configure Klarna 
   - in the **Payment Methods** screen, click on the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button at the top right corner of the page.
   - Find the **Klarna Pay Over Time** option in the list of available payment methods and click on it.
   - In the **Add Payment Method** screen, select the **Provider** in the "Process with Provider" selection box.
-  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](../configuring-provider.md)
+  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](configuring-provider)
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
 ### Klarna Pay Now
@@ -131,7 +131,7 @@ Allows customers to pay for their purchase immediately via bank transfer. To con
   - in the **Payment Methods** screen, click on the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button at the top right corner of the page.
   - Find the **Klarna** option in the list of available payment methods and click on it.
   - In the **Add Payment Method** screen, select the **Provider** in the "Process with Provider" selection box.
-  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](../configuring-provider.md)
+  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](configuring-provider)
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
 ### Klarna Pay Later
@@ -148,12 +148,12 @@ Allows customers to pay for their purchase in 30 days without interest. To confi
   - in the **Payment Methods** screen, click on the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button at the top right corner of the page.
   - Find the **Klarna Pay Later** option in the list of available payment methods and click on it.
   - In the **Add Payment Method** screen, select the **Provider** in the "Process with Provider" selection box.
-  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](../configuring-provider.md)
+  - Save the configuration. After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](configuring-provider)
     ![#klarna](https://i.imgur.com/JRlpO7p.gif)
 
 ## Ideal
 
-> **Important**: The important information about Ideal is that in the VTEX payment method configuration step, you will find two payment methods when you search for Ideal. Please select “**Ideal V3**". After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](../configuring-provider.md)
+> **Important**: The important information about Ideal is that in the VTEX payment method configuration step, you will find two payment methods when you search for Ideal. Please select “**Ideal V3**". After that follow the steps detailed in the [Configuring the Payment Provider in VTEX](configuring-provider)
 
 ![IDeal](https://i.imgur.com/EjnvuSR.png)
 ![iDeal V3](https://i.imgur.com/3Qt1408.png)

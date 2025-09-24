@@ -17,15 +17,15 @@ If you encounter any issues during the integration process, refer to the followi
 
 ### Payment Method Not Appearing
 
-Ensure that the payment method is correctly configured and activated in the VTEX admin panel. (See: [Configuring Payment Methods](../vtex-configuration/payment-methods.md))
+Ensure that the payment method is correctly configured and activated in the VTEX admin panel. (See: [Configuring Payment Methods](vtex-configuration/payment-methods))
 
 ### Payment Method Not Available
 
-Check the payment method configuration in the VTEX admin panel and ensure that it is properly configured and enabled. (See: [Configuring Payment Methods](../vtex-configuration/payment-methods.md))
+Check the payment method configuration in the VTEX admin panel and ensure that it is properly configured and enabled. (See: [Configuring Payment Methods](vtex-configuration/payment-methods))
 
 ### Transactions Failing
 
-Verify the API credentials and ensure that the AdyenV3 Payment Provider is properly configured in VTEX admin at `https://{{account}}.myvtex.com/admin/affiliations`. (See: [Configuring the Provider](../vtex-configuration/configuring-provider.md) and [API Key Configuration](../adyen-configuration/api-key.md))
+Verify the API credentials and ensure that the AdyenV3 Payment Provider is properly configured in VTEX admin at `https://{{account}}.myvtex.com/admin/affiliations`. (See: [Configuring the Provider](vtex-configuration/configuring-provider) and [API Key Configuration](adyen-configuration/api-key))
 
 ### Sub-Accounts Configuration
 
@@ -92,7 +92,7 @@ To complete a purchase with two cards, you must first finalize the purchase with
 
 ### Invalid API Key
 
-Regenerate the API key in the Adyen admin panel and update it in VTEX. (See: [API Key Configuration](../adyen-configuration/api-key.md))
+Regenerate the API key in the Adyen admin panel and update it in VTEX. (See: [API Key Configuration](adyen-configuration/api-key))
 
 ### Payment Processing Errors
 
@@ -104,12 +104,12 @@ There are different scenarios that can generate a 403 error.
 
 #### Scenario 1) Live URL set for test transactions
 
-For test transactions don’t set the live url, otherwise you may face an error 403. The live url should be set only for production transactions. (See: [Live URL](../adyen-configuration/live-url.md))
+For test transactions don’t set the live url, otherwise you may face an error 403. The live url should be set only for production transactions. (See: [Live URL](adyen-configuration/live-url))
 
 #### Scenario 2) Wrong Merchant name
 
-Make sure the Merchant Account filled in VTEX is the exact same as seen in your Adyen Customer Area. It is important to follow even the capital letters, spaces and other special characters (See: [Getting Credentials](../adyen-configuration/getting-credentials.md))
+Make sure the Merchant Account filled in VTEX is the exact same as seen in your Adyen Customer Area. It is important to follow even the capital letters, spaces and other special characters (See: [Getting Credentials](adyen-configuration/getting-credentials))
 
 #### Scenario 3) Ticket to Adyen Support was not opened yet or the enablement done was not to the correct username
 
-Make sure you open the ticket to the Adyen support following the instruction we provided in step xx and that you inform the correct username. Remember that if for some reason new credentials are created, the permission needs to be granted by the Adyen team again. (See: [PCI Role](../adyen-configuration/pci-role.md))
+Make sure you open the ticket to the Adyen support following the instruction we provided in step xx and that you inform the correct username. Remember that if for some reason new credentials are created, the permission needs to be granted by the Adyen team again. (See: [PCI Role](adyen-configuration/pci-role))
