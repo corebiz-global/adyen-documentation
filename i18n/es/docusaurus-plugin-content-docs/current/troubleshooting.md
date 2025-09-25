@@ -1,115 +1,115 @@
 ---
 sidebar_position: 9
-title: Solução de Problemas
+title: Solución de problemas
 ---
 
 
-Problemas com o Plugin de Integração Adyen podem estar relacionados a um ou mais dos seguintes:
+Los problemas con el plugin de integración de Adyen pueden estar relacionados con uno o más de los siguientes:
 
-- Problemas de configuração da Vtex;
-- Erros de configuração da Adyen;
-- Customizações do Checkout;
-- Outros erros de disponibilidade de serviço da VTEX;
+- Problemas de configuración de Vtex;
+- Errores de configuración de Adyen;
+- Personalización del checkout;
+- Otros errores de disponibilidad del servicio VTEX;
 
-Se você encontrar algum problema durante o processo de integração, consulte os seguintes cenários de solução de problemas mais comuns:
+Si encuentra algún problema durante el proceso de integración, consulte los siguientes escenarios de solución de problemas más comunes:
 
-## Problemas de Configuração VTEX
+## Problemas de configuración VTEX
 
-### Método de Pagamento Não Aparece
+### Método de pago no aparece
 
-Garanta que o método de pagamento está corretamente configurado e ativado no painel de administração da VTEX. (Veja: [Configurando Métodos de Pagamento](vtex-configuration/payment-methods))
+Asegúrese de que el método de pago está correctamente configurado y activado en el panel de administración de VTEX. (Vea: [Configurando métodos de pago](vtex-configuration/payment-methods))
 
-### Método de Pagamento Não Disponível
+### Método de pago no disponible
 
-Verifique a configuração do método de pagamento no painel de administração da VTEX e garanta que ele está devidamente configurado e habilitado. (Veja: [Configurando Métodos de Pagamento](vtex-configuration/payment-methods))
+Compruebe la configuración del método de pago en el panel de administración de VTEX y asegúrese de que está correctamente configurado y habilitado. (Vea: [Configurando métodos de pago](vtex-configuration/payment-methods))
 
-### Falha nas Transações
+### Falla en las transacciones
 
-Verifique as credenciais da API e garanta que o Provedor de Pagamento AdyenV3 está devidamente configurado no admin da VTEX em `https://{{account}}.myvtex.com/admin/affiliations`. (Veja: [Configurando o Provedor](vtex-configuration/configuring-provider) e [Configuração da Chave de API](adyen-configuration/api-key))
+Compruebe las credenciales de la API y asegúrese de que el proveedor de pagos AdyenV3 está correctamente configurado en el administrador de VTEX en `https://{{account}}.myvtex.com/admin/affiliations`. (Vea: [Configurando el proveedor](vtex-configuration/configuring-provider) y [Configuración de la clave API](adyen-configuration/api-key))
 
-### Configuração de Subcontas
+### Configuración de subcuentas
 
-Se você estiver usando subcontas na VTEX, garanta que a subconta correta está selecionada no painel de administração da VTEX e que a configuração completa do Provedor e dos Métodos de Pagamento seja feita para a subconta selecionada. Cada subconta pode ter configurações diferentes e elas não herdam as configurações da conta principal da VTEX.
+Si está usando subcuentas en VTEX, asegúrese de que la subcuenta correcta esté seleccionada en el panel de administración de VTEX y que la configuración completa del proveedor y los métodos de pago se hagan para la subcuenta seleccionada. Cada subcuenta puede tener diferentes configuraciones y no heredan las configuraciones de la cuenta principal de VTEX.
 
-### Outros Problemas Comuns da VTEX
+### Otros problemas comunes de VTEX
 
-Antes de abrir um ticket de suporte com a VTEX, por favor, teste em um Checkout padrão da VTEX com um produto padrão para garantir que o problema não está relacionado às customizações da loja.
+Antes de abrir un ticket de soporte con VTEX, por favor, prueba en una caja estándar de VTEX con un producto estándar para asegurar que el problema no está relacionado con las personalizaciones de la tienda.
 
-### Testando o fluxo de compra com um produto padrão
+### Probando el flujo de compra con un producto estándar
 
-Escolha um produto para testar o Fluxo de Compra que não requer nenhuma configuração especial ou específica, como anexos, acessórios, assinaturas ou kits. Isso ajudará a identificar se o problema está relacionado à configuração do produto ou ao fluxo de compra e pagamento.
+Elija un producto para probar el flujo de compra que no requiere ninguna configuración especial o específica, como archivos adjuntos, accesorios, suscripciones o kits. Esto ayudará a identificar si el problema está relacionado con la configuración del producto o el flujo de compra y pago.
 
-### Compra com Dois Cartões Usando SallesApp
+### Compra con dos tarjetas usando SallesApp
 
-Para concluir uma compra com dois cartões, você deve primeiro finalizar a compra com um cartão (escolhendo se deseja ou não imprimir o recibo de pagamento). Isso significa liberar o terminal para a segunda transação com o segundo cartão.
+Para completar una compra con dos tarjetas, primero debe finalizar la compra con una tarjeta (eligiendo si desea o no imprimir el recibo de pago). Esto significa liberar el terminal para la segunda transacción con la segunda tarjeta.
 
-## Customizações do Checkout VTEX
+## Personalizaciones de Checkout VTEX
 
-- **Scripts Personalizados**: Desabilite quaisquer scripts personalizados ou CSS que possam estar interferindo no processo de pagamento usando as instruções fornecidas na próxima seção.
-- **Plugins de Terceiros**: Verifique se há plugins ou integrações de terceiros que possam estar causando conflitos com o provedor de pagamento.
-- **Google Tag Manager**: Garanta que o Google Tag Manager ou outros scripts de rastreamento não estão bloqueando o processo de pagamento.
+- **Scripts personalizados**: desactive cualquier script personalizado o CSS que pueda interferir con el proceso de pago usando las instrucciones proporcionadas en la siguiente sección.
+- **Plugins de terceros**: comprueba si hay plugins o integraciones de terceros que puedan estar causando conflictos con el proveedor de pagos.
+- **Google Tag Manager**: Asegúrate de que Google Tag Manager u otros scripts de rastreo no bloqueen el proceso de pago.
 
-### Como testar o Fluxo de Pagamento usando o Checkout padrão da VTEX
+### Cómo probar el flujo de pago usando la salida estándar de VTEX
 
-1. Verifique qual versão do checkout está sendo usada na loja.
-   - No Admin da VTEX, procure por **checkout** na barra de pesquisa.
-     - se você encontrar apenas **Checkout** na pesquisa, sua loja está usando **checkout-ui-settings**
+1. Comprueba qué versión de pago se está usando en la tienda.
+   - En VTEX Admin, busca **checkout** en la barra de búsqueda.
+     - si solo encuentras **Checkout** en la búsqueda, tu tienda está usando **checkout-ui-settings**
        ![checkout-ui-settings](https://i.imgur.com/YRuIrTg.png)
-     - se você encontrar **Checkout** e **Checkout UI Custom**, sua loja está usando **checkout-ui-custom**
+     - si encuentras **Checkout** y **Checkout UI Custom**, tu tienda está usando **checkout-ui-custom**
        ![checkout-ui](https://i.imgur.com/h0McJSx.png)
-2. Desabilitando Customizações no Checkout para Teste:
-   2.a Para Lojas usando **checkout-ui-settings**:
+2. Desactivación de personalizaciones no Checkout para prueba:
+   2.a Para Tiendas usando **checkout-ui-settings**:
 
-   - Vá para `https://{{account}}.myvtex.com/admin/portal/#/sites` ou clique na opção **Checkout** na lista de resultados da pesquisa
+   - Vaya a `https://{{account}}.myvtex.com/admin/portal/#/sites` o haga clic en la opción **Checkout** en la lista de resultados de búsqueda
      ![sites](https://i.imgur.com/9VVU0Hx.png)
-   - Na tela **Checkout**, clique no ícone de engrenagem azul ![settings](https://i.imgur.com/D2PTBuq.png) no Checkout que está sendo usado pela sua loja para acessar as **configurações do Checkout**
-   - Na tela de **configurações do Checkout**, clique em **Código** no topo da página
-   - Na página seguinte, procure pelo arquivo **checkout6-custom.js** na lista do lado direito
+   - En la pantalla **Checkout**, haga clic en el icono de engranaje azul! [settings](https://i.imgur.com/D2PTBuq.png) en el Checkout que está usando su tienda para acceder a las **configuraciones del Checkout**
+   - En la pantalla de **configuración del pago**, haga clic en **código** en la parte superior de la página
+   - En la siguiente página, busque el archivo **checkout6-custom.js** en la lista de la derecha
      ![checkout6-custom](https://i.imgur.com/k1Se9js.png)
-   - Clique no arquivo **checkout6-custom.js** para abri-lo
+   - Haga clic en el archivo **checkout6-custom.js** para abrirlo
      ![checkout6-custom-file](https://i.imgur.com/r2I33l5.png)
-   - Copie o conteúdo do arquivo se houver alguma customização e salve-o em um lugar seguro
-   - Apague todo o conteúdo do arquivo e clique em **Salvar** para remover qualquer customização
-   - Repita o mesmo processo para o arquivo **checkout6-custom.css**
-   - Teste o processo de checkout na loja
+   - Copia el contenido del archivo si hay alguna personalización y guárdalo en un lugar seguro
+   - Borra todo el contenido del archivo y haz clic en **Guardar** para eliminar cualquier personalización
+   - Repita el mismo proceso para el archivo **checkout6-custom.css**
+   - Prueba el proceso de pago en la tienda
 
-     2.b Para Lojas usando **checkout-ui-custom**:
+     2.b Para tiendas usando **checkout-ui-custom**:
 
-   - Vá para `https://{{account}}.myvtex.com/admin/vtex-checkout-ui-custom/` ou clique na opção **Checkout UI Custom** na lista de resultados da pesquisa
+   - Vaya a `https://{{account}}.myvtex.com/admin/vtex-checkout-ui-custom/` o haga clic en la opción **Checkout UI Custom** en la lista de resultados de búsqueda
      ![checkout-ui-custom](https://i.imgur.com/oIR1jF7.png)
-   - Na tela **Checkout UI Custom**, clique na aba **Javascript** ![settings](https://i.imgur.com/Q4NM7KN.png)
-   - Na aba **Javascript**, vá até o final da página e desative o javascript usando o botão de alternância
+   - En la pantalla **Checkout UI Custom**, haga clic en la pestaña **Javascript** ! [ajustes](https://i.imgur.com/Q4NM7KN.png)
+   - En la pestaña **Javascript**, ve al final de la página y desactiva el javascript usando el botón
      ![toggle](https://i.imgur.com/a4ZByOz.png)
-   - Repita o mesmo processo para a aba **CSS**
-   - Em seguida, clique em **PUBLICAR** ![publish](https://i.imgur.com/OxXaqUK.png) no topo da página para refletir as mudanças na loja
-   - Teste o processo de checkout na loja
+   - Repita el mismo proceso para la pestaña **CSS**
+   - Luego haga clic en **PUBLICAR** ! [publish](https://i.imgur.com/OxXaqUK.png) en la parte superior de la página para reflejar los cambios en la tienda
+   - Prueba el proceso de pago en la tienda
 
-## Outros Erros de Disponibilidade de Serviço VTEX
+## Otros errores de disponibilidad del servicio VTEX
 
-- **Status do Serviço**: Verifique a página de status da VTEX para quaisquer problemas ou manutenções em andamento que possam estar afetando o processamento de pagamentos em sua Statuspage [VTEX Status](https://status.vtex.com/). Para instruções sobre como verificar o status dos serviços da VTEX, consulte a [Documentação da Central de Ajuda da VTEX](https://help.vtex.com/pt/tutorial/pagina-de-status-da-vtex--gPhqDn9IQ3c67wbJEX3JJ).
+- **Estado del servicio**: Revisa la página de estado de VTEX para cualquier problema o mantenimiento en curso que pueda estar afectando el procesamiento de pagos en tu Statuspage [VTEX Status](https://status.vtex.com/). Para instrucciones sobre cómo verificar el estado de los servicios de VTEX, consulte [Documentación del Centro de ayuda de VTEX](https://help.vtex.com/pt/tutorial/pagina-de-status-da-vtex--gPhqDn9IQ3c67wbJEX3JJ).
 
-## Problemas de Configuração Adyen
+## Problemas de configuración de Adyen
 
-### Chave de API Inválida
+### Clave de API no válida
 
-Regenere a chave de API no painel de administração da Adyen e atualize-a na VTEX. (Veja: [Configuração da Chave de API](adyen-configuration/api-key))
+Regenere la clave API en el panel de administración de Adyen y actualícela en VTEX. (Vea: [Configuración de la clave API](adyen-configuration/api-key))
 
-### Erros de Processamento de Pagamento
+### Errores de procesamiento de pago
 
-Consulte o guia de solução de problemas da Adyen para problemas e soluções comuns.
+Consulte la guía de solución de problemas de Adyen para problemas comunes y soluciones.
 
-### Erro 403
+### Error 403
 
-Existem diferentes cenários que podem gerar um erro 403.
+Hay diferentes escenarios que pueden generar un error 403.
 
-#### Cenário 1) URL Live definida para transações de teste
+#### Escenario 1) URL Live definida para las transacciones de prueba
 
-Para transações de teste, não defina a URL live, caso contrário, você pode enfrentar um erro 403. A URL live deve ser definida apenas para transações de produção. (Veja: [URL Live](adyen-configuration/live-url))
+Para las transacciones de prueba, no defina la URL en vivo, de lo contrario puede enfrentar un error 403. La URL live debe ser definida solo para las transacciones de producción. (Vea: [URL Live](adyen-configuration/live-url))
 
-#### Cenário 2) Nome do Comerciante errado
+#### Escenario 2) Nombre del comerciante equivocado
 
-Certifique-se de que a Conta do Comerciante preenchida na VTEX é exatamente a mesma que aparece na sua Área do Cliente Adyen. É importante seguir até mesmo as letras maiúsculas, espaços e outros caracteres especiais (Veja: [Obtendo Credenciais](adyen-configuration/getting-credentials))
+Asegúrese de que la cuenta del comerciante rellenada en VTEX es exactamente la misma que aparece en su área de cliente de Adyen. Es importante seguir incluso las letras mayúsculas, espacios y otros caracteres especiales (Ver: [Obtención de credenciales](adyen-configuration/getting-credentials))
 
-#### Cenário 3) O ticket para o Suporte da Adyen ainda não foi aberto ou a habilitação não foi feita para o nome de usuário correto
+##### Escenario 3) El ticket para el soporte de Adyen aún no ha sido abierto o la habilitación no se ha hecho para el nombre de usuario correcto
 
-Certifique-se de abrir o ticket para o suporte da Adyen seguindo as instruções que fornecemos no passo xx e que você informa o nome de usuário correto. Lembre-se de que, se por algum motivo novas credenciais forem criadas, a permissão precisa ser concedida pela equipe da Adyen novamente. (Veja: [Papel PCI](adyen-configuration/pci-role))
+Asegúrese de abrir el ticket para el soporte de Adyen siguiendo las instrucciones que le proporcionamos en el paso xx e introduzca el nombre de usuario correcto. Recuerde que si por alguna razón se crean nuevas credenciales, el permiso debe ser otorgado nuevamente por el equipo de Adyen. (Vea: [papel PCI](adyen-configuration/pci-role))

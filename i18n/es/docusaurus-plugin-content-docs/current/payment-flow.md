@@ -1,58 +1,58 @@
 ---
 sidebar_position: 5
-title: Fluxo de Pagamento
+title: Flujo de Pago
 ---
 
 
 ## Autorizando
 
-O fluxo de pagamento começa com a etapa de **Autorização**, que ocorre logo após o checkout. Neste momento, o cliente seleciona o método de pagamento e confirma a compra clicando em **"Finalizar Compra."** A VTEX então coleta todas as informações necessárias — como detalhes do cartão, informações do pedido e outras credenciais — e o conector de pagamento as envia de forma segura para a Adyen. Essa transmissão marca o início da comunicação essencial entre as plataformas, garantindo que todos os elementos da transação sejam corretamente registrados para as próximas etapas.
+El flujo de pago comienza con el paso **Autorización**, que ocurre justo después del pago. En este momento, el cliente selecciona el método de pago y confirma la compra haciendo clic en **"Finalizar Compra."** VTEX luego recopila toda la información necesaria - como los detalles de la tarjeta, información de pedido y otras credenciales - y el conector de pago los envía de forma segura a Adyen. Esta transmisión marca el comienzo de la comunicación esencial entre las plataformas, asegurando que todos los elementos de la transacción se registren correctamente para los próximos pasos.
 
 ## Autorizado
 
-Nesta etapa, a Adyen encaminha as informações recebidas aos bancos emissores, que realizam uma série de verificações. Eles checam a autenticidade dos dados, a disponibilidade de fundos e aplicam protocolos de segurança, como os padrões **PCI DSS**, para prevenir fraudes. O sucesso desta etapa é crucial para que a transação prossiga sem problemas, garantindo que o pagamento possa ser processado com segurança.
+En esta etapa, Adyen envía la información recibida a los bancos emisores, que realizan una serie de verificaciones. Verifican la autenticidad de los datos, la disponibilidad de fondos y aplican protocolos de seguridad como los estándares **PCI DSS** para prevenir el fraude. El éxito de este paso es crucial para que la transacción se lleve a cabo sin problemas, asegurando que el pago pueda procesarse con seguridad.
 
-## Aprovado
+## Aprobado
 
-Uma vez que o banco emissor autoriza a transação, ela atinge a etapa de **Aprovado**. Isso significa que o pagamento foi oficialmente aceito, e todos os critérios de segurança e validação foram atendidos. O cliente é então redirecionado para a página **"Pedido Realizado"**, confirmando que o pedido foi registrado. Além disso, o sistema pode enviar notificações por e-mail ou SMS para reforçar que a compra foi concluída com sucesso.
+Una vez que el banco emisor autoriza la transacción, ésta alcanza el paso de **Aprobado**. Esto significa que el pago ha sido aceptado oficialmente, y todos los criterios de seguridad y validación se han cumplido. El cliente es entonces redirigido a la página **"Pedido realizado"** confirmando que el pedido ha sido registrado. Además, el sistema puede enviar notificaciones por correo electrónico o SMS para reforzar que la compra se ha completado con éxito.
 
-## Negado
+## Denegado
 
-Se a transação não for autorizada pelo banco emissor, o pagamento é recusado. Isso pode acontecer por várias razões, tais como:
-- Fundos insuficientes
-- Suspeita de fraude
-- Detalhes incorretos
-- Restrições no cartão do cliente
+Si la transacción no está autorizada por el banco emisor, el pago es rechazado. Esto puede suceder por varias razones, tales como:
+- Fondos insuficientes
+- Sospecha de fraude
+- Detalles incorrectos
+- Restricciones en la tarjeta del cliente
 
-Quando isso ocorre, o sistema notifica imediatamente o cliente, sugerindo que ele tente um método de pagamento diferente ou entre em contato com seu banco para mais detalhes.
+Cuando esto ocurre, el sistema inmediatamente notifica al cliente, sugiriendo que intente un método de pago diferente o póngase en contacto con su banco para más detalles.
 
 ## Captura
 
-Na etapa de **Captura**, o valor previamente autorizado é retido ou debitado da conta do cliente, dependendo do período de captura configurado. Esse processo pode ocorrer imediatamente ou dentro do prazo estabelecido para cada método de pagamento. Aqui, a **pré-autorização** é convertida em um compromisso financeiro real. O sistema monitora a transação para garantir que o valor debitado corresponda ao valor exato da compra, prevenindo discrepâncias e assegurando a integridade do fluxo de pagamento.
+En el paso de **Captura**, la cantidad previamente autorizada es retenida o debitada de la cuenta del cliente, dependiendo del período de captura configurado. Este proceso puede tener lugar inmediatamente o dentro del plazo establecido para cada método de pago. Aquí, la **pre-autorización** se convierte en un compromiso financiero real. El sistema monitorea la transacción para asegurar que el monto cargado corresponda al valor exacto de la compra, previniendo discrepancias y asegurando la integridad del flujo de pagos.
 
 ## Cancelado
 
-Uma transação pode ser cancelada antes ou depois da captura por diversas razões:
-- A pedido do cliente (se ele decidir cancelar antes da confirmação do pagamento).
-- Pelo lojista (em casos de suspeita de fraude, erros de pedido ou problemas operacionais).
-- Devido a falhas no processo (como erros técnicos ou irregularidades em qualquer etapa).
+Una transacción puede ser cancelada antes o después de la captura por varias razones:
+- A petición del cliente (si decide cancelar antes de confirmar el pago).
+- Por el comerciante (en casos de sospecha de fraude, errores de pedido o problemas operativos).
+- Debido a fallas en el proceso (como errores técnicos o irregularidades en cualquier etapa).
 
-Quando uma transação é cancelada, o sistema impede que o valor seja debitado ou reverte imediatamente a autorização, garantindo que o cliente não seja cobrado.
+Cuando una transacción es cancelada, el sistema impide que se cargue el importe o revierte inmediatamente la autorización, asegurando que el cliente no sea cobrado.
 
-## Liquidação
+## Liquidación
 
-Após a captura, o pagamento passa para a etapa de **Liquidação**, onde o valor debitado é preparado para transferência ao lojista. A liquidação pode ocorrer imediatamente ou somente após a emissão da fatura, dependendo das regras de negócio. Durante esta etapa, são realizadas conciliações financeiras e aplicadas quaisquer taxas ou descontos aplicáveis, garantindo que o valor final seja preciso antes da transferência.
+Después de la captura, el pago pasa a la etapa de **Liquidación**, donde el valor debitado se prepara para transferencia al tendero. La liquidación puede ocurrir inmediatamente o sólo después de la emisión de la factura, dependiendo de las reglas del negocio. Durante esta etapa, se realizan conciliaciones financieras y se aplican las tasas o descuentos aplicables, asegurando que el valor final sea preciso antes de la transferencia.
 
 ## Liquidando
 
-Neste ponto, o processo de liquidação é oficialmente iniciado. A Adyen transfere o valor capturado para a conta do lojista, seguindo todos os requisitos contratuais e regulatórios. Esta etapa envolve uma verificação detalhada dos valores, juntamente com a correta aplicação de comissões e deduções conforme descrito no contrato. Essa conclusão reforça a confiabilidade do sistema integrado entre VTEX e Adyen, proporcionando segurança tanto para o lojista quanto para o cliente.
+En este punto, el proceso de liquidación se inicia oficialmente. Adyen transfiere el valor capturado a la cuenta del comerciante, siguiendo todos los requisitos contractuales y regulatorios. Este paso implica una verificación detallada de los valores, junto con la correcta aplicación de comisiones y deducciones como se describe en el contrato. Esta conclusión refuerza la confiabilidad del sistema integrado entre VTEX y Adyen, proporcionando seguridad tanto para el comerciante como para el cliente.
 
 ## Liquidado
 
-Na etapa final de **Liquidado**, a liquidação do pagamento é concluída com sucesso. Todos os procedimentos — desde a autorização inicial até a transferência de fundos — foram executados corretamente. Como resultado, o valor devido ao lojista torna-se disponível para uso, finalizando de forma eficaz e segura o processo de pagamento.
+En el último paso de **Liquidado**, la liquidación del pago se completa con éxito. Todos los procedimientos - desde la autorización inicial hasta la transferencia de fondos - se ejecutaron correctamente. Como resultado, el valor adeudado al comerciante se pone a disposición para su uso, finalizando de manera eficaz y segura el proceso de pago.
 
 ## Reembolsado
 
-Se necessário, uma transação capturada pode passar pela etapa de **Reembolsado**, onde o valor debitado é devolvido ao cliente. O reembolso pode ser **total ou parcial**, dependendo da política do lojista e do tipo de compra. Esse processo pode ser iniciado tanto pelo cliente quanto pelo lojista, tipicamente em casos de devoluções de produtos, cancelamentos de serviços ou erros de pagamento. Uma vez processado o reembolso, o cliente recebe o valor de volta através do mesmo método de pagamento utilizado na compra.
+Si es necesario, una transacción capturada puede pasar por la etapa de **Reembolsado**, donde el importe debitado se devuelve al cliente. El reembolso puede ser **total o parcial**, dependiendo de la política del comerciante y el tipo de compra. Este proceso puede ser iniciado tanto por el cliente como por el comerciante, típicamente en casos de devoluciones de productos, cancelaciones de servicios o errores de pago. Una vez procesado el reembolso, el cliente recibe el valor de vuelta a través del mismo método de pago utilizado en la compra.
 
 ![paymentflow](https://i.imgur.com/yWGGPkR.png)

@@ -1,14 +1,14 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Actual",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Adyen Configuration": {
-    "message": "Adyen Configuration",
+    "message": "Configuración de Adyen",
     "description": "The label for category Adyen Configuration in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.VTEX Configuration": {
-    "message": "VTEX Configuration",
+    "message": "Configuración de VTEX",
     "description": "The label for category VTEX Configuration in sidebar tutorialSidebar"
   }
 }

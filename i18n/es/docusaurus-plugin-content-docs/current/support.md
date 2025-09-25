@@ -1,36 +1,36 @@
 ---
 sidebar_position: 12
-title: Suporte
+title: Soporte
 ---
 
 
-## Como Contatar o Suporte Adyen
+## Cómo contactar con Adyen
 
-Se você não conseguiu resolver o problema que está enfrentando lendo a documentação, entre em contato com a equipe de Suporte da Adyen. Siga os passos abaixo para abrir um ticket para a Adyen:
+Si no pudiste resolver el problema al que te enfrentas leyendo la documentación, ponte en contacto con el equipo de soporte de Adyen. Siga los pasos a continuación para abrir un ticket para Adyen:
 
-> **Importante**: Lembre-se de incluir os anexos listados abaixo do template, pois são essenciais para uma resolução rápida.
+> **Importante**: Recuerde incluir los archivos adjuntos listados debajo de la plantilla, ya que son esenciales para una resolución rápida.
 
-1.  **Prepare os detalhes do seu ticket**: Use o seguinte template para coletar todas as informações necessárias para uma resposta mais rápida:
+1.  **Prepare los detalles de su ticket**: Utilice la siguiente plantilla para recopilar toda la información necesaria para una respuesta más rápida:
 
     ```
-    Assunto: Conector Adyen V3 VTEX + [Tópico relacionado ao seu problema]
+    Asunto: Conector Adyen V3 VTEX + [Tema relacionado con su problema]
 
-    Descrição:
-    Credenciais Adyen: [Sua Conta da Empresa, Sua Conta de Vendedor] (Veja: [Obtendo Credenciais](../adyen-configuration/getting-credentials.md))
-    Descrição do problema: [Texto descrevendo o comportamento]
-    Detalhes da Conta VTEX: [Nome da sua Conta VTEX e Nome da Subconta (se houver)]
-    Ambiente: [Teste/ Produção/ Ambos]
-    Configuração de captura: [Tipo de captura configurada na VTEX: Captura Automática Imediatamente Após a Autorização do Pagamento/ Atraso de Liquidação Automática: 7 dias]
-    Versão do Plugin: [Versão do plugin em uso, ex: v2.24.4]
-    IDs VTEX: [ID do Pedido VTEX, ID da Transação VTEX] (Veja: [Monitoramento](../monitoring.md))
-    TID / (Adyen) Referência PSP: [Informações de Pagamento/Oferta Adyen] (Veja: [Monitoramento](../monitoring.md))
-    Chamadas de API Adyen: [Requisições e Respostas da API Adyen]
-    Webhooks Adyen: [Logs de Webhook de Autorização e Captura] (Veja: [Webhooks](../adyen-configuration/webhooks.md))
+    Descripción:
+    Credenciales de Adyen: [su cuenta de empresa, su cuenta de vendedor] (vea: [obtener credenciales](../adyen-configuration/getting-credentials.md))
+    Descripción del problema: [Texto que describe el comportamiento]
+    Detalles de la cuenta VTEX: [Nombre de su cuenta VTEX y nombre de la subcuenta (si la hay)]
+    Ambiente: [Prueba/ Producción/ Ambos]
+    Configuración de captura: [Tipo de captura configurada en VTEX: Captura automática inmediatamente después de la autorización del pago/ Retraso de liquidación automática: 7 días]
+    Versión del plugin: [Versión del plugin en uso, ex: v2.24.4]
+    ID de VTEX: [ID de pedido VTEX, ID de transacción VTEX] (Vea: [Monitoreo](../monitoring.md))
+    TID / (Adyen) Referencia PSP: [Información de Pago/Oferta Adyen] (Ver: [Monitoreo](../monitoring.md))
+    Llamadas de la API de Adyen: [Solicitudes y respuestas de la API de Adyen]
+    Webhooks Adyen: [Logs de Webhooks de Autorización y Captura] (Vea: [Webhooks](../adyen-configuration/webhooks.md))
 
-    Anexos:
-    - Logs de Transação VTEX
-    - Vídeo do Comportamento no Checkout
-    - Prints de Erro
+    Archivos adjuntos:
+    - Registros de transacciones VTEX
+    - Video de comportamiento en la caja
+    - Impresiones de error
     ```
 
-2.  **Abrir o ticket de suporte**: Siga as instruções na documentação da Adyen para [contatar o suporte da Adyen](https://docs.adyen.com/support/how-to-reach-adyen-support/).
+2.  **Abrir el ticket de soporte**: siga las instrucciones en la documentación de Adyen para [ponerse en contacto con el soporte de Adyen](https://docs.adyen.com/support/how-to-reach-adyen-support/).

@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-title: Obtendo Credenciais
+title: Obteniendo credenciales
 ---
 
 
-1. Acesse sua [Área do Cliente](https://ca-test.adyen.com/ca/ca/overview/default.shtml) na Adyen.
-2. No canto superior esquerdo, encontre o nome da sua **conta da Empresa** (localizado acima do seletor "Conta do Comerciante").
-3. No seletor de contas, escolha a **Conta do Comerciante** que você pretende usar.
-4. Copie os nomes da sua **conta da Empresa** e da **Conta do Comerciante**. Você precisará deles mais tarde ao configurar o provedor de pagamento na VTEX.
+1. Ve a tu [Área del cliente](https://ca-test.adyen.com/ca/ca/overview/default.shtml) en Adyen.
+2. En la esquina superior izquierda, encuentre el nombre de su **cuenta de empresa** (ubicado sobre el selector "Cuenta de comerciante").
+3. En el selector de cuentas, elija la **Cuenta del comerciante** que desea usar.
+4. Copie los nombres de su **cuenta de empresa** y **cuenta de comerciante**. Los necesitarás más tarde al configurar el proveedor de pagos en VTEX.

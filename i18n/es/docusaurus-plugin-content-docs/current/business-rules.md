@@ -1,164 +1,164 @@
 ---
 sidebar_position: 6
-title: Regras de Negócio
+title: Reglas de Negocio
 ---
 
 
-Este documento apresenta as regras de negócio aplicáveis aos diferentes métodos de pagamento utilizados na plataforma. Cada método segue um fluxo operacional específico, com regras claras para autorização, captura, reembolso e cancelamento. O objetivo é garantir uma experiência segura e eficiente para clientes e lojistas.
+Este documento presenta las reglas de negocio aplicables a los diferentes métodos de pago utilizados en la plataforma. Cada método sigue un flujo de trabajo específico, con reglas claras para la autorización, captura, reembolso y cancelación. El objetivo es garantizar una experiencia segura y eficiente para clientes y comerciantes.
 
-## Cartões de Crédito e Débito
+## Tarjetas de Crédito y Débito
 
-Pagamentos com cartões de crédito e débito envolvem múltiplas etapas, desde a análise de risco até a liquidação da transação.
+Los pagos con tarjetas de crédito y débito implican múltiples pasos, desde el análisis de riesgo hasta la liquidación de la transacción.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona um cartão de crédito ou débito como método de pagamento no checkout.
-2. O sistema realiza uma análise de risco para minimizar fraudes.
-3. Se aprovado, o pagamento é autorizado pela emissora do cartão.
-4. A captura ocorre de acordo com a janela de captura configurada no conector.
-5. A transação é liquidada, e o pedido é atualizado na VTEX.
+1. El cliente selecciona una tarjeta de crédito o débito como método de pago en la caja.
+2. El sistema realiza un análisis de riesgos para minimizar los fraudes.
+3. Si se aprueba, el pago es autorizado por la entidad emisora de la tarjeta.
+4. La captura ocurre de acuerdo con la ventana de captura configurada en el conector.
+5. La transacción se liquida, y el pedido se actualiza en VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Autorização**: Realizada após a análise de risco, que pode ser automática ou manual.
-- **Captura**: Pode ser imediata ou ocorrer dentro do período definido pelo conector.
-- **Reembolso**: Permitido em valores parciais ou totais, dependendo das regras da adquirente.
-- **Cancelamento**: Só pode ser feito antes da captura; após isso, um reembolso é necessário.
-- **3DS (Autenticação Segura)**: Algumas transações podem exigir autenticação via **3D Secure** para maior segurança. Para cartões de débito, a disponibilidade do 3DS depende da rede do cartão e da emissora.
+- **Autorización**: Realizado después del análisis de riesgo, que puede ser automático o manual.
+- **Captura**: Puede ser inmediato o dentro del período definido por el conector.
+- **Reembolso**: Permitido en valores parciales o totales, dependiendo de las reglas del comprador.
+- **Cancelación**: Solo se puede hacer antes de la captura; después de eso, un reembolso es necesario.
+- **3DS (Autenticación Segura)**: Algunas transacciones pueden requerir autenticación vía **3D Secure** para mayor seguridad. Para las tarjetas de débito, la disponibilidad del 3DS depende de la red de la tarjeta y del emisor.
 
-### Tokenização
+### Tokenización
 
-Com a Adyen, você pode armazenar com segurança um ou mais detalhes de pagamento por comprador, com o consentimento do comprador. Isso permite que você ofereça pagamentos por assinatura, recargas automáticas nas contas dos compradores e proporcione aos seus compradores uma experiência de checkout mais rápida usando o cartão armazenado.
+Con Adyen, puede almacenar de forma segura uno o más detalles de pago por comprador, con el consentimiento del comprador. Esto le permite ofrecer pagos por suscripción, recargas automáticas en las cuentas de los compradores y proporcionar a sus compradores una experiencia de pago más rápida usando la tarjeta almacenada.
 
-Referimo-nos a esses detalhes de pagamento salvos como tokens e ao armazenamento dos detalhes de pagamento de um comprador como tokenização.
+Nos referimos a estos detalles de pago guardados como tokens y al almacenamiento de los detalles de pago de un comprador como tokenización.
 
-A tokenização é aplicada nos seguintes cenários:
+La tokenización se aplica en los siguientes escenarios:
 
-- Pagamentos com Cartão de Crédito
-- Pagamentos 3DS
-- Assinaturas
-- Alterar Pedidos
+- Pagos con Tarjeta de Crédito
+- Pagos con 3DS
+- Subscripciones
+- Cambiar pedidos
 
-O processo de tokenização funciona da seguinte forma:
+El proceso de tokenización funciona de la siguiente manera:
 
-1. Quando o primeiro pedido com cartão de crédito é feito e a opção de salvar cartão é selecionada, o conector informará a Adyen para tokenizar o cartão.
-2. A Adyen então responderá com um token que pode ser usado para futuras transações.
-3. Este token é armazenado na VTEX, de modo que para quaisquer transações posteriores do mesmo usuário e cartão de crédito, apenas o CCV e o token são enviados para a Adyen, e as informações do cartão não são transmitidas novamente.
+1. Cuando se hace la primera solicitud con tarjeta de crédito y se selecciona la opción para guardar la tarjeta, el conector informará a Adyen para tokenizar la tarjeta.
+2. Adyen entonces responderá con un token que puede ser utilizado para futuras transacciones.
+3. Este token se almacena en VTEX, por lo que para cualquier transacción posterior del mismo usuario y tarjeta de crédito, solo el CCV y el token se envían a Adyen, y la información de la tarjeta no se transmite de nuevo.
 
 ## Pix
 
-Pix é um método de pagamento instantâneo que permite transferências rápidas e diretas entre contas bancárias.
+Pix es un método de pago instantáneo que permite transferencias rápidas y directas entre cuentas bancarias.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona Pix como método de pagamento no checkout.
-2. O conector gera um **QR Code** dinâmico e o exibe ao cliente.
-3. O cliente realiza o pagamento via aplicativo bancário.
-4. A transação é confirmada em até 10 segundos.
-5. A Adyen envia um webhook para o conector.
-6. O conector aprova o pagamento e atualiza a VTEX, redirecionando o cliente para a página de Pedido Realizado.
+1. El cliente selecciona Pix como método de pago en la compra.
+2. El conector genera un **QR Code** dinámico y lo muestra al cliente.
+3. El cliente realiza el pago a través de la aplicación bancaria.
+4. La transacción se confirma en 10 segundos.
+5. Adyen envía un webhook al conector.
+6. El conector aprueba o paga y actualiza a VTEX, redireccionando o cliente a la página de Pedido Realizado.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Captura**: Sempre imediata, sem janela de captura configurável.
-- **Reembolso**: Apenas reembolsos totais são permitidos; reembolsos parciais não são possíveis.
-- **Cancelamento**: Um pagamento Pix não pode ser cancelado após a conclusão.
-- **Expiração do QR Code**: O código expira em 10 minutos. Se o pagamento for feito após este período, a VTEX não reconhecerá a transação, e o valor será automaticamente reembolsado.
+- **Captura**: Siempre inmediata, sin ventana de captura configurable.
+- **Reembolso**: Solo se permiten reembolsos totales; no son posibles reembolsos parciales.
+- **Cancelación**: Un pago Pix no puede ser cancelado una vez completado.
+- **Caducidad del código QR**: El código expira en 10 minutos. Si el pago se hace después de este período, VTEX no reconocerá la transacción, y el valor será automáticamente reembolsado.
 
-## Boleto Bancário
+## Boleto Bancario
 
-O boleto bancário é uma opção amplamente utilizada para compras de maior valor, mas depende da compensação bancária para validação do pagamento.
+El boleto bancario es una opción ampliamente utilizada para compras de mayor valor, pero depende de la compensación bancaria para la validación del pago.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona Boleto Bancário no checkout.
-2. O conector gera um arquivo PDF com o boleto.
-3. O cliente realiza o pagamento via banco, casa lotérica ou aplicativo bancário.
-4. A compensação ocorre em 1 a 3 dias úteis.
-5. A Adyen confirma o pagamento e envia um webhook para o conector.
-6. O conector aprova o pagamento e atualiza a VTEX.
+1. El cliente selecciona Boleto Bancario en la caja.
+2. El conector genera un archivo PDF con el boleto.
+3. El cliente realiza el pago vía banco, casa de lotería o aplicación bancaria.
+4. La compensación se produce en 1 a 3 días hábiles.
+5. Adyen confirma el pago y envía un webhook al conector.
+6. El conector aprueba el pago y actualiza VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Reembolso**: Não permitido. Se necessário, o lojista deve reembolsar manualmente via transferência bancária.
-- **Validade**: Definida no momento da geração, variando de 1 a 30 dias, dependendo da configuração do conector e das regras bancárias.
+- **Reembolso**: No permitido. Si es necesario, el comerciante debe reembolsar manualmente vía transferencia bancaria.
+- **Validez**: definida en el momento de la generación, variando de 1 a 30 días, dependiendo de la configuración del conector y las reglas bancarias.
 
 ## Apple Pay
 
-Apple Pay é um método de pagamento digital que permite transações seguras através de dispositivos Apple compatíveis.
+Apple Pay es un método de pago digital que permite transacciones seguras a través de dispositivos Apple compatibles.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona Apple Pay como método de pagamento no checkout.
-2. O aplicativo exibe os cartões disponíveis do cliente.
-3. O cliente autentica a transação via Face ID, Touch ID ou senha.
-4. O pagamento segue as regras do cartão selecionado (crédito ou débito).
-5. A Adyen confirma a transação e envia um webhook para o conector.
-6. O conector aprova o pagamento e atualiza a VTEX.
+1. El cliente selecciona Apple Pay como método de pago en la caja.
+2. La aplicación muestra las tarjetas disponibles del cliente.
+3. El cliente autentica la transacción vía Face ID, Touch ID o contraseña.
+4. El pago sigue las reglas de la tarjeta seleccionada (crédito o débito).
+5. Adyen confirma la transacción y envía un webhook al conector.
+6. El conector aprueba el pago y actualiza VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Parcelamento**: Disponível apenas para cartões de crédito.
-- **Autenticação**: Todas as transações exigem autenticação biométrica ou por senha para maior segurança.
+- **Pago a plazos**: Disponible solo para tarjetas de crédito.
+- **Autentificación**: todas las transacciones requieren autentificación biométrica o por contraseña para mayor seguridad.
 
 ## Klarna
 
-Klarna oferece várias opções de pagamento, permitindo que os clientes escolham entre pagamentos imediatos, parcelados ou diferidos.
+Klarna ofrece varias opciones de pago, permitiendo a los clientes elegir entre pagos inmediatos, a plazos o diferidos.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona Klarna como método de pagamento no checkout.
-2. O cliente escolhe entre as opções de pagamento disponíveis: Pagar Agora, Pagar ao Longo do Tempo ou Pagar Mais Tarde.
-3. O sistema redireciona o cliente para a Klarna para autenticação e aprovação da transação.
-4. A Klarna confirma o pagamento e envia um webhook para o conector.
-5. O conector aprova o pagamento e atualiza a VTEX.
+1. El cliente selecciona Klarna como método de pago en la caja.
+2. El cliente elige entre las opciones de pago disponibles: Pagar ahora, Pagar a lo largo del tiempo o Pagar más tarde.
+3. El sistema redirige al cliente a Klarna para la autenticación y aprobación de la transacción.
+4. Klarna confirma el pago y envía un webhook al conector.
+5. El conector aprueba el pago y actualiza VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Pagar Agora**: O valor total é debitado imediatamente da conta bancária ou cartão do cliente.
-- **Pagar ao Longo do Tempo**: O cliente paga em múltiplas parcelas de acordo com as opções da Klarna.
-- **Pagar Mais Tarde**: O cliente tem um período definido para efetuar o pagamento sem juros adicionais (de acordo com as regras da Klarna e do lojista).
-- **Autorização**: Realizada pela Klarna e pode estar sujeita a uma verificação de crédito.
-- **Captura**: Automática após a aprovação do pagamento.
-- **Reembolso**: Permitido em valores parciais ou totais, dependendo das regras da Klarna.
-- **Cancelamento**: Só pode ser feito antes da captura; após isso, um reembolso é necessário.
+- **Pagar ahora**: el importe total se carga inmediatamente de la cuenta bancaria o tarjeta del cliente.
+- **Pagar a lo largo del tiempo**: el cliente paga en múltiples cuotas de acuerdo con las opciones de Klarna.
+- ***Pagar más tarde**: El cliente tiene un plazo definido para hacer el pago sin intereses adicionales (de acuerdo con las reglas de Klarna y del comerciante).
+- ***Autorización**: realizada por Klarna y puede estar sujeta a una verificación de crédito.
+- **Captura**: automática tras la aprobación del pago.
+- **Reembolso**: permitido en valores parciales o totales, dependiendo de las reglas de Klarna.
+- *** Cancelación**: Solo se puede hacer antes de la captura; después de eso, un reembolso es necesario.
 
 ## iDEAL
 
-iDEAL é um método de pagamento amplamente utilizado na Holanda, permitindo transferências bancárias diretas.
+iDEAL es un método de pago ampliamente utilizado en los Países Bajos, permitiendo transferencias bancarias directas.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona iDEAL como método de pagamento no checkout.
-2. O sistema exibe uma lista de bancos participantes para o cliente escolher.
-3. O cliente é redirecionado para seu ambiente bancário para autenticação e aprovação do pagamento.
-4. O banco confirma a transação, e o iDEAL envia um webhook para o conector.
-5. O conector aprova o pagamento e atualiza a VTEX.
+1. El cliente selecciona iDEAL como método de pago en la compra.
+2. El sistema muestra una lista de bancos participantes para que el cliente elija.
+3. El cliente es redirigido a su entorno bancario para autentificación y aprobación del pago.
+4. El banco confirma la transacción, y iDEAL envía un webhook al conector.
+5. El conector aprueba el pago y actualiza VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Captura**: Sempre imediata, sem janela de captura configurável.
-- **Reembolso**: Permitido em valores parciais ou totais, dependendo das regras do banco emissor.
-- **Cancelamento**: Não é possível após a conclusão do pagamento.
-- **Disponibilidade**: Apenas para clientes com contas bancárias em bancos holandeses que participam do iDEAL.
-- **Tempo de Confirmação**: Geralmente ocorre em segundos, garantindo transações rápidas.
+- **Captura**: siempre instantánea, sin ventana de captura configurable.
+- **Reembolso**: permitido en valores parciales o totales, dependiendo de las reglas del banco emisor.
+- **Cancelación**: No es posible después de completar el pago.
+- **Disponibilidad**: Solo para clientes con cuentas bancarias en bancos holandeses que participan en iDEAL.
+- **Tiempo de confirmación**: normalmente en segundos, lo que garantiza transacciones rápidas.
 
 ## P24
 
-P24 é um método de pagamento popular na Polônia, permitindo transferências bancárias diretas e pagamentos rápidos.
+P24 es un método de pago popular en Polonia, que permite transferencias bancarias directas y pagos rápidos.
 
-### Fluxo de Pagamento
+### Flujo de Pagos
 
-1. O cliente seleciona Przelewy24 (P24) no checkout.
-2. O sistema exibe uma lista de bancos participantes para o cliente escolher.
-3. O cliente é redirecionado para seu ambiente bancário para autenticação e aprovação do pagamento.
-4. O banco confirma a transação, e o P24 envia um webhook para o conector.
-5. O conector aprova o pagamento e atualiza a VTEX.
+1. El cliente selecciona Przelewy24 (P24) en la caja.
+2. El sistema muestra una lista de bancos participantes para que el cliente elija.
+3. El cliente es redirigido a su entorno bancario para autentificación y aprobación del pago.
+4. El banco confirma la transacción, y P24 envía un webhook al conector.
+5. El conector aprueba el pago y actualiza VTEX.
 
-### Regras Específicas
+### Reglas Específicas
 
-- **Captura**: Sempre imediata, sem janela de captura configurável.
-- **Reembolso**: Permitido em valores parciais ou totais, dependendo das regras do banco emissor.
-- **Cancelamento**: Não é possível após a conclusão do pagamento.
-- **Disponibilidade**: Apenas para clientes com contas bancárias em bancos poloneses que participam do P24.
-- **Tempo de Confirmação**: Geralmente ocorre em segundos, garantindo transações rápidas.
+- **Captura**: siempre instantánea, sin ventana de captura configurable.
+- **Reembolso**: permitido en valores parciales o totales, dependiendo de las reglas del banco emisor.
+- **Cancelación**: No es posible después de completar el pago.
+- **Disponibilidad**: Solo para clientes con cuentas bancarias en bancos polacos que participan en P24.
+- **Tiempo de confirmación**: normalmente en segundos, lo que garantiza transacciones rápidas.

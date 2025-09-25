@@ -1,21 +1,21 @@
 ---
 sidebar_position: 6
-title: Dados Adicionais
+title: Datos adicionales
 ---
 
 
-Para receber dados extras nos detalhes da transação (como a resposta do adquirente), você deve habilitar campos específicos na sua Área do Cliente Adyen. Embora alguns campos básicos sejam habilitados por padrão, os seguintes são essenciais para reconciliação e suporte:
+Para recibir datos adicionales en los detalles de la transacción (como la respuesta del comprador), debe habilitar campos específicos en su área de cliente de Adyen. Aunque algunos campos básicos están habilitados por defecto, los siguientes son esenciales para la reconciliación y el soporte:
 
 - **Adquirente**
-- **Referência do adquirente**: O NSU (Número Sequencial Único) da transação.
-- **Referência PSP**: O TID (ID da Transação), a referência única da Adyen para a transação.
+- **Referencia del adquirente**: el NSU (número secuencial único) de la transacción.
+-**Referencia PSP**: el TID (ID de la transacción), la única referencia de Adyen para la transacción.
 
-**Para ativar esses campos:**
+**Para activar estos campos:**
 
-1.  Na sua **Área do Cliente Adyen**, vá para **Desenvolvedores** > **Dados Adicionais**.
-2.  Na seção **Transação**, marque os campos essenciais listados acima, além de quaisquer outros que você necessite.
-3.  Clique em **Salvar Configuração**.
+1.  En su **Área de cliente de Adyen**, vaya a **Desarrolladores** > **Datos adicionales**.
+2.  En la sección **Transacción**, marque los campos esenciales enumerados arriba, además de cualquier otro que necesite.
+3.  Haga clic en **Guardar configuración**.
 
-![Dados Adicionais](https://i.imgur.com/0Q7HpuN.png)
+![Datos Adicionales](https://i.imgur.com/0Q7HpuN.png)
 
-> **Importante**: É necessário configurar ambos os ambientes de Teste e Produção para que esses dados sejam enviados.
+> **Importante**: Es necesario configurar ambos entornos de prueba y producción para que estos datos sean enviados.

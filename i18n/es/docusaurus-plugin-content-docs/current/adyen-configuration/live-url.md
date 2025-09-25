@@ -4,6 +4,6 @@ title: URL Live
 ---
 
 
-1. Navegue até Desenvolvedores > URLs de API na barra lateral. Clique no botão Copiar ao lado do campo Prefixo e salve esta informação com segurança.
+1. Dirígete a Desarrolladores > URL de la API en la barra lateral. Haz clic en el botón Copiar al lado del campo Prefijo y guarda esta información de forma segura.
 
-> **Nota**: Este prefixo é necessário apenas para o ambiente live (produção). Para transações de teste, este campo deve ser deixado em branco.
+> **Nota**: Este prefijo es necesario solo para el entorno live (producción). Para las transacciones de prueba, este campo debe dejarse en blanco.

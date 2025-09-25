@@ -1,15 +1,15 @@
 ---
 sidebar_position: 2
-title: Configurando Métodos de Pagamento
+title: Configurando métodos de pago
 ---
 
 
-1. **Navegue até Métodos de Pagamento**: Acesse o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/rules` ou digite **pagamentos** na caixa de pesquisa do Admin.
-2. **Adicionar Condições de Pagamento**: Clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png) no canto superior direito da página para adicionar uma nova Condição de Pagamento.
-3. **Definir o Provedor de Pagamento que processará as Condições**: Configure a condição de pagamento selecionando o [Provedor criado na etapa anterior](configuring-provider) ![seleção do provedor](https://i.imgur.com/xqMT3Ak.png).
-4. **Definir Condições de Pagamento**, como opções de parcelamento, de acordo com os requisitos do seu negócio.
-5. **Ativar Métodos de Pagamento**: Certifique-se de que os métodos de pagamento estão corretamente ativados para que fiquem visíveis para os clientes durante o checkout.
+1. *** Navegue a Métodos de pago**: Vaya al panel de administración de VTEX y vaya a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/rules` o escribe **pagos** en el cuadro de búsqueda del administrador.
+2. **Añadir condiciones de pago**: ¡Haga clic en el botón! [**Añadir método de pago**](https://i.imgur.com/j8KuDvn.png) en la esquina superior derecha de la página para añadir una nueva condición de pago.
+3. **Definir el proveedor de pagos que procesará las condiciones**: ¡Configure la condición de pago seleccionando [Proveedor creado en el paso anterior](configuring-provider)! [selección del proveedor](https://i.imgur.com/xqMT3Ak.png).
+4. **Definir condiciones de pago**, como opciones de pago a plazos, según los requisitos de su negocio.
+5. **Activar métodos de pago**: Asegúrese de que los métodos de pago están activados correctamente para que sean visibles para los clientes durante el proceso de compra.
 
-Para etapas detalhadas sobre a configuração de métodos de pagamento na VTEX, consulte a [Configuração de Pagamentos da VTEX](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3).
+Para pasos detallados sobre la configuración de los métodos de pago en VTEX, consulte [Configuración de pagos de VTEX](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AAGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3).
 
-> **Importante**: Lembre-se também de que, para poder oferecer um método de pagamento ao seu cliente, primeiro ele deve ter sido habilitado em sua conta Adyen. As instruções sobre como fazer isso estão nesta [documentação](https://docs.adyen.com/payment-methods/add-payment-methods/).
+> **Importante**: Recuerde también que para poder ofrecer un método de pago a su cliente, primero debe haber sido habilitado en su cuenta Adyen. Las instrucciones sobre cómo hacer esto están en esta [documentación] (https://docs.adyen.com/payment-methods/add-payment-methods/).

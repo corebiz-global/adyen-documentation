@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-title: Pré-requisitos
+title: Requisitos previos
 ---
 
 
-# Pré-requisitos
+# Requisitos previos
 
-Para seguir este guia, você precisará de:
+Para seguir esta guía, necesitarás:
 
-- Uma conta VTEX com acesso de administrador.
-- Uma conta Adyen.
-- Suas credenciais de API da Adyen. Se você ainda não as possui, veja como [gerar sua chave de API](./adyen-configuration/api-key.md).
+- Una cuenta VTEX con acceso de administrador.
+- Una cuenta de Adyen.
+- Sus credenciales de API de Adyen. Si aún no las tiene, vea cómo [generar su clave de API](./adyen-configuration/api-key.md).

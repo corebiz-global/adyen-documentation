@@ -1,25 +1,25 @@
 ---
 sidebar_position: 8
-title: Monitoramento
+title: Monitoreo
 ---
 
 
-## Acompanhando o Fluxo de Pagamento no Admin da VTEX
+## Seguimiento del flujo de pagos en el administrador de VTEX
 
-1. **Acessar Painel Admin da VTEX**: Faça login na sua conta admin da VTEX.
-2. **Navegar para Pedidos**: Vá para a seção 'Pedidos', onde você pode ver todos os pedidos dos clientes.
-3. **Detalhes do Pedido**: Clique em um pedido específico para visualizar informações detalhadas.
-4. **Status do Pagamento**: Nos detalhes do pedido, verifique o status do pagamento, que mostrará se o pagamento foi aprovado, pendente ou falhou.
-5. **Histórico de Transações**: Para cada pedido, você pode visualizar o histórico de transações, que inclui carimbos de data/hora e detalhes de cada evento de pagamento.
+1. **Acceder al panel de administración de VTEX**: Inicie sesión en su cuenta de administrador de VTEX.
+2. **Ir a Pedidos**: Vaya a la sección 'Pedidos', donde puede ver todos los pedidos de los clientes.
+3. **Detalles del pedido**: Haga clic en un pedido específico para ver información detallada.
+4. **Estado del pago**: En los detalles de la orden, compruebe el estado del pago, que mostrará si el pago ha sido aprobado, pendiente o ha fallado.
+5. **Historial de transacciones**: Para cada pedido, puedes ver el historial de transacciones, que incluye sellos de fecha/hora y detalles de cada evento de pago.
 
-Para mais detalhes, consulte a documentação de [Rastreamento de Pedidos](https://help.vtex.com/tutorial/order-tracking--et0Ei7F3bjcrEmVAR2kKS) da VTEX.
+Para más detalles, consulte la documentación de [Seguimiento de pedidos](https://help.vtex.com/tutorial/order-tracking--et0Ei7F3bjcrEmVAR2kKS) de VTEX.
 
-## Acompanhando o Fluxo de Pagamento no Admin da Conta Adyen
+## Seguimiento del flujo de pagos en el administrador de la cuenta de Adyen
 
-1. **Fazer Login na Adyen**: Acesse o painel admin da sua conta Adyen.
-2. **Navegar para Transações**: Vá para a seção 'Transações' para visualizar todas as transações de pagamento.
-3. **Detalhes da Transação**: Clique em uma transação específica para visualizar informações detalhadas, incluindo método de pagamento, valor e status.
-4. **Ciclo de Vida do Pagamento**: Verifique o ciclo de vida do pagamento, que mostra todas as etapas pelas quais o pagamento passou, desde a autorização até a liquidação.
-5. **Relatórios e Análises**: Utilize as ferramentas de relatório da Adyen para obter insights sobre o processamento de seus pagamentos, incluindo pagamentos bem-sucedidos, recusas e chargebacks.
+1. **Iniciar sesión en Adyen**: Vaya al panel de administración de su cuenta de Adyen.
+2. **Ir a Transacciones**: Vaya a la sección 'Transacciones' para ver todas las transacciones de pago.
+3. **Detalles de la transacción**: Haga clic en una transacción específica para ver información detallada, incluyendo el método de pago, valor y estado.
+4. **Ciclo de vida del pago**: comprueba el ciclo de vida del pago, que muestra todos los pasos por los que ha pasado el pago, desde la autorización hasta la liquidación.
+5. **Reportes y análisis**: Utilice las herramientas de reporte de Adyen para obtener información sobre el procesamiento de sus pagos, incluyendo pagos exitosos, rechazos y chargebacks.
 
-Para mais informações, consulte o [Guia da Área do Cliente](https://docs.adyen.com/account/customer-area) da Adyen.
+Para más información, consulte la [Guía del área de cliente](https://docs.adyen.com/account/customer-area) de Adyen.

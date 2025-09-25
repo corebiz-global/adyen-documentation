@@ -1,32 +1,32 @@
 ---
 sidebar_position: 3
-title: Chave de API
+title: Clave de API
 ---
 
 
-## Configuração de Credenciais de API
+## Configuración de credenciales API
 
-Gere e configure sua chave de API conforme descrito na [Documentação de Plataformas da Adyen](https://docs.adyen.com/development-resources/api-credentials/). Certifique-se de armazenar sua chave de API com segurança e usá-la para autenticar solicitações da VTEX para a Adyen.
+Genere y configure su clave de API como se describe en [Documentación de plataformas de Adyen](https://docs.adyen.com/development-resources/api-credentials/). Asegúrate de almacenar tu clave API de forma segura y usarla para autenticar las solicitudes de VTEX a Adyen.
 
-1. Em sua [Área do Cliente Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml), no menu lateral, clique em **Desenvolvedores** e, em seguida, clique em **Credenciais de API**;
-2. Clique no botão **Criar nova credencial** no lado direito da tela;
-3. Selecione **Usuário de serviço da Web**
-4. Abrirá um pop-up com as Configurações Gerais:
+1. En su [Área de cliente de Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml), en el menú lateral, haga clic en **Desarrolladores** y luego haga clic en **Credenciales de API**;
+2. Haga clic en el botón **Crear nueva credencial** en el lado derecho de la pantalla;
+3. Seleccionar **Usuario del servicio web**
+4. Se abrirá una ventana emergente con la configuración general:
    1. Tipo de Credencial
-      1. Nome de usuário: Este é o seu **Usuário de Serviço da Web** da Adyen. Guarde este ID, pois você precisará dele para abrir um ticket para a Adyen mais tarde (por exemplo, `ws_123456@Company.YourCompany`).
-      2. Descrição: Uma descrição para a chave de API
-5. Em **Configurações do Servidor**, na área de **Autenticação**, selecione **Chave de API** e, em seguida, clique no botão **Gerar Chave de API** para criar uma nova chave e **armazene** esta informação com segurança.
-6. Em **Configurações do Cliente**, na área de **Autenticação**, selecione **Chave do Cliente** e clique no botão **Gerar Chave do Cliente**.
+      1. Nombre de usuario: Este es su **Usuario del servicio web** de Adyen. Guarde este ID porque lo necesitará para abrir un ticket a Adyen más tarde (por ejemplo, ws_123456@Company.YourCompany).
+      2. Descripción: Una descripción de la clave API
+5. En **Configuración del servidor**, en el área de **Autenticación**, seleccione **Clave API** y luego haga clic en el botón **Generar clave API** para crear una nueva clave y **almacenar** esta información de forma segura.
+6. En **Configuración del cliente**, en el área de **Autenticación**, seleccione **Clave del cliente** y haga clic en el botón **Generar clave del cliente**.
 
-### Configurações Adicionais
+### Configuraciones adicionales
 
-- **Adicionar origem permitida**: Adicione todos os domínios que farão solicitações do lado do cliente para a Adyen. Isso inclui seu ambiente VTEX e o domínio de produção de sua loja. Você deve adicionar cada domínio separadamente.
-  - **Exemplo (Ambiente VTEX)**: `https://{{account}}.myvtex.com`
-  - **Exemplo (Domínio de Produção)**: `https://www.yourstore.com`
-- **Permissões**: Recomenda-se selecionar todas as permissões disponíveis para o Usuário de Serviço da Web para garantir a funcionalidade completa e evitar possíveis problemas com novos recursos ou métodos de pagamento.
+- ***Añadir origen permitido**: Añade todos los dominios que harán solicitudes del lado del cliente a Adyen. Esto incluye su entorno VTEX y el dominio de producción de su tienda. Debe agregar cada dominio por separado.
+  - **Ejemplo (entorno VTEX)**: `https://{{account}}.myvtex.com`
+  - **Ejemplo (Dominio de producción)**: `https://www.yourstore.com`
+- **Permisos**: se recomienda seleccionar todos los permisos disponibles para el usuario del servicio web para garantizar la funcionalidad completa y evitar posibles problemas con nuevos recursos o métodos de pago.
 
-![Credenciais de API](https://i.imgur.com/2C6J0FS.png)
+![Credenciales de API](https://i.imgur.com/2C6J0FS.png)
 
-7. Após configurar todas as configurações para a nova credencial, role até o final da página e clique em **Salvar**.
+7. Después de configurar todas las configuraciones para la nueva credencial, desplácese hasta el final de la página y haga clic en **Guardar**.
 
-> **Importante:** Deixar de salvar as alterações após criar a credencial resultará em erros de autenticação (Erro 401). Sempre garanta que você salve a nova credencial antes de prosseguir. Após salvar, recomenda-se reabrir as configurações da credencial para confirmar que todas as alterações foram persistidas corretamente.
+> **Importante:** Dejar de guardar los cambios después de crear la credencial resultará en errores de autenticación (error 401). Asegúrese siempre de guardar la nueva credencial antes de continuar. Después de guardar, se recomienda volver a abrir la configuración de credenciales para confirmar que todos los cambios se han persistido correctamente.

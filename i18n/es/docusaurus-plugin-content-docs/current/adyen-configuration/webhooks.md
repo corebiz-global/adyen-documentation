@@ -4,24 +4,24 @@ title: Webhooks
 ---
 
 
-A configuração do webhook é necessária para que a Adyen possa enviar atualizações de status de pagamento da Adyen para sua conta VTEX.
+La configuración del webhook es necesaria para que Adyen pueda enviar actualizaciones de estado de pago de Adyen a su cuenta VTEX.
 
-Para mais informações, consulte a [documentação](https://docs.adyen.com/development-resources/webhooks/) de Webhooks da Adyen.
+Para más información, consulte la [documentación de Webhooks de Adyen](https://docs.adyen.com/development-resources/webhooks/).
 
-Para configurar o webhook, siga os passos listados abaixo:
+Para configurar el webhook, siga los pasos que se enumeran a continuación:
 
-1. Abra sua [área do Cliente Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml);
-2. No menu do lado esquerdo, vá para **Desenvolvedores** e depois **Webhooks**
-3. Clique no botão **“Criar novo webhook”** no lado direito da tela.
-4. Selecione **Webhook Padrão** e depois clique em **Adicionar**.
-5. Adicione uma descrição ao seu Webhook em **Geral** > **Descrição**.
-6. Vá para a seção de **configuração do Servidor**. No campo **URL**, cole a URL completa do endpoint do webhook para sua loja. Use o seguinte formato, substituindo `{{account}}` pelo nome da sua conta VTEX:
+1. Abra su [área de cliente de Adyen](https://ca-test.adyen.com/ca/ca/overview/default.shtml);
+2. En el menú de la izquierda, ve a **Desarrolladores** y luego **Webhooks**
+3. Haga clic en el botón **"Crear nuevo webhook"** en el lado derecho de la pantalla.
+4. Seleccione **Webhook por defecto** y luego haga clic en **Agregar**.
+5. Añade una descripción a tu webhook en **General** > **Descripción**.
+6. Vaya a la sección de **configuración del servidor**. En el campo **URL**, pegue la URL completa del endpoint del webhook para su tienda. Utilice el siguiente formato, sustituyendo `{{account}}` por el nombre de su cuenta VTEX:
    `https://{{account}}.myvtex.com/_v3/api/webhook/notification`
 
-![Configuração do servidor](https://i.imgur.com/T9LXJK9.png)
+![Configuración del servidor](https://i.imgur.com/T9LXJK9.png)
 
-7. Clique em **Aplicar**
-8. Vá para a seção de **configurações Adicionais**, selecione todas as caixas de seleção e clique em **Aplicar** em cada uma das abas.
-9. Finalmente, clique em **Salvar alterações**.
+7. Haga clic en **Aplicar**
+8. Vaya a la sección de **Ajustes adicionales**, seleccione todas las casillas y haga clic en **Aplicar** en cada una de las pestañas.
+9. Por último, haga clic en **Guardar cambios**.
 
-> **Importante**: É necessário configurar um webhook para cada loja, então se você tiver mais de uma loja, repita os passos de configuração para cada uma delas.
+> **Importante**: Es necesario configurar un webhook para cada tienda, así que si tienes más de una tienda, repite los pasos de configuración para cada una.
