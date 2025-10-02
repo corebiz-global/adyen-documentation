@@ -22,4 +22,4 @@ For more details, refer to the VTEX [Order Tracking](https://help.vtex.com/tutor
 4. **Payment Lifecycle**: Check the lifecycle of the payment, which shows all the stages the payment went through from authorization to settlement.
 5. **Reports and Analytics**: Use Adyen’s reporting tools to get insights into your payment processing, including successful payments, declines, and chargebacks.
 
-For more information, refer to the Adyen [Customer Area Guide](https://docs.adyen.com/account/customer-area).
+For more information, refer to the Adyen [Customer Area Guide](https://docs.adyen.com/platforms/quickstart-guide/customer-area/).

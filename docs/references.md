@@ -1,8 +1,9 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 title: References
 ---
 
+## VTEX Documentation
 
 - [VTEX Registering Gateway Affiliations](https://help.vtex.com/tutorial/registering-gateway-affiliations--tutorials_444)
 - [VTEX Payments Track](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/7pAEMAo4iqNHwYOarZ3zgm)
@@ -11,4 +12,4 @@ title: References
 - [Payment Provider Protocol](https://help.vtex.com/tutorial/payment-provider-protocol--RdsT2spdq80MMwwOeEq0m)
 - [Adyen Documentation](https://docs.adyen.com/)
 - [Adyen Platforms Documentation](https://docs.adyen.com/platforms/)
-- [Adyen Customer Area Guide](https://docs.adyen.com/account/customer-area)
+- [Adyen Customer Area Guide](https://docs.adyen.com/platforms/quickstart-guide/customer-area/)

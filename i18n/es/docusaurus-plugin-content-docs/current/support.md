@@ -33,4 +33,4 @@ Si no pudiste resolver el problema al que te enfrentas leyendo la documentación
     - Impresiones de error
     ```
 
-2.  **Abrir el ticket de soporte**: siga las instrucciones en la documentación de Adyen para [ponerse en contacto con el soporte de Adyen](https://docs.adyen.com/support/how-to-reach-adyen-support/).
+2.  **Abrir el ticket de soporte**: envíe un correo electrónico a support@adyen.com.

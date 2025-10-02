@@ -10,6 +10,6 @@ title: Configurando métodos de pago
 4. **Definir condiciones de pago**, como opciones de pago a plazos, según los requisitos de su negocio.
 5. **Activar métodos de pago**: Asegúrese de que los métodos de pago están activados correctamente para que sean visibles para los clientes durante el proceso de compra.
 
-Para pasos detallados sobre la configuración de los métodos de pago en VTEX, consulte [Configuración de pagos de VTEX](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AAGoEAwDbwJG/6bzGxlz4inf8sKmvZ1c7i3).
+Para pasos detallados sobre la configuración de los métodos de pago en VTEX, consulte [Configuración de pagos de VTEX](https://help.vtex.com/tracks/payments--6GAS7ZzGAm7AGoEAwDbwJG/7pAEMAo4iqNHwYOarZ3zgm).
 
 > **Importante**: Recuerde también que para poder ofrecer un método de pago a su cliente, primero debe haber sido habilitado en su cuenta Adyen. Las instrucciones sobre cómo hacer esto están en esta [documentación] (https://docs.adyen.com/payment-methods/add-payment-methods/).

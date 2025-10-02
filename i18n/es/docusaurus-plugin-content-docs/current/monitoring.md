@@ -22,4 +22,4 @@ Para más detalles, consulte la documentación de [Seguimiento de pedidos](https
 4. **Ciclo de vida del pago**: comprueba el ciclo de vida del pago, que muestra todos los pasos por los que ha pasado el pago, desde la autorización hasta la liquidación.
 5. **Reportes y análisis**: Utilice las herramientas de reporte de Adyen para obtener información sobre el procesamiento de sus pagos, incluyendo pagos exitosos, rechazos y chargebacks.
 
-Para más información, consulte la [Guía del área de cliente](https://docs.adyen.com/account/customer-area) de Adyen.
+Para más información, consulte la [Guía del área de cliente](https://docs.adyen.com/platforms/quickstart-guide/customer-area/) de Adyen.

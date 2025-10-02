@@ -41,7 +41,7 @@ Adyen é uma empresa global de pagamentos que oferece uma plataforma para proces
 | [**Gerenciamento de pedidos**](https://docs.adyen.com/issuing/payment-stages#page-introduction) |         |
 | [Autorização](https://docs.adyen.com/issuing/payment-stages#authorisation)              | Sim     |
 | [Captura](https://docs.adyen.com/issuing/payment-stages#captures)                       | Sim     |
-| [Reembolso](https://docs.adyen.com/issuing/payment-stages#refunds)                      | Sim     |
-| [Reembolso Parcial](https://docs.adyen.com/issuing/payment-stages#refunds)              | Sim     |
+| [Reembolso](https://docs.adyen.com/issuing/payment-stages/#refunded)                      | Sim     |
+| [Reembolso Parcial](https://docs.adyen.com/issuing/payment-stages/#refunded)              | Sim     |
 | **Outros**                                                                              |         |
 | Ponto de Venda                                                                          | Sim     |

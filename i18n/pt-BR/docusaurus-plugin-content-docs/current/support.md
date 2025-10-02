@@ -33,4 +33,4 @@ Se você não conseguiu resolver o problema que está enfrentando lendo a docume
     - Prints de Erro
     ```
 
-2.  **Abrir o ticket de suporte**: Siga as instruções na documentação da Adyen para [contatar o suporte da Adyen](https://docs.adyen.com/support/how-to-reach-adyen-support/).
+2.  **Abrir o ticket de suporte**: envie um e-mail para support@adyen.com.
