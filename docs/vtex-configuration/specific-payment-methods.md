@@ -45,11 +45,81 @@ To process payments with Google Pay on Adyen, set the product or merchant ID of 
 
 1. Create and configure a merchant in Google Pay
 2. Link this merchant to Adyen
+3. In the VTEX Admin, navigate to **Store Settings > Payments > Providers** and edit the Adyen provider.
+4. Fill in the **Google Merchant ID** (Numeric ID obtained from Google) and **Google Merchant Name**.
 
-> **Warning**: In case this step is not done, the possible error the merchant will encounter: 
+> **Warning**: In case the Numeric Merchant ID is not correctly configured in production, the customer will encounter the error: 
 > _OR_BIBED_11 This merchant has not completed registration to use Google Pay API.
 
 For further information, please refer to [Google Pay Component](https://docs.adyen.com/payment-methods/google-pay/web-component/#before-you-go-live).
+
+## PayPal
+
+To offer PayPal through Adyen on VTEX, follow these steps:
+
+1. **In Adyen**:
+   - Enable PayPal in your Adyen Customer Area under **Settings > Payment Methods**.
+   - Ensure your PayPal Merchant ID is linked to your Adyen account.
+
+2. **In VTEX**:
+   - Go to **Store Settings > Payment > Settings**.
+   - In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
+   - Search for **PayPal** and select it.
+   - Select the Adyen provider in the **Process with provider** field.
+   - Set the status to **Active** and click **Save**.
+
+## Affirm
+
+Affirm is configured as a standard payment method in VTEX:
+
+1. **In Adyen**:
+   - Enable **Affirm** in your Adyen Customer Area.
+
+2. **In VTEX**:
+   - Go to **Store Settings > Payment > Settings**.
+   - In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
+   - Search for **Affirm** and select it.
+   - Select the Adyen provider in the **Process with provider** field.
+   - Click **Save**.
+
+## BLIK
+
+1. **In Adyen**:
+   - Enable **BLIK** in your Adyen Customer Area.
+
+2. **In VTEX**:
+   - Go to **Store Settings > Payment > Settings**.
+   - In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
+   - Search for **BLIK** and select it.
+   - Associate it with the Adyen provider.
+   - Save the configuration.
+
+## MultiBanco
+
+1. **In Adyen**:
+   - Enable **MultiBanco** in your Adyen Customer Area.
+
+2. **In VTEX**:
+   - Go to **Store Settings > Payment > Settings**.
+   - In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
+   - Search for **MultiBanco** and select it.
+   - Associate it with the Adyen provider.
+   - Save the configuration.
+   - **Note**: Ensure your store has the email template `multibanco-payment-information` configured to send payment details to customers.
+
+## Bancontact Mobile
+
+This method allows customers to pay using the Bancontact app on their mobile devices via QR code or app redirect.
+
+1. **In Adyen**:
+   - Enable **Bancontact Mobile** in your Adyen Customer Area.
+
+2. **In VTEX**:
+   - Go to **Store Settings > Payment > Settings**.
+   - In the **Payment Conditions** tab, click the ![**Add Payment Method**](https://i.imgur.com/j8KuDvn.png) button.
+   - Search for **Bancontact Mobile** and select it.
+   - Associate it with the Adyen provider.
+   - Save the configuration.
 
 ## Boletos (Bank Slips)
 

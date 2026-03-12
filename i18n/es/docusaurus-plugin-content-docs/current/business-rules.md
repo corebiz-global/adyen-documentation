@@ -3,7 +3,6 @@ sidebar_position: 6
 title: Reglas de Negocio
 ---
 
-
 Este documento presenta las reglas de negocio aplicables a los diferentes métodos de pago utilizados en la plataforma. Cada método sigue un flujo de trabajo específico, con reglas claras para la autorización, captura, reembolso y cancelación. El objetivo es garantizar una experiencia segura y eficiente para clientes y comerciantes.
 
 ## Tarjetas de Crédito y Débito
@@ -56,7 +55,7 @@ Pix es un método de pago instantáneo que permite transferencias rápidas y dir
 3. El cliente realiza el pago a través de la aplicación bancaria.
 4. La transacción se confirma en 10 segundos.
 5. Adyen envía un webhook al conector.
-6. El conector aprueba o paga y actualiza a VTEX, redireccionando o cliente a la página de Pedido Realizado.
+6. El conector aprueba el pago y actualiza VTEX, redireccionando al cliente a la página de Pedido Realizado.
 
 ### Reglas Específicas
 
@@ -101,6 +100,108 @@ Apple Pay es un método de pago digital que permite transacciones seguras a trav
 - **Pago a plazos**: Disponible solo para tarjetas de crédito.
 - **Autentificación**: todas las transacciones requieren autentificación biométrica o por contraseña para mayor seguridad.
 
+## Google Pay
+
+Google Pay permite a los clientes pagar con tarjetas guardadas en su cuenta de Google.
+
+### Flujo de Pago
+
+1. El cliente selecciona Google Pay en el checkout.
+2. El cliente selecciona la tarjeta deseada de su Google Wallet.
+3. El cliente se autentica si es necesario (p. ej., mediante biometría o PIN del dispositivo).
+4. La transacción se procesa a través de Adyen.
+5. Adyen confirma la transacción y envía un webhook al conector.
+6. El conector aprueba el pago y actualiza VTEX.
+
+### Reglas Específicas
+
+- **Cuotas**: Disponible solo para tarjetas de crédito.
+- **Requisitos de Producción**: En producción, se requiere un Merchant ID numérico de Google para evitar errores de integración.
+
+## MultiBanco
+
+MultiBanco es un método de pospago popular en Portugal que permite a los clientes pagar a través de cajeros automáticos o banca en línea.
+
+### Flujo de Pago
+
+1. El cliente selecciona MultiBanco en el checkout.
+2. El conector genera una referencia de pago e uma entidade.
+3. Se envía un correo electrónico al cliente con los detalles del pago.
+4. El cliente completa el pago en un cajero automático o mediante banca en línea utilizando los detalles proporcionados.
+5. Adyen recibe la confirmación del pago y envía un webhook.
+6. El conector aprueba el pago y actualiza VTEX.
+
+### Reglas Específicas
+
+- **Vencimiento**: La referencia de pago tiene un periodo de validez específico (normalmente 3 días).
+- **Reembolso**: Permitido en montos parciales o totales.
+
+## BLIK
+
+BLIK es un sistema de pago móvil en Polonia que permite realizar pagos instantáneos mediante un código de 6 dígitos.
+
+### Flujo de Pago
+
+1. El cliente selecciona BLIK en el checkout.
+2. El cliente introduce un código BLIK de 6 dígitos generado en su aplicación bancaria.
+3. El cliente confirma el pago en su aplicación bancaria.
+4. Adyen confirma la transacción y envía un webhook.
+5. El conector aprueba el pago y actualiza VTEX.
+
+### Reglas Específicas
+
+- **Captura**: Siempre inmediata.
+- **Tiempo de espera**: El cliente tiene un tiempo limitado (normalmente 2 minutos) para confirmar la transacción en la aplicación.
+
+## PayPal
+
+PayPal es una billetera digital global que permite a los clientes pagar utilizando su saldo de PayPal o tarjetas/cuentas bancarias vinculadas.
+
+### Flujo de Pago
+
+1. El cliente selecciona PayPal en el checkout.
+2. El cliente es redirigido al entorno de PayPal para iniciar sesión y aprobar el pago.
+3. Tras la aprobación, el cliente es redirigido de nuevo a la tienda.
+4. Adyen procesa la transacción y envía un webhook.
+5. El conector actualiza el estado del pedido en VTEX.
+
+### Reglas Específicas
+
+- **Reembolso**: El conector admite reembolsos totales y parciales directamente.
+
+## Affirm
+
+Affirm es un servicio "Compre ahora, pague después" (BNPL) que permite a los clientes pagar sus compras en cuotas mensuales fijas.
+
+### Flujo de Pago
+
+1. El cliente selecciona Affirm en el checkout.
+2. El cliente es redirigido a Affirm para elegir un plan de pago y realizar una comprobación de crédito rápida.
+3. Una vez aprobado, el cliente confirma la compra y es redirigido de nuevo a la tienda.
+4. Adyen confirma la transacción y envía un webhook.
+5. El conector actualiza el estado del pedido en VTEX.
+
+### Reglas Específicas
+
+- **Elegibilidad**: La disponibilidad depende de la evaluación crediticia del cliente realizada por Affirm.
+
+## Bancontact Mobile
+
+Bancontact Mobile permite a los clientes pagar utilizando la aplicación Bancontact en sus dispositivos móviles, a menudo mediante un código QR o una redirección de aplicación a aplicación.
+
+### Flujo de Pago
+
+1. El cliente selecciona Bancontact Mobile en el checkout.
+2. Se genera un código QR para que el cliente lo escanee con la aplicación Bancontact, o se le redirige a la aplicación si está en un dispositivo móvil.
+3. El cliente confirma el pago en la aplicación.
+4. Adyen confirma la transacción y envía un webhook.
+5. El conector actualiza el estado del pedido en VTEX.
+
+### Reglas Específicas
+
+- **Captura**: Siempre inmediata.
+- **Reembolso**: Permitido en montos parciales o totales.
+
 ## Klarna
 
 Klarna ofrece varias opciones de pago, permitiendo a los clientes elegir entre pagos inmediatos, a plazos o diferidos.
@@ -117,11 +218,11 @@ Klarna ofrece varias opciones de pago, permitiendo a los clientes elegir entre p
 
 - **Pagar ahora**: el importe total se carga inmediatamente de la cuenta bancaria o tarjeta del cliente.
 - **Pagar a lo largo del tiempo**: el cliente paga en múltiples cuotas de acuerdo con las opciones de Klarna.
-- ***Pagar más tarde**: El cliente tiene un plazo definido para hacer el pago sin intereses adicionales (de acuerdo con las reglas de Klarna y del comerciante).
-- ***Autorización**: realizada por Klarna y puede estar sujeta a una verificación de crédito.
+- **Pagar más tarde**: El cliente tiene un plazo definido para hacer el pago sin intereses adicionales (de acuerdo con las reglas de Klarna y del comerciante).
+- **Autorización**: realizada por Klarna y puede estar sujeta a una verificación de crédito.
 - **Captura**: automática tras la aprobación del pago.
 - **Reembolso**: permitido en valores parciales o totales, dependiendo de las reglas de Klarna.
-- *** Cancelación**: Solo se puede hacer antes de la captura; después de eso, un reembolso es necesario.
+- **Cancelación**: Solo se puede hacer antes de la captura; después de eso, un reembolso es necesario.
 
 ## iDEAL
 

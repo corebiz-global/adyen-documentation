@@ -43,13 +43,83 @@ Se a configuração estiver correta, você deverá ver “Apple Pay” ao pesqui
 
 Para processar pagamentos com Google Pay na Adyen, defina o ID do produto ou comerciante da Conta Google na plataforma Adyen (não se aplica ao ambiente de teste).
 
-1. Crie e configure um comerciante no Google Pay
-2. Vincule este comerciante à Adyen
+1. Crie e configure um comerciante no Google Pay.
+2. Vincule este comerciante à Adyen.
+3. No Admin VTEX, navegue até **Configurações da Loja > Pagamentos > Provedores** e edite o provedor Adyen.
+4. Preencha o **Google Merchant ID** (ID Numérico obtido do Google) e o **Google Merchant Name**.
 
-> **Aviso**: Caso esta etapa não seja feita, o possível erro que o comerciante encontrará:
+> **Aviso**: Caso o ID Numérico do Comerciante não esteja configurado corretamente em produção, o cliente encontrará o erro: 
 > _OR_BIBED_11 Este comerciante não concluiu o registro para usar a API do Google Pay.
 
 Para mais informações, consulte [Componente Google Pay](https://docs.adyen.com/payment-methods/google-pay/web-component/#before-you-go-live).
+
+## PayPal
+
+Para oferecer o PayPal através da Adyen na VTEX, siga estes passos:
+
+1. **Na Adyen**:
+   - Habilite o PayPal em sua Área do Cliente Adyen em **Configurações > Métodos de Pagamento**.
+   - Certifique-se de que seu ID de Comerciante PayPal esteja vinculado à sua conta Adyen.
+
+2. **Na VTEX**:
+   - Vá para **Configurações da Loja > Pagamentos > Configurações**.
+   - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
+   - Pesquise por **PayPal** e selecione-o.
+   - Selecione o provedor Adyen no campo **Processar com o provedor**.
+   - Defina o status como **Ativo** e clique em **Salvar**.
+
+## Affirm
+
+A Affirm é configurada como um método de pagamento padrão na VTEX:
+
+1. **Na Adyen**:
+   - Habilite o **Affirm** em sua Área do Cliente Adyen.
+
+2. **Na VTEX**:
+   - Vá para **Configurações da Loja > Pagamentos > Configurações**.
+   - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
+   - Pesquise por **Affirm** e selecione-o.
+   - Selecione o provedor Adyen no campo **Processar com o provedor**.
+   - Clique em **Salvar**.
+
+## BLIK
+
+1. **Na Adyen**:
+   - Habilite o **BLIK** em sua Área do Cliente Adyen.
+
+2. **Na VTEX**:
+   - Vá para **Configurações da Loja > Pagamentos > Configurações**.
+   - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
+   - Pesquise por **BLIK** e selecione-o.
+   - Associe-o ao provedor Adyen.
+   - Salve a configuração.
+
+## MultiBanco
+
+1. **Na Adyen**:
+   - Habilite o **MultiBanco** em sua Área do Cliente Adyen.
+
+2. **Na VTEX**:
+   - Vá para **Configurações da Loja > Pagamentos > Configurações**.
+   - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
+   - Pesquise por **MultiBanco** e selecione-o.
+   - Associe-o ao provedor Adyen.
+   - Salve a configuração.
+   - **Nota**: Certifique-se de que sua loja tenha o template de e-mail `multibanco-payment-information` configurado para enviar os detalhes do pagamento aos clientes.
+
+## Bancontact Mobile
+
+Este método permite que os clientes paguem usando o aplicativo Bancontact em seus dispositivos móveis via código QR ou redirecionamento de aplicativo.
+
+1. **Na Adyen**:
+   - Habilite o **Bancontact Mobile** em sua Área do Cliente Adyen.
+
+2. **Na VTEX**:
+   - Vá para **Configurações da Loja > Pagamentos > Configurações**.
+   - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
+   - Pesquise por **Bancontact Mobile** e selecione-o.
+   - Associe-o ao provedor Adyen.
+   - Salve a configuração.
 
 ## Boletos
 
@@ -57,7 +127,7 @@ Para mais informações, consulte [Componente Google Pay](https://docs.adyen.com
 
 1. No Admin VTEX, navegue para Configurações da Loja > Pagamentos > Provedores, ou digite **Provedores** na barra de pesquisa superior.
 2. Na tela de Provedores, clique no botão **Novo Provedor**.
-3. Use a barra de pesquisa para encontrar o provedor responsável por processar o boleto.
+3. Use la barra de pesquisa para encontrar o provedor responsável por processar o boleto.
 4. Preencha os campos do formulário com os dados fornecidos pelo seu provedor ou banco.
 5. Clique em **Salvar**.
 
@@ -127,7 +197,7 @@ Permite que os clientes paguem por suas compras imediatamente via transferência
   - Configure as configurações do método de pagamento de acordo com os requisitos do seu negócio.
 
 - **Na VTEX**:
-  - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` ou digite **pagamentos** na caixa de pesquisa do Admin e clique em **Pagamentos**.
+  - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` or digite **pagamentos** na caixa de pesquisa do Admin e clique em **Pagamentos**.
   - na tela **Métodos de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png) no canto superior direito da página.
   - Encontre a opção **Klarna** na lista de métodos de pagamento disponíveis e clique nela.
   - Na tela **Adicionar Método de Pagamento**, selecione o **Provedor** na caixa de seleção "Processar com o Provedor".
@@ -143,7 +213,7 @@ Permite que os clientes paguem por suas compras em 30 dias sem juros. Para confi
   - Habilite o **Klarna Pay Later** em sua conta Adyen.
   - Configure as configurações do método de pagamento de acordo com os requisitos do seu negócio.
 
-- **Na VTEX**:
+- **In VTEX**:
   - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` ou digite **pagamentos** na caixa de pesquisa do Admin e clique em **Pagamentos**.
   - na tela **Métodos de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png) no canto superior direito da página.
   - Encontre a opção **Klarna Pay Later** na lista de métodos de pagamento disponíveis e clique nela.
@@ -157,3 +227,4 @@ Permite que os clientes paguem por suas compras em 30 dias sem juros. Para confi
 
 ![IDeal](https://i.imgur.com/EjnvuSR.png)
 ![iDeal V3](https://i.imgur.com/3Qt1408.png)
+

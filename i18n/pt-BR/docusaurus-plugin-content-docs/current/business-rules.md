@@ -101,6 +101,108 @@ Apple Pay é um método de pagamento digital que permite transações seguras at
 - **Parcelamento**: Disponível apenas para cartões de crédito.
 - **Autenticação**: Todas as transações exigem autenticação biométrica ou por senha para maior segurança.
 
+## Google Pay
+
+O Google Pay permite que os clientes paguem usando cartões salvos em sua conta do Google.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona o Google Pay no checkout.
+2. O cliente seleciona o cartão desejado em sua Carteira do Google.
+3. O cliente autentica, se necessário (por exemplo, via biometria ou PIN do dispositivo).
+4. A transação é processada via Adyen.
+5. A Adyen confirma a transação e envia um webhook para o conector.
+6. O conector aprova o pagamento e atualiza a VTEX.
+
+### Regras Específicas
+
+- **Parcelamento**: Disponível apenas para cartões de crédito.
+- **Requisitos de Produção**: Em produção, é necessário um Merchant ID Numérico do Google para evitar erros de integração.
+
+## MultiBanco
+
+O MultiBanco é um método de pós-pagamento popular em Portugal que permite aos clientes pagar via caixa eletrônico (ATM) ou banco online.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona o MultiBanco no checkout.
+2. O conector gera uma referência de pagamento e uma entidade.
+3. Um e-mail é enviado ao cliente com os detalhes do pagamento.
+4. O cliente conclui o pagamento em um caixa eletrônico ou via banco online usando os detalhes fornecidos.
+5. A Adyen recebe a confirmação do pagamento e envia um webhook.
+6. O conector aprova o pagamento e atualiza a VTEX.
+
+### Regras Específicas
+
+- **Expiração**: A referência de pagamento tem um período de validade específico (geralmente 3 dias).
+- **Reembolso**: Permitido em valores parciais ou totais.
+
+## BLIK
+
+O BLIK é um sistema de pagamento móvel na Polônia que permite pagamentos instantâneos usando um código de 6 dígitos.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona o BLIK no checkout.
+2. O cliente insere um código BLIK de 6 dígitos gerado em seu aplicativo bancário.
+3. O cliente confirma o pagamento em seu aplicativo bancário.
+4. A Adyen confirma a transação e envia um webhook.
+5. O conector aprova o pagamento e atualiza a VTEX.
+
+### Regras Específicas
+
+- **Captura**: Sempre imediata.
+- **Timeout**: O cliente tem um tempo limitado (geralmente 2 minutos) para confirmar a transação no aplicativo.
+
+## PayPal
+
+O PayPal é uma carteira digital global que permite aos clientes pagar usando seu saldo do PayPal ou cartões/contas bancárias vinculadas.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona o PayPal no checkout.
+2. O cliente é redirecionado para o ambiente do PayPal para fazer login e aprovar o pagamento.
+3. Após a aprovação, o cliente é redirecionado de volta para a loja.
+4. A Adyen processa a transação e envia um webhook.
+5. O conector atualiza o status do pedido na VTEX.
+
+### Regras Específicas
+
+- **Reembolso**: Reembolsos totais e parciais são suportados diretamente pelo conector.
+
+## Affirm
+
+Affirm é um serviço "Compre agora, pague depois" (BNPL) que permite aos clientes pagar por compras em parcelas mensais fixas.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona Affirm no checkout.
+2. O cliente é redirecionado para a Affirm para escolher um plano de pagamento e realizar uma rápida verificação de crédito.
+3. Uma vez aprovado, o cliente confirma a compra e é redirecionado de volta para a loja.
+4. A Adyen confirma a transação e envia um webhook.
+5. O conector atualiza o status do pedido na VTEX.
+
+### Regras Específicas
+
+- **Elegibilidade**: A disponibilidade depende da avaliação de crédito do cliente pela Affirm.
+
+## Bancontact Mobile
+
+O Bancontact Mobile permite que os clientes paguem usando o aplicativo Bancontact em seus dispositivos móveis, geralmente via código QR ou redirecionamento de aplicativo para aplicativo.
+
+### Fluxo de Pagamento
+
+1. O cliente seleciona o Bancontact Mobile no checkout.
+2. Um código QR é gerado para o cliente escanear com o aplicativo Bancontact, ou ele é redirecionado para o aplicativo se estiver em um dispositivo móvel.
+3. O cliente confirma o pagamento no aplicativo.
+4. A Adyen confirma a transação e envia um webhook.
+5. O conector atualiza o status do pedido na VTEX.
+
+### Regras Específicas
+
+- **Captura**: Sempre imediata.
+- **Reembolso**: Permitido em valores parciais ou totais.
+
 ## Klarna
 
 Klarna oferece várias opções de pagamento, permitindo que os clientes escolham entre pagamentos imediatos, parcelados ou diferidos.

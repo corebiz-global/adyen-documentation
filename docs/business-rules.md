@@ -101,6 +101,108 @@ Apple Pay is a digital payment method that enables secure transactions through c
 - **Installments**: Available only for credit cards.
 - **Authentication**: All transactions require biometric or passcode authentication for added security.
 
+## Google Pay
+
+Google Pay allows customers to pay using cards saved to their Google Account.
+
+### Payment Flow
+
+1. The customer selects Google Pay at checkout.
+2. The customer selects the desired card from their Google Wallet.
+3. The customer authenticates if required (e.g., via biometrics or device PIN).
+4. The transaction is processed through Adyen.
+5. Adyen confirms the transaction and sends a webhook to the connector.
+6. The connector approves the payment and updates VTEX.
+
+### Specific Rules
+
+- **Installments**: Available only for credit cards.
+- **Production Requirements**: In production, a Numeric Merchant ID from Google is required to avoid integration errors.
+
+## MultiBanco
+
+MultiBanco is a popular post-payment method in Portugal that allows customers to pay via ATM or online banking.
+
+### Payment Flow
+
+1. The customer selects MultiBanco at checkout.
+2. The connector generates a payment reference and entity.
+3. An email is sent to the customer with the payment details.
+4. The customer completes the payment at an ATM or via online banking using the provided details.
+5. Adyen receives the payment confirmation and sends a webhook.
+6. The connector approves the payment and updates VTEX.
+
+### Specific Rules
+
+- **Expiration**: The payment reference has a specific validity period (usually 3 days).
+- **Refund**: Allowed in partial or full amounts.
+
+## BLIK
+
+BLIK is a mobile payment system in Poland that allows for instant payments using a 6-digit code.
+
+### Payment Flow
+
+1. The customer selects BLIK at checkout.
+2. The customer enters a 6-digit BLIK code generated in their banking app.
+3. The customer confirms the payment within their banking app.
+4. Adyen confirms the transaction and sends a webhook.
+5. The connector approves the payment and updates VTEX.
+
+### Specific Rules
+
+- **Capture**: Always immediate.
+- **Timeout**: The customer has a limited time (usually 2 minutes) to confirm the transaction in the app.
+
+## PayPal
+
+PayPal is a global digital wallet that allows customers to pay using their PayPal balance or linked cards/bank accounts.
+
+### Payment Flow
+
+1. The customer selects PayPal at checkout.
+2. The customer is redirected to the PayPal environment to log in and approve the payment.
+3. After approval, the customer is redirected back to the store.
+4. Adyen processes the transaction and sends a webhook.
+5. The connector updates the order status in VTEX.
+
+### Specific Rules
+
+- **Refund**: Full and partial refunds are supported directly through the connector.
+
+## Affirm
+
+Affirm is a "Buy Now, Pay Later" (BNPL) service that allows customers to pay for purchases in fixed monthly installments.
+
+### Payment Flow
+
+1. The customer selects Affirm at checkout.
+2. The customer is redirected to Affirm to choose a payment plan and complete a quick credit check.
+3. Once approved, the customer confirms the purchase and is redirected back to the store.
+4. Adyen confirms the transaction and sends a webhook.
+5. The connector updates the order status in VTEX.
+
+### Specific Rules
+
+- **Eligibility**: Availability depends on the customer's credit evaluation by Affirm.
+
+## Bancontact Mobile
+
+Bancontact Mobile allows customers to pay using the Bancontact app on their mobile devices, often via a QR code or app-to-app redirect.
+
+### Payment Flow
+
+1. The customer selects Bancontact Mobile at checkout.
+2. A QR code is generated for the customer to scan with the Bancontact app, or they are redirected to the app if on a mobile device.
+3. The customer confirms the payment within the app.
+4. Adyen confirms the transaction and sends a webhook.
+5. The connector updates the order status in VTEX.
+
+### Specific Rules
+
+- **Capture**: Always immediate.
+- **Refund**: Allowed in partial or full amounts.
+
 ## Klarna
 
 Klarna offers various payment options, allowing customers to choose between immediate, installment, or deferred payments.
