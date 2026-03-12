@@ -1,10 +1,10 @@
 ---
 sidebar_position: 5
-title: Papel PCI
+title: Función PCI
 ---
 
 
-Para que los pagos con tarjeta de crédito se procesen correctamente, el usuario del servicio web requiere un permiso específico llamado **papel de pago API PCI**. Si este rol no está habilitado, las transacciones fallarán con un error 403.
+Para que los pagos con tarjeta de crédito se procesen correctamente, el usuario del servicio web requiere un permiso específico llamado **Función de Pagos PCI vía API**. Si este rol no está habilitado, las transacciones fallarán con un error 403.
 
 Este papel debe ser solicitado al equipo de soporte de Adyen abriendo un ticket.
 
@@ -12,7 +12,7 @@ Este papel debe ser solicitado al equipo de soporte de Adyen abriendo un ticket.
 
 1.  Siga las instrucciones en la documentación de Adyen para [ponerse en contacto con el soporte de Adyen](../support.md).
 2.  Al crear el ticket, use los siguientes detalles:
-    *   **Tema**: `Habilitar papel de pagos PCI API`
+    *   **Tema**: `Habilitar Función de Pagos PCI vía API`
     *   **Descripción**: Informe que está configurando Adyen V3 en VTEX y proporcione el **Usuario de servicio web** que está usando (este es el valor del campo **Nombre de usuario** en el panel de Adyen, por ejemplo, `ws_123456@Company.YourCompany`).
 
 Este es el mismo usuario creado en el paso de [Clave API](./api-key.md).

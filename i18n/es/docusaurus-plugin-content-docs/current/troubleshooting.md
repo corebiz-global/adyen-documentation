@@ -112,4 +112,4 @@ Asegúrese de que la cuenta del comerciante rellenada en VTEX es exactamente la 
 
 ##### Escenario 3) El ticket para el soporte de Adyen aún no ha sido abierto o la habilitación no se ha hecho para el nombre de usuario correcto
 
-Asegúrese de abrir el ticket para el soporte de Adyen siguiendo las instrucciones que le proporcionamos en el paso xx e introduzca el nombre de usuario correcto. Recuerde que si por alguna razón se crean nuevas credenciales, el permiso debe ser otorgado nuevamente por el equipo de Adyen. (Vea: [papel PCI](adyen-configuration/pci-role))
+Asegúrese de abrir el ticket para el soporte de Adyen siguiendo las instrucciones que le proporcionamos en el paso xx e introduzca el nombre de usuario correcto. Recuerde que si por alguna razón se crean nuevas credenciales, el permiso debe ser otorgado nuevamente por el equipo de Adyen. (Vea: [función PCI](adyen-configuration/pci-role))
