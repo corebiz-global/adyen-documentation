@@ -27,6 +27,8 @@ Los pagos con tarjetas de crédito y débito implican múltiples pasos, desde el
 
 ### Tokenización
 
+> **Importante**: Contamos con una versión específica del conector para la tokenización. Si opta por trabajar con tokenización, póngase en contacto con nuestro equipo de soporte para asegurarse de que la versión correcta esté instalada en su entorno VTEX.
+
 Con Adyen, puede almacenar de forma segura uno o más detalles de pago por comprador, con el consentimiento del comprador. Esto le permite ofrecer pagos por suscripción, recargas automáticas en las cuentas de los compradores y proporcionar a sus compradores una experiencia de pago más rápida usando la tarjeta almacenada.
 
 Nos referimos a estos detalles de pago guardados como tokens y al almacenamiento de los detalles de pago de un comprador como tokenización.

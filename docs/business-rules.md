@@ -28,6 +28,8 @@ Payments with credit and debit cards involve multiple steps, from risk analysis 
 
 ### Tokenization
 
+> **Important**: We have a specific version of the connector for tokenization. If you choose to work with tokenization, please contact our support team to ensure the correct version is installed in your VTEX environment.
+
 With Adyen, you can securely store one or more payment details per shopper, with the shopper's consent. This allows you to offer subscription payments, automatic top-ups to shopper accounts, and give your shoppers a faster checkout experience by using their stored card.
 
 We refer to these saved payment details as tokens and storing a shopper's payment details as tokenization.
