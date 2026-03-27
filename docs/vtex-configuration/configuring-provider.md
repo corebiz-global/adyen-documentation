@@ -17,13 +17,13 @@ Ensure you have the necessary permissions and details of the Adyen payment gatew
 1. Go to the store's Admin page `https://{{account}}.myvtex.com/admin/`.
 2. In the VTEX Admin, go to **Store Settings > Payments > Providers**, or type **Providers** in the search bar at the top of the page.
 3. On the providers screen, click the New provider button.
-   ![Providers](https://i.imgur.com/mjkoQTi.png)
+   ![Providers](/img/vtex-providers-list.png)
 4. Look for **Adyen**.
-   ![Adyen](https://i.imgur.com/kIo1GBC.png)
+   ![Adyen](/img/vtex-adyen-search.png)
 5. Select **AdyenV3** from the list of available payment providers.
 6. In **App Key** (your Merchant Account Name) field, fill in the name of your Merchant account you grabbed during the [Getting Company and Merchant account credentials](../adyen-configuration/getting-credentials.md) step.
 7. In the **App Token** (API Key) field, paste the API Key generated in the [API Key](../adyen-configuration/api-key.md) step.
-   ![API Credentials](https://i.imgur.com/Ih85Tus.png)
+   ![API Credentials](/img/vtex-api-credentials-tab.png)
 8. Optionally, set an identification name by filling the **Name** field in **Basic Information**.
 9. If your store is not yet in production and you are running tests, you may **Enable test mode** in Payment Control.
 10. In the **Live URL** field, fill in the URL prefix you’ve gotten in the [Live URL](../adyen-configuration/live-url.md) section.
@@ -31,10 +31,10 @@ Ensure you have the necessary permissions and details of the Adyen payment gatew
 11. In the **Company name**, enter the Company name as set in the Adyen account, the one you saved in the [Getting Company and Merchant account credentials](../adyen-configuration/getting-credentials.md) step.
 12. The **Live POS URL** field is used only for Sales APP.
 13. In **Client key** field, fill in the Client key you got on Step 6 of the [API Key](../adyen-configuration/api-key.md) section.
-    ![API Credentials](https://i.imgur.com/1W8F8FE.png)
+    ![API Credentials](/img/vtex-api-key-field.png)
 14. Click **Save**.
 
-![AdyenV3](https://i.imgur.com/uleOsY1.png)
+![AdyenV3](/img/vtex-adyen-v3-installed.png)
 
 For further information on the data to be filled in, please refer to the [Adyen API Credentials](https://docs.adyen.com/development-resources/api-credentials/) documentation.
 

@@ -17,7 +17,7 @@ This role must be requested from the Adyen support team by opening a ticket.
 
 This is the same user created in the [API Key](./api-key.md) step.
 
-![User Role](https://i.imgur.com/yGKCsOH.png)
+![User Role](/img/adyen-user-role.png)
 
 The username can also be found following the steps below:
 Go to your [Adyen Customer Area](https://ca-test.adyen.com/ca/ca/overview/default.shtml);
@@ -25,5 +25,5 @@ In the left side menu, click on “Developers” and then “API credential”;
 Select the username being used;
 Under the “General Settings” section you will find the full Username, copy this information and share it with the Adyen Support team in the ticket you’re creating.
 
-![Configure API Credential](https://i.imgur.com/X4EKrk0.png)
+![Configure API Credential](/img/adyen-configure-api-credential.png)
 > **Important**: This step applies to Test and Live environments. Every time a new credential is created, the permission will need to be granted for that specific username as well.

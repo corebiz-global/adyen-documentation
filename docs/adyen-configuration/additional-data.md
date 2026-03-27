@@ -16,6 +16,6 @@ To receive extra data in transaction details (such as the acquirer response), yo
 2.  In the **Transaction** section, check the essential fields listed above, plus any others you require.
 3.  Click **Save Configuration**.
 
-![Additional Data](https://i.imgur.com/0Q7HpuN.png)
+![Additional Data](/img/adyen-additional-data.png)
 
 > **Important**: It is required to configure both Test and Production environments for this data to be sent.

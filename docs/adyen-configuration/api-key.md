@@ -25,7 +25,7 @@ Generate and configure your API key as described in the [Adyen Platforms Documen
   - **Example (Production Domain)**: `https://www.yourstore.com`
 - **Permissions**: It is recommended to select all available permissions for the Web Service User to ensure full functionality and avoid potential issues with new features or payment methods.
 
-![API Credentials](https://i.imgur.com/2C6J0FS.png)
+![API Credentials](/img/adyen-api-credentials.png)
 
 7. After configuring all settings for the new credential, scroll to the bottom of the page and click **Save**.
 

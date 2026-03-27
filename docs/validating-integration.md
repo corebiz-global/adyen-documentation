@@ -34,11 +34,11 @@ Before proceeding with testing, ensure that the following steps have been comple
 
 To check the status of the test transaction, follow these steps:
 
-1.  **VTEX Admin Panel**: go to `https://{{account}}.myvtex.com/admin/` and navigate to the Orders section or search **orders** in the admin search box. ![orders](https://i.imgur.com/iOPV29h.png)
+1.  **VTEX Admin Panel**: go to `https://{{account}}.myvtex.com/admin/` and navigate to the Orders section or search **orders** in the admin search box. ![orders](/img/vtex-admin-orders.png)
 2.  **Order Details**: Click on the **Order Id** to view the details of an Order.
-3.  **Payment Status**: In the order details, in the right corner, you can see the payment information for that Order. ![payment](https://i.imgur.com/Is2kZn2.png)
-4.  **Transaction History**: Click **See Details** to go to the **Transaction Details** page. There you can check the details for all the steps of the [Payment Processment Flow](payment-flow) ![transaction](https://i.imgur.com/B2vkZFB.png)
+3.  **Payment Status**: In the order details, in the right corner, you can see the payment information for that Order. ![payment](/img/vtex-payment-status.png)
+4.  **Transaction History**: Click **See Details** to go to the **Transaction Details** page. There you can check the details for all the steps of the [Payment Processment Flow](payment-flow) ![transaction](/img/vtex-transaction-details.png)
     *   At the top of the page, you can see the **Payment Information**:
-        ![payment information](https://i.imgur.com/g24ciyo.png)
+        ![payment information](/img/vtex-payment-info-box.png)
     > **IMPORTANT**: When a payment is Authorized, you can see the **TID**, which is the ID in the Adyen system for that transaction. In Adyen the **TID** is referred as **PSP Reference** and you can search for this ID to check the transaction details at `https://{{account}}.adyen.com/ca/ca/offers/showList.shtml`
-        ![transactions](https://i.imgur.com/in37FYK.png)
+        ![transactions](/img/vtex-transactions-list.png)

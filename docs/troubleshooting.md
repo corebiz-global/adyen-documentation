@@ -77,7 +77,7 @@ To complete a purchase with two cards, you must first finalize the purchase with
 
    - Go to `https://{{account}}.myvtex.com/admin/vtex-checkout-ui-custom/` or click on the **Checkout UI Custom** option in the search results list
      ![checkout-ui-custom](https://i.imgur.com/oIR1jF7.png)
-   - In the **Checkout UI Custom** screen, click on the **Javascript** tab ![settings](https://i.imgur.com/Q4NM7KN.png)
+   - In the **Checkout UI Custom** screen, click on the **Javascript** tab ![settings](/img/troubleshooting-js-tab-icon.png)
    - In the **Javascript** tab, go to the bottom of the page and deactivate the javascript using the toggle  
      ![toggle](https://i.imgur.com/a4ZByOz.png)
    - Repeat the same process for the **CSS** tab
@@ -112,4 +112,4 @@ Make sure the Merchant Account filled in VTEX is the exact same as seen in your 
 
 #### Scenario 3) Ticket to Adyen Support was not opened yet or the enablement done was not to the correct username
 
-Make sure you open the ticket to the Adyen support following the instruction we provided in step xx and that you inform the correct username. Remember that if for some reason new credentials are created, the permission needs to be granted by the Adyen team again. (See: [PCI Role](adyen-configuration/pci-role))
+Make sure you open the ticket to the Adyen support following the instruction we provided in step xx and that you inform the correct username. Remember that if for some reason new credentials are created, the permission needs to be granted by the Adyen team again. (See: [PCI Role](adyen-configuration/pci-role)))))))e))

@@ -55,4 +55,4 @@ In the final **Settled** stage, the payment settlement is successfully completed
 
 If necessary, a captured transaction can go through the **Refunded** stage, where the debited amount is returned to the customer. The refund can be **full or partial**, depending on the merchant's policy and the type of purchase. This process can be initiated by either the customer or the merchant, typically in cases of product returns, service cancellations, or payment errors. Once the refund is processed, the customer receives the amount back through the same payment method used for the purchase.
 
-![paymentflow](https://i.imgur.com/yWGGPkR.png)
+![paymentflow](/img/payment-flow-diagram.png)
