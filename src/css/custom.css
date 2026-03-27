@@ -1,4 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/fakt/FaktPro-Blond.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/fakt/FaktPro-Normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/fakt/FaktPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fakt';
+  src: url('/fonts/fakt/FaktPro-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
 
 /**
  * Any CSS included here will be global. The classic template
@@ -8,8 +36,17 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* Adyen Green */
-  --ifm-color-primary: #0ABF53;
+  /* Adyen Design Tokens */
+  --adyen-green: #0ABF53;
+  --adyen-dark-blue: #00112C;
+  --adyen-surface: #f9f9ff;
+  --adyen-surface-container-low: #f1f3ff;
+  --adyen-surface-container-lowest: #ffffff;
+  --adyen-surface-container-high: #dfe8ff;
+  --adyen-outline-variant: rgba(187, 203, 184, 0.15);
+
+  /* Infima Overrides */
+  --ifm-color-primary: var(--adyen-green);
   --ifm-color-primary-dark: #09a84a;
   --ifm-color-primary-darker: #08913f;
   --ifm-color-primary-darkest: #077a34;
@@ -17,90 +54,150 @@
   --ifm-color-primary-lighter: #0cda61;
   --ifm-color-primary-lightest: #0eef68;
 
-  /* Custom Adyen Palette */
-  --adyen-green: #0ABF53;
-  --adyen-dark-blue: #00112C;
-  --adyen-interactive-blue: #4990E2;
-  --adyen-light-gray-bg: #F5F7F9;
-  --adyen-light-gray-border: #E5E9EB;
-  --adyen-text-secondary: #6C7A89;
-
-  /* Font Families */
-  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-background-color: var(--adyen-surface);
+  --ifm-navbar-background-color: var(--adyen-surface-container-lowest);
+  --ifm-footer-background-color: var(--adyen-dark-blue);
+  --ifm-footer-color: #ffffff;
+  
+  --ifm-font-color-base: var(--adyen-dark-blue);
+  --ifm-heading-color: var(--adyen-dark-blue);
+  
+  --ifm-font-family-base: 'Fakt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
 
-  /* Base Styles */
-  --ifm-font-color-base: var(--adyen-dark-blue);
-  --ifm-background-color: #fff; /* White background for content area */
-  --ifm-link-color: var(--adyen-interactive-blue);
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.07);
+  /* Sidebar Tokens */
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-active: var(--adyen-green);
 }
 
 body {
-  background-color: var(--adyen-light-gray-bg); /* Light gray for the overall page background */
+  background-color: var(--adyen-surface);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  /* Adyen Green */
-  --ifm-color-primary: #0ABF53;
-  --ifm-color-primary-dark: #09a84a;
-  --ifm-color-primary-darker: #08913f;
-  --ifm-color-primary-darkest: #077a34;
-  --ifm-color-primary-light: #0bc65a;
-  --ifm-color-primary-lighter: #0cda61;
-  --ifm-color-primary-lightest: #0eef68;
-
-  /* Custom Adyen Palette - Dark Mode */
-  --adyen-green: #0ABF53;
-  --adyen-dark-blue: #FFFFFF; /* Text becomes white */
-  --adyen-interactive-blue: #66bfff; /* Lighter blue for links */
-  --adyen-light-gray-bg: #00112C; /* Dark blue becomes background */
-  --adyen-light-gray-border: #334257; /* Darker border */
-  --adyen-text-secondary: #a9b8c7; /* Lighter secondary text */
-
-  /* Base Styles - Dark Mode */
-  --ifm-font-color-base: var(--adyen-dark-blue);
-  --ifm-background-color: #011638; /* Slightly lighter than the body for content area */
-  --ifm-link-color: var(--adyen-interactive-blue);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Sidebar Customization */
+.theme-doc-sidebar-container {
+  background-color: var(--adyen-surface-container-low) !important;
+  border-right: none !important;
 }
 
-[data-theme='dark'] body {
-  background-color: var(--adyen-light-gray-bg);
+.menu__link {
+  font-weight: 500;
+  color: var(--adyen-dark-blue);
+  padding: 0.6rem 1rem;
+  margin: 0.2rem 0;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
-/* Custom styling for blockquotes to be used as disclaimers/admonitions */
+.menu__link:hover {
+  background-color: var(--adyen-surface-container-high) !important;
+  color: var(--adyen-green);
+}
+
+.menu__link--active {
+  border-left: 2px solid var(--adyen-green) !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  color: var(--adyen-green) !important;
+  font-weight: 700 !important;
+}
+
+/* Category Headers */
+.menu__list-item:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.menu__caret {
+  padding: 0.6rem;
+}
+
+/* Navbar Polish */
+.navbar {
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--adyen-outline-variant) !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: var(--adyen-surface-container-lowest) !important;
+}
+
+.navbar__logo {
+  height: 2rem;
+}
+
+/* Footer Polish */
+.footer {
+  background-color: var(--adyen-dark-blue) !important;
+  color: #ffffff !important;
+  padding: 4rem 0;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+  opacity: 1 !important;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  color: #ffffff;
+}
+
+/* Philosophy "No-Line" - Card style for main content */
+.theme-doc-markdown {
+  background-color: var(--adyen-surface-container-lowest);
+  padding: 3rem 4rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 17, 44, 0.03);
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Typography polish */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: none;
+}
+
+/* Code blocks polish */
+.prism-code {
+  border-radius: 8px !important;
+  padding: 1.5rem !important;
+}
+
+/* Attention Boxes (Callouts) */
 blockquote {
-  background-color: #fffbe6; /* Light yellow */
-  border-left: 8px solid #ffc107; /* Amber/Orange */
-  padding: 1rem 1.5rem;
-  border-radius: 0.25rem;
-  margin: 1.5rem 0;
+  background-color: var(--adyen-surface-container-high) !important;
+  border: none !important;
+  border-left: 3px solid var(--adyen-green) !important;
+  padding: 1.75rem !important;
+  border-radius: 0 4px 4px 0 !important;
+  margin: 2rem 0 !important;
+  color: var(--adyen-dark-blue);
 }
 
 blockquote p {
   margin-bottom: 0;
 }
 
-/* Dark mode version */
-[data-theme='dark'] blockquote {
-  background-color: #332e1b;
-  border-left-color: #ffc107;
+/* Dark Mode Adjustments */
+[data-theme='dark'] {
+  --adyen-surface: #00112C;
+  --adyen-surface-container-low: #091b36;
+  --adyen-surface-container-lowest: #011638;
+  --adyen-surface-container-high: #20304c;
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: #ffffff;
 }
 
-/* Custom footer adjustments */
-.footer {
-  padding-top: 20px; /* Adjust from default, e.g., 30px - 10px */
-  padding-bottom: 20px; /* Adjust from default, e.g., 30px - 10px */
-}
-
-/* Remove opacity mask from all footer links */
-.footer a {
-  opacity: 1 !important; /* Ensure full opacity */
-}
-
-.footer a:hover {
-  opacity: 1 !important; /* Ensure full opacity on hover */
-}

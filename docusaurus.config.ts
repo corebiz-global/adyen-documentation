@@ -55,11 +55,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/logo.svg',
     navbar: {
-      style: 'dark',
       title: '',
       logo: {
         alt: 'Adyen Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo-green.svg',
         srcDark: 'img/logo.svg',
       },
       items: [
