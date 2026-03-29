@@ -70,6 +70,62 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Documentation',
+          items: [
+            {
+              label: 'Introduction',
+              to: '/',
+            },
+            {
+              label: 'Adyen Configuration',
+              to: '/adyen-configuration/getting-credentials',
+            },
+            {
+              label: 'VTEX Configuration',
+              to: '/vtex-configuration/configuring-provider',
+            },
+            {
+              label: 'Support',
+              to: '/support',
+            },
+          ],
+        },
+        {
+          title: 'Adyen Resources',
+          items: [
+            {
+              label: 'Adyen Academy',
+              href: 'https://academy.adyen.com/',
+            },
+            {
+              label: 'Knowledge Hub',
+              href: 'https://www.adyen.help/hc/en-us',
+            },
+            {
+              label: 'Developer Documentation',
+              href: 'https://docs.adyen.com/',
+            },
+          ],
+        },
+        {
+          title: 'About Corebiz',
+          items: [
+            {
+              html: `
+                <p style="opacity: 0.6; font-size: 0.875rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                  Corebiz is a global partner specialized in Adyen and VTEX ecosystems, delivering high-performance payment experiences.
+                </p>
+              `,
+            },
+            {
+              label: 'Visit Corebiz',
+              href: 'https://corebiz.ag',
+            },
+          ],
+        },
+      ],
       logo: {
         alt: 'Corebiz Logo',
         src: 'img/corebiz_logo_footer.svg',
@@ -77,7 +133,7 @@ const config: Config = {
         width: 105,
         height: 23.635,
       },
-      copyright: `Built by Corebiz.`,
+      copyright: `© ${new Date().getFullYear()} Corebiz. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
