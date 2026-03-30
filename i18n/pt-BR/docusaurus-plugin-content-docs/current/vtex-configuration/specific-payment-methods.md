@@ -65,6 +65,10 @@ Para oferecer o PayPal através da Adyen na VTEX, siga estes passos:
    - Vá para **Configurações da Loja > Pagamentos > Configurações**.
    - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
    - Pesquise por **PayPal** e selecione-o.
+   > **Atenção**: Ao pesquisar por PayPal na VTEX, você encontrará diversas opções. Certifique-se de selecionar a opção chamada apenas **PayPal**.
+
+   ![Seleção PayPal](/img/vtex-paypal-selection.png)
+
    - Selecione o provedor Adyen no campo **Processar com o provedor**.
    - Defina o status como **Ativo** e clique em **Salvar**.
 
