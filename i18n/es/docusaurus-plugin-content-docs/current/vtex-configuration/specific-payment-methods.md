@@ -3,6 +3,7 @@ sidebar_position: 4
 title: Métodos de Pago Específicos
 ---
 
+
 ## Apple Pay
 
 ### Configurar Apple Pay en el Área de Cliente de Adyen
@@ -13,20 +14,20 @@ También deberá configurar Apple Pay en su Área de Cliente de Adyen en Método
 2. Haga clic en “Métodos de Pago”<br/>
 3. En el lado derecho, haga clic en “Solicitar Método de Pago”<br/>
 4. En la pantalla “Seleccionar Método de Pago”, seleccione “Apple Pay”
-![PantallaSeleccionarPago](https://i.imgur.com/9TWDm36.png)
+![PantallaSeleccionarPagamento](/img/vtex-select-payment-screen.png)
 5. Seleccione el Comerciante<br/>
-![SeleccionarComerciante](https://i.imgur.com/r5M1jNF.png)
+![SeleccionarComerciante](/img/vtex-select-merchant.png)
 6. Configure la cuenta del adquirente<br/>
-![ConfigurarCuentaAdquirente](https://i.imgur.com/NxE5Wlb.png)
+![SeleccionarCuentaAdquirente](/img/vtex-select-acquirer-account.png)
 7. Seleccione el tipo de certificado: “Usar Certificado de Adyen”.<br/>
-![UsarCertificadoAdyen](https://i.imgur.com/obApo0m.png)
+![UsarCertificadoAdyen](/img/vtex-use-adyen-certificate.png)
 8. En la pantalla “Revisar y Finalizar”, ingrese el dominio completo del sitio web<br/>
-![DominioCompletoSitio](https://i.imgur.com/r2taBn5.png)
+![DominioCompletoSitio](/img/vtex-full-website-domain.png)
 
 ### Validando la configuración
 
 Si la configuración es correcta, debería ver “Apple Pay” al buscar en la pantalla “Métodos de Pago”.
-![MetodosPago](https://i.imgur.com/ryeBp6m.png)
+![MetodosPago](/img/vtex-payment-methods-list.png)
 
 ### Instalar el certificado
 
@@ -34,7 +35,7 @@ Si la configuración es correcta, debería ver “Apple Pay” al buscar en la p
 
 2. Instale el certificado en el servidor de VTEX. Para hacerlo, realice un POST utilizando Postman o una herramienta similar al siguiente endpoint: `https://{{PublicStoreDomain}}/.well-known/raw/apple-developer-merchantid-domain-association?persistent=true`
 
-[<img src="https://run.pstmn.io/button.svg" alt="Ejecutar en Postman" />](https://www.postman.com/suportecorebiz/adyen-apple-pay/collection/2y1c8n1/apple-pay?action=share&creator=41098825)
+[<img src="/img/postman-button.svg" alt="Ejecutar en Postman" />](https://www.postman.com/suportecorebiz/adyen-apple-pay/collection/2y1c8n1/apple-pay?action=share&creator=41098825)
 
 3. Verifique si el certificado se instaló correctamente. Para verificar si o certificado se instaló correctamente nos servidores VTEX, use a seguinte url: `https://{{PublicStoreDomain}}/.well-known/apple-developer-merchantid-domain-association`
 
@@ -42,8 +43,8 @@ Si la configuración es correcta, debería ver “Apple Pay” al buscar en la p
 
 Para procesar pagos con Google Pay en Adyen, configure el ID de producto o comerciante de la Cuenta de Google en la plataforma Adyen (no se aplica al entorno de prueba).
 
-1. Cree y configure un comerciante en Google Pay.
-2. Vincule este comerciante a Adyen.
+1. Cree y configure un comerciante en Google Pay
+2. Vincule este comerciante a Adyen
 3. En el Admin de VTEX, navegue a **Configuración de la tienda > Pagos > Proveedores** y edite el proveedor Adyen.
 4. Complete el **Google Merchant ID** (ID numérico obtenido de Google) y el **Google Merchant Name**.
 
@@ -62,14 +63,14 @@ Para ofrecer PayPal a través de Adyen en VTEX, siga estos pasos:
 
 2. **En VTEX**:
    - Vaya a **Configuración de la tienda > Pago > Configuración**.
-   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png).
+   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
    - Busque **PayPal** y selecciónelo.
    > **Atención**: Al buscar PayPal en VTEX, encontrará varias opciones. Asegúrese de seleccionar la opción llamada simplemente **PayPal**.
 
    ![Selección PayPal](/img/vtex-paypal-selection.png)
 
-   - Selecione el proveedor Adyen en el campo **Procesar con el proveedor**.
-   - Establezca el estado como **Activo** e haga clic en **Guardar**.
+   - Seleccione el proveedor Adyen en el campo **Procesar con el proveedor**.
+   - Establezca el estado como **Activo** y haga clic en **Guardar**.
 
 ## Affirm
 
@@ -80,9 +81,9 @@ Affirm se configura como un método de pago estándar en VTEX:
 
 2. **En VTEX**:
    - Vaya a **Configuración de la tienda > Pago > Configuración**.
-   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png).
+   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
    - Busque **AdyenAffirm** y selecciónelo.
-   > **Atención**: Al buscar Affirm en VTEX, encontrará dos opciones (**Affirm** e **AdyenAffirm**). Asegúrese de seleccionar la opción **AdyenAffirm** para que el proveedor Adyen se utilice correctamente.
+   > **Atención**: Al buscar Affirm en VTEX, encontrará dos opciones (**Affirm** y **AdyenAffirm**). Asegúrese de seleccionar la opción **AdyenAffirm** para que el proveedor Adyen se utilice correctamente.
 
    ![Selección Affirm](/img/vtex-affirm-selection.png)
 
@@ -96,7 +97,7 @@ Affirm se configura como un método de pago estándar en VTEX:
 
 2. **En VTEX**:
    - Vaya a **Configuración de la tienda > Pago > Configuración**.
-   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png).
+   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
    - Busque **BLIK** y selecciónelo.
    - Asócielo con el proveedor Adyen.
    - Guarde la configuración.
@@ -108,7 +109,7 @@ Affirm se configura como un método de pago estándar en VTEX:
 
 2. **En VTEX**:
    - Vaya a **Configuración de la tienda > Pago > Configuración**.
-   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png).
+   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
    - Busque **MultiBanco** y selecciónelo.
    - Asócielo con el proveedor Adyen.
    - Guarde la configuración.
@@ -116,34 +117,26 @@ Affirm se configura como un método de pago estándar en VTEX:
 
 ## Bancontact Mobile
 
-Este método permite que los clientes paguem utilizando a aplicação Bancontact em seus dispositivos móveis mediante um código QR ou redirecionamento de aplicação.
+Este método permite que los clientes paguen utilizando la aplicación Bancontact en sus dispositivos móviles mediante un código QR o redireccionamiento de aplicación.
 
 1. **En Adyen**:
    - Habilite **Bancontact Mobile** en su Área de Cliente de Adyen.
 
 2. **En VTEX**:
    - Vaya a **Configuración de la tienda > Pago > Configuración**.
-   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png).
+   - En la pestaña **Condiciones de pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
    - Busque **Bancontact Mobile** y selecciónelo.
    - Asócielo con el proveedor Adyen.
    - Guarde la configuración.
 
-## Boletos
+## Boletos (Recibos Bancarios)
 
-### Configurando Boletos
+### Configurando la Condición de Pago
 
-1. En el Admin de VTEX, navegue a Configuración de la tienda > Pagos > Proveedores, o ingrese **Proveedores** en la barra de búsqueda superior.
-2. En la pantalla de Proveedores, haga clic en el botón **Nuevo Proveedor**.
-3. Use la barra de búsqueda para encontrar el proveedor responsable de procesar el boleto.
-4. Complete los campos del formulario con los datos proporcionados por su proveedor o banco.
-5. Haga clic en **Guardar**.
-
-### Configurando la Condição de Pago
-
-1. En el Admin de VTEX, vaya a Configuración de la tienda > Pagos > Configuración, o ingrese **Configuración** en la barra de búsqueda superior.
-2. En la pestaña **Condiciones de Pago**, haga clic en el botón ![**Agregar Condición de Pago**](https://i.imgur.com/j8KuDvn.png).
+1. En el Admin de VTEX, vaya a Configuración de la tienda > Pago > Configuración, o ingrese **Configuración** en la barra de búsqueda superior.
+2. En la pestaña **Condiciones de Pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png).
 3. Seleccione **Boleto Bancário** en la sección Boleto.
-4. Habilite la condición en el campo Estado.
+4. Habilite la condición en el campo Status.
 5. En el campo **Procesar con el proveedor**, elija el proveedor que configuró anteriormente.
 6. Opcionalmente, configure condiciones de pago especiales según sea necesario.
 7. Haga clic en **Guardar**.
@@ -155,20 +148,20 @@ Este método permite que los clientes paguem utilizando a aplicação Bancontact
 3. En la sección de detalles, haga clic en Editar.
 4. En el campo Días para el Vencimiento del Boleto, defina el período de vencimiento deseado para el boleto. Tenga en cuenta que se requiere un día de procesamiento adicional para que el pago se envíe a Adyen.
 
-![días de vencimiento del boleto](https://i.imgur.com/mA3VmHy.png)
+![Días de Vencimiento del Boleto](/img/vtex-boleto-expiration.png)
 
 ## Bancontact
 
 - Para que este método de pago funcione, debe realizar algunas configuraciones específicas en el Panel de Administración de VTEX:
-  - **Configuración del Método de Pago**: Vaya al panel de administración de VTEX y acceda a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` o ingrese **pagos** en el cuadro de búsqueda del Admin y haga clic en la pestaña **Pagos Personalizados**.
-  - En la pestaña **Pagos Personalizados**, haga clic en una **Config** disponible en **Tarjetas de Marca Propia** ![tarjetas-marca-propia](https://i.imgur.com/IJvqQOJ.png).
+  - **Configuración del Método de Pago**: Vaya al panel de administración de VTEX y acceda a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` o ingrese **pagos** en el cuadro de búsqueda del Admin y haga clic en la pestaña **Pagos customizados**.
+  - En la pestaña **Pagos customizados**, haga clic en una **Config** disponible en **Tarjetas de Marca Propia** ![tarjetas-marca-propia](/img/vtex-private-label-cards.png).
   - En la siguiente pantalla, complete el campo **Nombre** con "Bancontact" (asegúrese de que la sintaxis sea correcta, ya que este es el nombre del método de pago que se enviará en las Transacciones).
   - En el campo **Número de Dígitos del CVV**, establézcalo como **no requerido**.
-    ![bancontact](https://i.imgur.com/SkvSV8g.png)
+    ![bancontact](/img/vtex-bancontact-config.png)
   - Deje los otros campos con sus valores sin cambios.
   - Haga clic en **Guardar** para guardar la configuración.
   - Después de guardar la configuración, se le redirigirá automáticamente para finalizar la configuración en la siguiente pantalla **Condición de Pago**:
-    ![bancontact-2](https://i.imgur.com/pD1FMYu.png)
+    ![bancontact-2](/img/vtex-bancontact-details.png)
   - En la pantalla **Condición de Pago**, complete el **Nombre de la Condición**.
   - Seleccione el **Proveedor** de Adyen en el menú desplegable **Procesar con el proveedor**.
   - Cambie el **Estado** a "activo".
@@ -188,11 +181,11 @@ Permite que los clientes paguen sus compras en cuotas. Para configurar Klarna Pa
 
 - **En VTEX**:
   - **Configuración del Método de Pago**: Vaya al panel de administración de VTEX y acceda a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` o ingrese **pagos** en el cuadro de búsqueda del Admin y haga clic en **Pagos**.
-  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png) en la esquina superior derecha de la página.
+  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png) en la esquina superior derecha de la página.
   - Busque la opción **Klarna Pay Over Time** en la lista de métodos de pago disponibles y haga clic en ella.
   - En la pantalla **Agregar Método de Pago**, seleccione el **Proveedor** en el cuadro de selección "Procesar con el Proveedor".
   - Guarde la configuración. Después de eso, siga los pasos detallados en [Configuración del Proveedor de Pago en VTEX](configuring-provider).
-    ![#klarna](https://i.imgur.com/JRlpO7p.gif)
+    ![#klarna](/img/vtex-klarna-animation.gif)
 
 ### Klarna Pay Now
 
@@ -205,11 +198,11 @@ Permite que los clientes paguen sus compras de inmediato mediante transferencia 
 
 - **En VTEX**:
   - **Configuración del Método de Pago**: Vaya al panel de administración de VTEX y acceda a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` o ingrese **pagos** en el cuadro de búsqueda del Admin y haga clic en **Pagos**.
-  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png) en la esquina superior derecha de la página.
+  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png) en la esquina superior derecha de la página.
   - Busque la opción **Klarna** en la lista de métodos de pago disponibles y haga clic en ella.
   - En la pantalla **Agregar Método de Pago**, seleccione el **Proveedor** en el cuadro de selección "Procesar con el Proveedor".
   - Guarde la configuración. Después de eso, siga los pasos detallados en [Configuración del Proveedor de Pago en VTEX](configuring-provider).
-    ![#klarna](https://i.imgur.com/JRlpO7p.gif)
+    ![#klarna](/img/vtex-klarna-animation.gif)
 
 ### Klarna Pay Later
 
@@ -222,15 +215,15 @@ Permite que los clientes paguen sus compras en 30 días sin intereses. Para conf
 
 - **En VTEX**:
   - **Configuración del Método de Pago**: Vaya al panel de administración de VTEX y acceda a la sección de métodos de pago `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` o ingrese **pagos** en el cuadro de búsqueda del Admin y haga clic en **Pagos**.
-  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](https://i.imgur.com/j8KuDvn.png) en la esquina superior derecha de la página.
-  - Busque la opção **Klarna Pay Later** na lista de métodos de pago disponíveis e clique nela.
-  - Na tela **Agregar Método de Pago**, selecione o **Proveedor** no quadro de seleção "Procesar con el Proveedor".
-  - Guarde a configuração. Depois disso, siga os passos detalhados em [Configuración del Proveedor de Pago en VTEX](configuring-provider).
-    ![#klarna](https://i.imgur.com/JRlpO7p.gif)
+  - En la pantalla **Métodos de Pago**, haga clic en el botón ![**Agregar Método de Pago**](/img/vtex-add-payment-method-button.png) en la esquina superior derecha de la página.
+  - Busque la opción **Klarna Pay Later** en la lista de métodos de pago disponibles y clique nela.
+  - En la pantalla **Agregar Método de Pago**, seleccione el **Proveedor** en el cuadro de selección "Procesar con el Proveedor".
+  - Guarde la configuración. Después de eso, siga los pasos detallados en [Configuración del Proveedor de Pago en VTEX](configuring-provider).
+    ![#klarna](/img/vtex-klarna-animation.gif)
 
 ## Ideal
 
 > **Importante**: La información importante sobre Ideal es que en el paso de configuración del método de pago de VTEX, encontrará dos métodos de pago al buscar Ideal. Por favor, seleccione “**Ideal V3**". Después de eso, siga los pasos detallados en [Configuración del Proveedor de Pago en VTEX](configuring-provider).
 
-![IDeal](https://i.imgur.com/EjnvuSR.png)
-![iDeal V3](https://i.imgur.com/3Qt1408.png)
+![IDeal](/img/vtex-ideal-config.png)
+![iDeal V3](/img/vtex-ideal-v3.png)

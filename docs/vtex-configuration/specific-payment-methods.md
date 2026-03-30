@@ -131,14 +131,6 @@ This method allows customers to pay using the Bancontact app on their mobile dev
 
 ## Boletos (Bank Slips)
 
-### Configuring Bank Slips - Boleto
-
-1. In VTEX Admin, navigate to Store Settings > Payments > Providers, or enter **Providers** in the top search bar.
-2. On the Providers screen, click the **New Provider** button.
-3. Use the search bar to find the provider responsible for processing the bank slip.
-4. Complete the form fields using the data provided by your provider or bank.
-5. Click **Save**.
-
 ### Setting Up the Payment Condition
 
 1. In VTEX Admin, go to Store Settings > Payment > Settings, or type **Settings** in the top search bar.

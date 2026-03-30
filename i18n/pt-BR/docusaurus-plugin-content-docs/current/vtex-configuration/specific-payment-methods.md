@@ -131,14 +131,6 @@ Este método permite que os clientes paguem usando o aplicativo Bancontact em se
 
 ## Boletos
 
-### Configurando Boletos
-
-1. No Admin VTEX, navegue para Configurações da Loja > Pagamentos > Provedores, ou digite **Provedores** na barra de pesquisa superior.
-2. Na tela de Provedores, clique no botão **Novo Provedor**.
-3. Use la barra de pesquisa para encontrar o provedor responsável por processar o boleto.
-4. Preencha os campos do formulário com os dados fornecidos pelo seu provedor ou banco.
-5. Clique em **Salvar**.
-
 ### Configurando a Condição de Pagamento
 
 1. No Admin VTEX, vá para Configurações da Loja > Pagamentos > Configurações, ou digite **Configurações** na barra de pesquisa superior.
@@ -161,8 +153,8 @@ Este método permite que os clientes paguem usando o aplicativo Bancontact em se
 ## Bancontact
 
 - Para que este método de pagamento funcione, você precisa fazer algumas configurações específicas no Painel de Administração da VTEX:
-  - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` ou digite **pagamentos** na caixa de pesquisa do Admin e clique na aba **Pagamentos Personalizados**.
-  - Na aba **Pagamentos Personalizados**, clique em uma **Config** disponível em **Cartões de Marca Própria** ![cartoes-marca-propria](https://i.imgur.com/IJvqQOJ.png).
+  - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` ou digite **pagamentos** na caixa de pesquisa do Admin e clique na aba **Pagamentos customizados**.
+  - Na aba **Pagamentos customizados**, clique em uma **Config** disponível em **Cartões de Marca Própria** ![cartoes-marca-propria](https://i.imgur.com/IJvqQOJ.png).
   - Na próxima tela, preencha o campo **Nome** com "Bancontact" (certifique-se de que a sintaxe está correta, pois este é o nome do método de pagamento que será enviado nas Transações)
   - no campo **Número de Dígitos do CVV**, defina como **não obrigatório**
     ![bancontact](https://i.imgur.com/SkvSV8g.png)
