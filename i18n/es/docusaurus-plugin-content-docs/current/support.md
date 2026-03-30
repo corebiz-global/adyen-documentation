@@ -4,33 +4,35 @@ title: Soporte
 ---
 
 
-## Cómo contactar con Adyen
+## Cómo contactar con el Soporte de Adyen
 
-Si no pudiste resolver el problema al que te enfrentas leyendo la documentación, ponte en contacto con el equipo de soporte de Adyen. Siga los pasos a continuación para abrir un ticket para Adyen:
+Si no ha podido resolver el problema que experimenta leyendo la documentación, póngase en contacto con el equipo de Soporte de Adyen. Siga los pasos a continuación para abrir un ticket con Adyen:
 
-> **Importante**: Recuerde incluir los archivos adjuntos listados debajo de la plantilla, ya que son esenciales para una resolución rápida.
+> **Importante**: Recuerde incluir los archivos adjuntos enumerados debajo de la plantilla, ya que son esenciales para una resolución rápida.
 
-1.  **Prepare los detalles de su ticket**: Utilice la siguiente plantilla para recopilar toda la información necesaria para una respuesta más rápida:
+1.  **Prepare los detalles de su ticket**: Use la siguiente plantilla para recopilar toda la información necesaria para una respuesta más rápida:
 
     ```
-    Asunto: Conector Adyen V3 VTEX + [Tema relacionado con su problema]
+    Asunto: Adyen V3 VTEX Connector + [Tema relacionado con su problema]
 
     Descripción:
-    Credenciales de Adyen: [su cuenta de empresa, su cuenta de vendedor] (vea: [obtener credenciales](../adyen-configuration/getting-credentials.md))
+    Credenciales de Adyen: [Su Company Account, Su Merchant Account] (Consulte: [Obtención de credenciales](./adyen-configuration/getting-credentials.md))
     Descripción del problema: [Texto que describe el comportamiento]
-    Detalles de la cuenta VTEX: [Nombre de su cuenta VTEX y nombre de la subcuenta (si la hay)]
-    Ambiente: [Prueba/ Producción/ Ambos]
+    Detalles de la cuenta VTEX: [Nombre de su cuenta VTEX y nombre de la subcuenta (si hay)]
+    Entorno: [Prueba/ Producción/ Ambos]
     Configuración de captura: [Tipo de captura configurada en VTEX: Captura automática inmediatamente después de la autorización del pago/ Retraso de liquidación automática: 7 días]
-    Versión del plugin: [Versión del plugin en uso, ex: v2.24.4]
-    ID de VTEX: [ID de pedido VTEX, ID de transacción VTEX] (Vea: [Monitoreo](../monitoring.md))
-    TID / (Adyen) Referencia PSP: [Información de Pago/Oferta Adyen] (Ver: [Monitoreo](../monitoring.md))
-    Llamadas de la API de Adyen: [Solicitudes y respuestas de la API de Adyen]
-    Webhooks Adyen: [Logs de Webhooks de Autorización y Captura] (Vea: [Webhooks](../adyen-configuration/webhooks.md))
+    Versión del complemento: [Versión del complemento en uso, ej: v2.24.4]
+    IDs de VTEX: [ID de pedido de VTEX, ID de transacción de VTEX] (Consulte: [Monitoreo](./monitoring.md))
+    TID / Referencia PSP (Adyen): [Información de pago/oferta de Adyen] (Consulte: [Monitoreo](./monitoring.md))
+    Llamadas a la API de Adyen: [Solicitudes y respuestas de la API de Adyen]
+    Webhooks de Adyen: [Logs de webhooks de autorización y captura] (Consulte: [Webhooks](./adyen-configuration/webhooks.md))
 
-    Archivos adjuntos:
-    - Registros de transacciones VTEX
-    - Video de comportamiento en la caja
-    - Impresiones de error
+    Adjuntos:
+    - Logs de transacciones de VTEX
+    - Video del comportamiento del pago
+    - Capturas de pantalla del error
+    - Logs de red (archivo .HAR) - [Cómo generar un archivo HAR](https://help.vtex.com/es/tutorial/como-generar-archivo-har--tutorials_4318)
+    - Información de depuración del navegador (sesión JAM) - [Cómo crear una sesión JAM](https://jam.dev/)
     ```
 
 2.  **Abrir el ticket de soporte**: envíe un correo electrónico a support@adyen.com.

@@ -31,6 +31,8 @@ If you were not able to solve the issue you are facing by reading the documentat
     - VTEX Transaction Logs
     - Checkout Behavior Video
     - Error Prints
+    - Network Logs (.HAR file) - [How to generate a HAR file](https://help.vtex.com/en/tutorial/generating-a-har-file--tutorials_4318)
+    - Browser Debug Info (JAM session) - [How to create a JAM session](https://jam.dev/)
     ```
 
 2.  **Open the support ticket**: send an email to support@adyen.com.
