@@ -31,8 +31,12 @@ Se você não conseguiu resolver o problema que está enfrentando lendo a docume
     - Logs de Transação VTEX
     - Vídeo de Comportamento do Checkout
     - Prints de Erro
-    - Logs de Rede (arquivo .HAR) - [Como gerar um arquivo HAR](https://help.vtex.com/pt/tutorial/como-gerar-arquivo-har--tutorials_4318)
-    - Info de Debug do Navegador (sessão JAM) - [Como criar uma sessão JAM](https://jam.dev/)
+    - Logs de Rede (arquivo .HAR)
+    - Info de Debug do Navegador (sessão JAM)
     ```
+
+    > **Nota sobre anexos**:
+    > - Saiba [como gerar um arquivo HAR](https://help.vtex.com/pt/tutorial/como-gerar-arquivo-har--tutorials_4318).
+    > - Saiba [como criar uma sessão JAM](https://jam.dev/).
 
 2.  **Abra o ticket de suporte**: envie um e-mail para support@adyen.com.

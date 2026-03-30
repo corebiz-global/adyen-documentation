@@ -31,8 +31,12 @@ Si no ha podido resolver el problema que experimenta leyendo la documentación, 
     - Logs de transacciones de VTEX
     - Video del comportamiento del pago
     - Capturas de pantalla del error
-    - Logs de red (archivo .HAR) - [Cómo generar un archivo HAR](https://help.vtex.com/es/tutorial/como-generar-archivo-har--tutorials_4318)
-    - Información de depuración del navegador (sesión JAM) - [Cómo crear una sesión JAM](https://jam.dev/)
+    - Logs de red (archivo .HAR)
+    - Información de depuración del navegador (sesión JAM)
     ```
+
+    > **Nota sobre los archivos adjuntos**:
+    > - Aprenda [cómo generar un archivo HAR](https://help.vtex.com/es/tutorial/como-generar-archivo-har--tutorials_4318).
+    > - Aprenda [cómo crear una sesión JAM](https://jam.dev/).
 
 2.  **Abrir el ticket de soporte**: envíe un correo electrónico a support@adyen.com.
