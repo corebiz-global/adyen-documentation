@@ -82,7 +82,11 @@ A Affirm é configurada como um método de pagamento padrão na VTEX:
 2. **Na VTEX**:
    - Vá para **Configurações da Loja > Pagamentos > Configurações**.
    - Na aba **Condições de Pagamento**, clique no botão ![**Adicionar Método de Pagamento**](https://i.imgur.com/j8KuDvn.png).
-   - Pesquise por **Affirm** e selecione-o.
+   - Pesquise por **AdyenAffirm** e selecione-o.
+   > **Atenção**: Ao pesquisar por Affirm na VTEX, você encontrará duas opções (**Affirm** e **AdyenAffirm**). Certifique-se de selecionar a opção **AdyenAffirm** para que o provedor Adyen seja utilizado corretamente.
+
+   ![Seleção Affirm](/img/vtex-affirm-selection.png)
+
    - Selecione o provedor Adyen no campo **Processar com o provedor**.
    - Clique em **Salvar**.
 
