@@ -68,10 +68,26 @@
   /* Sidebar Tokens */
   --ifm-menu-color-background-active: transparent;
   --ifm-menu-color-active: var(--adyen-green);
+  --sidebar-link-color: var(--adyen-dark-blue);
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] {
+  --adyen-surface: #00112C;
+  --adyen-surface-container-low: #091b36;
+  --adyen-surface-container-lowest: #011638;
+  --adyen-surface-container-high: #20304c;
+  --ifm-font-color-base: #ffffff;
+  --ifm-heading-color: #ffffff;
+  --ifm-background-color: var(--adyen-surface);
+  --ifm-navbar-background-color: var(--adyen-surface-container-lowest);
+  --sidebar-link-color: #ffffff;
+  --ifm-menu-color: #ffffff;
+  --ifm-toc-link-color: #ffffff;
 }
 
 body {
-  background-color: var(--adyen-surface);
+  background-color: var(--ifm-background-color);
 }
 
 /* Sidebar Customization */
@@ -82,7 +98,7 @@ body {
 
 .menu__link {
   font-weight: 500;
-  color: var(--adyen-dark-blue);
+  color: var(--sidebar-link-color);
   padding: 0.6rem 1rem;
   margin: 0.2rem 0;
   border-left: 2px solid transparent;
@@ -115,11 +131,7 @@ body {
 .navbar {
   box-shadow: none !important;
   border-bottom: 1px solid var(--adyen-outline-variant) !important;
-  background-color: #ffffff !important;
-}
-
-[data-theme='dark'] .navbar {
-  background-color: var(--adyen-surface-container-lowest) !important;
+  background-color: var(--ifm-navbar-background-color) !important;
 }
 
 .navbar__logo {
@@ -184,6 +196,10 @@ body {
   margin-bottom: 4rem;
 }
 
+[data-theme='dark'] .theme-doc-markdown {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
 /* Typography polish */
 h1 {
   font-size: 2.5rem;
@@ -214,20 +230,9 @@ blockquote {
   padding: 1.75rem !important;
   border-radius: 0 4px 4px 0 !important;
   margin: 2rem 0 !important;
-  color: var(--adyen-dark-blue);
+  color: inherit;
 }
 
 blockquote p {
   margin-bottom: 0;
 }
-
-/* Dark Mode Adjustments */
-[data-theme='dark'] {
-  --adyen-surface: #00112C;
-  --adyen-surface-container-low: #091b36;
-  --adyen-surface-container-lowest: #011638;
-  --adyen-surface-container-high: #20304c;
-  --ifm-font-color-base: #ffffff;
-  --ifm-heading-color: #ffffff;
-}
-
