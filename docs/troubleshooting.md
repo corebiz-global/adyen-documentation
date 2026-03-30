@@ -6,7 +6,7 @@ title: Troubleshooting
 
 Issues with the Adyen Integration Plugin can be related to the one or more of following:
 
-- Vtex Configuration Issues;
+- VTEX Configuration Issues;
 - Adyen configuration errors;
 - Checkout Customizations;
 - Other VTEX service availability errors;

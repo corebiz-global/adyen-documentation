@@ -6,7 +6,7 @@ title: Supported Features
 
 ## Adyen's Integration for VTEX
 
-Adyen is a global payment company that offers a platform for processing online and in-store payments. Vtex is an e-commerce platform that allows businesses to build and manage online stores. Integrating Adyen with Vtex allows businesses using the Vtex platform to process payments through Adyen's platform, providing a seamless checkout experience for customers and streamlining the payment process for the business.
+Adyen is a global payment company that offers a platform for processing online and in-store payments. VTEX is an e-commerce platform that allows businesses to build and manage online stores. Integrating Adyen with VTEX allows businesses using the VTEX platform to process payments through Adyen's platform, providing a seamless checkout experience for customers and streamlining the payment process for the business.
 
 ## Features
 

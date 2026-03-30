@@ -6,7 +6,7 @@ title: Solução de Problemas
 
 Problemas com o Plugin de Integração Adyen podem estar relacionados a um ou mais dos seguintes:
 
-- Problemas de configuração da Vtex;
+- Problemas de configuração da VTEX;
 - Erros de configuração da Adyen;
 - Customizações do Checkout;
 - Outros erros de disponibilidade de serviço da VTEX;
