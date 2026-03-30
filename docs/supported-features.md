@@ -19,9 +19,11 @@ Adyen is a global payment company that offers a platform for processing online a
 | **Wallet payment methods**                                                              |         |
 | [Google Pay](https://docs.adyen.com/payment-methods/google-pay)                         | Yes     |
 | [Apple Pay](https://docs.adyen.com/payment-methods/apple-pay)                           | Yes     |
+| [PayPal](https://docs.adyen.com/payment-methods/paypal)                                 | Yes     |
 | **One-click payment methods**                                                           |         |
 | [BLIK](https://docs.adyen.com/payment-methods/blik)                                     | Yes     |
 | [Klarna](https://docs.adyen.com/payment-methods/klarna)                                 | Yes     |
+| [Affirm](https://docs.adyen.com/payment-methods/affirm)                                 | Yes     |
 | [iDeal](https://docs.adyen.com/payment-methods/ideal)                                   | Yes     |
 | **Card payment methods**                                                                |         |
 | [Visa](https://docs.adyen.com/payment-methods/cards)                                    | Yes     |

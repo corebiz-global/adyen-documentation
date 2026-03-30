@@ -24,7 +24,7 @@ Payments with credit and debit cards involve multiple steps, from risk analysis 
 - **Capture**: Can be immediate or occur within the period defined by the connector.
 - **Refund**: Allowed in partial or full amounts, depending on the acquirer’s rules.
 - **Cancellation**: Can only be done before capture; after that, a refund is required.
-- **3DS (Secure Authentication)**: Some transactions may require authentication via **3D Secure** for increased security. For debit cards, 3DS availability depends on the card network and issuer.
+- **3DS (Secure Authentication)**: Some transactions may require authentication via **3D Secure** for increased security. For debit cards, 3DS availability depends on the card network and issuer. See Adyen's [3D Secure documentation](https://docs.adyen.com/online-payments/3d-secure) for more examples.
 
 ### Tokenization
 
@@ -65,7 +65,7 @@ Pix is an instant payment method that allows quick and direct transfers between 
 - **Capture**: Always immediate, with no configurable capture window.
 - **Refund**: Only full refunds are allowed; partial refunds are not possible.
 - **Cancellation**: A Pix payment cannot be canceled after completion.
-- **QR Code Expiration**: The code expires in 10 minutes. If the payment is made after this period, VTEX will not recognize the transaction, and the amount will be automatically refunded.
+- **QR Code Expiration**: The code expires in 10 minutes by default, but the merchant can configure the expiration time in the provider settings, as seen in another step. If the payment is made after this period, VTEX will not recognize the transaction, and the amount will be automatically refunded.
 
 ## Bank Slip (Boleto Bancário)
 

@@ -24,7 +24,7 @@ Before configuring POS in VTEX, ensure that:
 To offer POS as a payment option:
 1. Go to **Store Settings > Payment > Settings**.
 2. In the **Payment Conditions** tab, click the **+** button.
-3. Search for the specific POS payment methods (e.g., **Venda Direta Debito**, **Venda Direta Credito**, or **Pix POS**).
+3. Search for the specific POS payment methods (e.g., **Venda Direta Debito**, or **Venda Direta Credito**).
 4. Associate them with the **AdyenV3** provider.
 5. Set the status to **Active** and click **Save**.
 
