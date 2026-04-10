@@ -1,0 +1,21 @@
+wing: adyen_documentation
+mission: "Gerenciar documentação técnica Adyen, garantindo paridade com o payment-provider e integridade semântica (front-matter e termos técnicos)."
+rooms:
+  docs-content:
+    path: "docs/"
+    description: "Regras de negócio, fluxos de pagamento e configurações Adyen/VTEX."
+  i18n:
+    path: "i18n/"
+    description: "Gestão de internacionalização e traduções (EN, ES, PT-BR)."
+  docusaurus-config:
+    files: ["docusaurus.config.ts", "sidebars.ts"]
+    description: "Configurações globais do motor Docusaurus e estrutura de navegação."
+  frontend-src:
+    path: "src/"
+    description: "Componentes React e customizações de estilo (CSS)."
+  assets:
+    path: "static/"
+    description: "Ativos estáticos como fontes FaktPro e diagramas PNG/SVG."
+  standards:
+    files: ["DOCUMENTATION_GUIDE.md"]
+    description: "Guia de estilo e diretrizes de contribuição."
