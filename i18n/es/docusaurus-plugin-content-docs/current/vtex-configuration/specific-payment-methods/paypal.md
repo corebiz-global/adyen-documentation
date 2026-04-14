@@ -1,5 +1,7 @@
 ---
 title: PayPal
+sidebar_custom_props:
+  image: /img/icons/paypal.svg
 ---
 
 Para ofrecer PayPal a través de Adyen en VTEX, siga estos pasos:

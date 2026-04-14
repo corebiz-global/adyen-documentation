@@ -1,5 +1,7 @@
 ---
 title: Bancontact
+sidebar_custom_props:
+  image: /img/icons/bancontact.svg
 ---
 
 - For this payment method to work, you need to make some specific configurations in the VTEX Admin Panel:

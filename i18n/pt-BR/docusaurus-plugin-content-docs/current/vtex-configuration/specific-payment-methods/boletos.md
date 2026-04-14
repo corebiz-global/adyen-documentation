@@ -1,5 +1,7 @@
 ---
 title: Boletos
+sidebar_custom_props:
+  image: /img/icons/boletos.svg
 ---
 
 ### Configurar a condição de pagamento

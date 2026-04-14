@@ -1,5 +1,7 @@
 ---
 title: Klarna
+sidebar_custom_props:
+  image: /img/icons/klarna.svg
 ---
 
 ### Klarna Pay Over Time

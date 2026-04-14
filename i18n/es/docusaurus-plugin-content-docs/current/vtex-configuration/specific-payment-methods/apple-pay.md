@@ -1,5 +1,7 @@
 ---
 title: Apple Pay
+sidebar_custom_props:
+  image: /img/icons/apple-pay.svg
 ---
 
 ### Configurar Apple Pay en el Área del Cliente de Adyen

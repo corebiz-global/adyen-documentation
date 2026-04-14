@@ -1,5 +1,7 @@
 ---
 title: Bancontact
+sidebar_custom_props:
+  image: /img/icons/bancontact.svg
 ---
 
 - Para que este método de pagamento funcione, você precisa fazer algumas configurações específicas no Painel Administrativo da VTEX:

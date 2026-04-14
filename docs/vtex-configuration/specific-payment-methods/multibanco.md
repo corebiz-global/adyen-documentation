@@ -1,5 +1,7 @@
 ---
 title: MultiBanco
+sidebar_custom_props:
+  image: /img/icons/multibanco.svg
 ---
 
 1. **In Adyen**:
