@@ -1,5 +1,7 @@
 ---
 title: Bancontact Mobile
+sidebar_custom_props:
+  image: /img/icons/bancontact.svg
 ---
 
 This method allows customers to pay using the Bancontact app on their mobile devices via QR code or app redirect.

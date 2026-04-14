@@ -1,5 +1,7 @@
 ---
 title: BLIK
+sidebar_custom_props:
+  image: /img/icons/blik.svg
 ---
 
 1. **En Adyen**:

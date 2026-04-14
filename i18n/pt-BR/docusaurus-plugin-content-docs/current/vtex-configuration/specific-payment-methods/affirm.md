@@ -1,5 +1,7 @@
 ---
 title: Affirm
+sidebar_custom_props:
+  image: /img/icons/affirm.svg
 ---
 
 O Affirm é configurado como um método de pagamento padrão na VTEX:

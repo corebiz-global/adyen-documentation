@@ -1,5 +1,7 @@
 ---
 title: Google Pay Wallet (VTEX Native)
+sidebar_custom_props:
+  image: /img/icons/google-pay.svg
 ---
 
 ### Configurar Google Pay en el Área del Cliente de Adyen

@@ -1,5 +1,7 @@
 ---
 title: Boletos (Bank Slips)
+sidebar_custom_props:
+  image: /img/icons/boletos.svg
 ---
 
 ### Configurar la condición de pago
