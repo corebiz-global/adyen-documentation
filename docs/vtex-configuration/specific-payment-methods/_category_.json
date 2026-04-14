@@ -1,0 +1,8 @@
+{
+  "label": "Specific Payment Methods",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Configure specific payment methods supported by the Adyen connector on VTEX."
+  }
+}
