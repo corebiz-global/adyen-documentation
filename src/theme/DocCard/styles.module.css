@@ -22,6 +22,14 @@
   font-size: 1.2rem;
 }
 
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
 .cardDescription {
   font-size: 0.8rem;
 }
@@ -31,6 +39,11 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+.cardTitleContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .cardImage {

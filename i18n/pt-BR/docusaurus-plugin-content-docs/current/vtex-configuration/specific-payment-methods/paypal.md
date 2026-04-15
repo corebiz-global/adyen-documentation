@@ -1,7 +1,9 @@
 ---
 title: PayPal
+description: O PayPal é uma das principais carteiras digitais, com mais de 300 milhões de consumidores ativos
 sidebar_custom_props:
   image: /img/icons/paypal.svg
+  subtitle: Carteiras digitais
 ---
 
 Para oferecer PayPal através da Adyen na VTEX, siga estes passos:

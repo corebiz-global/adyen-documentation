@@ -28,6 +28,42 @@ This document serves as a reference for the style, structure, and conventions us
   - File names must be identical across all language folders to ensure Docusaurus mapping works correctly.
 - **Categorization**: Group related documents into folders with a `_category_.json` file defining the sidebar label and position.
 
+## Component: DocCard
+
+The `DocCard` component (used in generated indexes) has been customized to support a more rich visual layout. To ensure information is rendered correctly, follow these metadata rules:
+
+### Metadata Structure (Markdown Files)
+Docusaurus does not pass custom front-matter fields to the sidebar items by default. Therefore, **subtitles and images must be placed inside `sidebar_custom_props`**.
+
+```yaml
+---
+title: "Title of the Card"
+description: "A short one-line description"
+sidebar_custom_props:
+  subtitle: "Category or Type (e.g., Digital Wallets, Cards)"
+  image: "/img/icons/filename.svg"
+---
+```
+
+### Metadata Structure (Folders / `_category_.json`)
+For folders that render as cards, use the `customProps` field:
+
+```json
+{
+  "label": "Category Name",
+  "customProps": {
+    "subtitle": "Alternative Subtitle",
+    "image": "/img/icons/category-icon.svg"
+  }
+}
+```
+
+### Rendering Logic
+1. **Title**: Uses `title` from front-matter or `label` from category.
+2. **Subtitle**: Primarily looks for `subtitle` (or `subTitle`) inside `sidebar_custom_props`.
+3. **Description**: Uses the standard `description` field.
+4. **Image**: Looks for `image` inside `sidebar_custom_props`. If absent, falls back to a default category/file icon.
+
 ## Content & Writing Style
 
 - **No Numbering in Headings**: The order is defined by `sidebar_position` in frontmatter.

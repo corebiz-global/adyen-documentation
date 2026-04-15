@@ -1,7 +1,9 @@
 ---
 title: Google Pay Wallet (VTEX Native)
+description: Google Pay™️ permite que millones de personas agreguen tarjetas de pago a sus Cuentas de Google
 sidebar_custom_props:
   image: /img/icons/google-pay.svg
+  subtitle: Billeteras digitales, Tarjetas
 ---
 
 ### Configurar Google Pay en el Área del Cliente de Adyen

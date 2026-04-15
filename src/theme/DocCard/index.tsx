@@ -61,6 +61,7 @@ function CardLayout({
   title,
   description,
   image,
+  subtitle,
 }: {
   className?: string;
   href: string;
@@ -68,6 +69,7 @@ function CardLayout({
   title: string;
   description?: string;
   image?: string;
+  subtitle?: string;
 }): ReactNode {
   const imageUrl = useBaseUrl(image);
   return (
@@ -78,12 +80,19 @@ function CardLayout({
         ) : (
           <span className={styles.cardIcon}>{icon}</span>
         )}
-        <Heading
-          as="h2"
-          className={clsx('text--truncate', styles.cardTitle)}
-          title={title}>
-          {title}
-        </Heading>
+        <div className={styles.cardTitleContainer}>
+          <Heading
+            as="h2"
+            className={clsx('text--truncate', styles.cardTitle)}
+            title={title}>
+            {title}
+          </Heading>
+          {subtitle && (
+            <div className={clsx('text--truncate', styles.cardSubtitle)} title={subtitle}>
+              {subtitle}
+            </div>
+          )}
+        </div>
       </div>
       {description && (
         <p
@@ -105,6 +114,9 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
     return null;
   }
 
+  // Get subtitle from customProps (supporting both casings)
+  const subtitle = (item.customProps?.subtitle as string | undefined) ?? (item.customProps?.subTitle as string | undefined);
+
   return (
     <CardLayout
       className={item.className}
@@ -112,6 +124,7 @@ function CardCategory({item}: {item: PropSidebarItemCategory}): ReactNode {
       icon="🗃️"
       title={item.label}
       description={item.description ?? categoryItemsPlural(item.items.length)}
+      subtitle={subtitle}
     />
   );
 }
@@ -123,6 +136,13 @@ function CardLink({item}: {item: PropSidebarItemLink}): ReactNode {
   // Try to get image from customProps or frontmatter
   const image = (item.customProps?.image as string) ?? (doc?.frontMatter?.image as string);
 
+  // Try to get subtitle from customProps or frontmatter (supporting both casings)
+  const subtitle = 
+    (item.customProps?.subtitle as string) ?? 
+    (item.customProps?.subTitle as string) ?? 
+    (doc?.frontMatter?.subtitle as string) ?? 
+    (doc?.frontMatter?.subTitle as string);
+
   return (
     <CardLayout
       className={item.className}
@@ -131,6 +151,7 @@ function CardLink({item}: {item: PropSidebarItemLink}): ReactNode {
       title={item.label}
       description={item.description ?? doc?.description}
       image={image}
+      subtitle={subtitle}
     />
   );
 }

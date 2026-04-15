@@ -1,7 +1,9 @@
 ---
 title: MultiBanco
+description: O método de pagamento mais popular em Portugal
 sidebar_custom_props:
   image: /img/icons/multibanco.svg
+  subtitle: Vouchers, pré-pagos e cartões-presente
 ---
 
 1. **Na Adyen**:

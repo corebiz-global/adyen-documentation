@@ -1,7 +1,9 @@
 ---
 title: Bancontact Mobile
+description: Permite que os clientes paguem usando o aplicativo Bancontact via código QR ou redirecionamento de aplicativo.
 sidebar_custom_props:
   image: /img/icons/bancontact.svg
+  subtitle: Mobile
 ---
 
 Este método permite que os clientes paguem usando o aplicativo Bancontact em seus dispositivos móveis via código QR ou redirecionamento de aplicativo.

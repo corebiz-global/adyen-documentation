@@ -1,6 +1,9 @@
 {
   "label": "Specific Payment Methods",
   "position": 4,
+  "customProps": {
+    "subtitle": "Alternative Payment Methods (APMs)"
+  },
   "link": {
     "type": "generated-index",
     "description": "Configure specific payment methods supported by the Adyen connector on VTEX."

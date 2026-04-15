@@ -1,7 +1,9 @@
 ---
 title: PayPal
+description: PayPal is a major digital wallet, with over 300 million active consumers
 sidebar_custom_props:
   image: /img/icons/paypal.svg
+  subtitle: Digital wallets
 ---
 
 To offer PayPal through Adyen on VTEX, follow these steps:
