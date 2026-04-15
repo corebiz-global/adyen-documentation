@@ -1,7 +1,9 @@
 ---
 title: Apple Pay
+description: Apple Pay is the digital wallet of choice for millions of iOS users
 sidebar_custom_props:
   image: /img/icons/apple-pay.svg
+  subtitle: Digital wallets, Cards
 ---
 
 ### Set up Apple Pay in the Adyen Customer Area

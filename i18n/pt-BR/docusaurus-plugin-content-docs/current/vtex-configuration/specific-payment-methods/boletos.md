@@ -1,7 +1,9 @@
 ---
 title: Boletos
+description: O Boleto é o método de pagamento baseado em dinheiro usado em todo o Brasil
 sidebar_custom_props:
   image: /img/icons/boletos.svg
+  subtitle: Dinheiro
 ---
 
 ### Configurar a condição de pagamento

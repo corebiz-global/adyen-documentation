@@ -1,3 +1,6 @@
 {
-  "label": "Métodos de Pagamento Específicos"
+  "label": "Métodos de Pagamento Específicos",
+  "customProps": {
+    "subtitle": "Métodos de Pagamento Alternativos (APMs)"
+  }
 }

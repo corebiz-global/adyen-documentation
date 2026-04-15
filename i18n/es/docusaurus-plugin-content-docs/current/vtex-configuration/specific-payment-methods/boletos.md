@@ -1,7 +1,9 @@
 ---
 title: Boletos (Bank Slips)
+description: Boleto es el método de pago basado en efectivo utilizado en todo Brasil
 sidebar_custom_props:
   image: /img/icons/boletos.svg
+  subtitle: Efectivo
 ---
 
 ### Configurar la condición de pago
@@ -18,7 +20,8 @@ sidebar_custom_props:
 
 1. En el Admin de VTEX, navegue a Configuración de la tienda > Pagos > Proveedores, o ingrese Proveedores en la barra de búsqueda superior.
 2. En la pantalla de Proveedores, seleccione o proveedor de Adyen.
-3. En la sección de detalles, haga clic en Editar.
+3. In la sección de detalles, haga clic en Editar.
 4. En el campo Días de vencimiento del boleto (Boleto Expiration Days), establezca el período de vencimiento deseado para el boleto. Tenga en cuenta que se requiere un día de procesamiento adicional para que el pago se envíe a Adyen.
 
 ![Boleto Expiration Days](/img/vtex-boleto-expiration.png)
+

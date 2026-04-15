@@ -1,7 +1,9 @@
 ---
 title: BLIK
+description: BLIK is Poland's dominant mobile payment method
 sidebar_custom_props:
   image: /img/icons/blik.svg
+  subtitle: Online banking
 ---
 
 1. **In Adyen**:

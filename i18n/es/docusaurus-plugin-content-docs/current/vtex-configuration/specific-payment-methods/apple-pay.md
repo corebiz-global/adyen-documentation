@@ -1,7 +1,9 @@
 ---
 title: Apple Pay
+description: Apple Pay es la billetera digital preferida por millones de usuarios de iOS
 sidebar_custom_props:
   image: /img/icons/apple-pay.svg
+  subtitle: Billeteras digitales, Tarjetas
 ---
 
 ### Configurar Apple Pay en el Área del Cliente de Adyen

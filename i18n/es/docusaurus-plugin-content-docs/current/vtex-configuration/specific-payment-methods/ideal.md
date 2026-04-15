@@ -1,7 +1,9 @@
 ---
 title: Ideal
+description: iDEAL es un sistema interbancario holandés para banca online
 sidebar_custom_props:
   image: /img/icons/ideal.svg
+  subtitle: Banca Online
 ---
 
 > **Importante**: La información importante sobre Ideal es que en el paso de configuración del método de pago de VTEX, encontrará dos métodos de pago cuando busque Ideal. Seleccione “**Ideal V3**". Después de eso, siga los pasos detallados en [Configuración del Proveedor de Pagos en VTEX](../configuring-provider)

@@ -1,7 +1,9 @@
 ---
 title: Affirm
+description: A Affirm oferece parcelamento no ato da compra (BNPL) para milhões de compradores na América do Norte.
 sidebar_custom_props:
   image: /img/icons/affirm.svg
+  subtitle: Compre agora, pague depois
 ---
 
 O Affirm é configurado como um método de pagamento padrão na VTEX:

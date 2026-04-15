@@ -1,7 +1,9 @@
 ---
 title: Klarna
+description: A Klarna é o maior provedor de serviços de "compre agora, pague depois" do mundo
 sidebar_custom_props:
   image: /img/icons/klarna.svg
+  subtitle: Compre agora, pague depois
 ---
 
 ### Klarna Pay Over Time

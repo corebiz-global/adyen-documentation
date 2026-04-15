@@ -1,7 +1,9 @@
 ---
 title: Bancontact
+description: Bancontact es el método de pago más popular de Bélgica
 sidebar_custom_props:
   image: /img/icons/bancontact.svg
+  subtitle: Tarjetas
 ---
 
 - Para que este método de pago funcione, debe realizar algunas configuraciones específicas en el Panel de Administración de VTEX:

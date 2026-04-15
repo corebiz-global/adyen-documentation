@@ -1,7 +1,9 @@
 ---
 title: BLIK
+description: O BLIK é o método de pagamento móvel dominante na Polônia
 sidebar_custom_props:
   image: /img/icons/blik.svg
+  subtitle: Banco Online
 ---
 
 1. **Na Adyen**:

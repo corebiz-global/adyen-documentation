@@ -1,7 +1,9 @@
 ---
 title: Klarna
+description: Klarna is the largest provider of buy now, pay later services in the world
 sidebar_custom_props:
   image: /img/icons/klarna.svg
+  subtitle: Buy now pay later
 ---
 
 ### Klarna Pay Over Time

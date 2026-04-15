@@ -1,7 +1,9 @@
 ---
 title: MultiBanco
+description: The most popular payment method in Portugal
 sidebar_custom_props:
   image: /img/icons/multibanco.svg
+  subtitle: Vouchers, prepaid and giftcards
 ---
 
 1. **In Adyen**:
