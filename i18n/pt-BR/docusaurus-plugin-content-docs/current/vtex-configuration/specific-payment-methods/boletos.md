@@ -1,10 +1,19 @@
 ---
 title: Boletos
 description: O Boleto é o método de pagamento baseado em dinheiro usado em todo o Brasil
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/boletos.svg
   subtitle: Dinheiro
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Configurar a condição de pagamento
 

@@ -1,10 +1,19 @@
 ---
-title: Google Pay Wallet (VTEX Native)
+title: Google Pay
 description: O Google Pay™️ permite que milhões de pessoas adicionem cartões de pagamento às suas Contas do Google
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/google-pay.svg
   subtitle: Carteiras digitais, Cartões
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Configurar o Google Pay na Área do Cliente Adyen
 

@@ -18,7 +18,7 @@ Gere e configure sua chave de API conforme descrito na [Documentação de Plataf
 5. Em **Configurações do Servidor**, na área de **Autenticação**, selecione **Chave de API** e, em seguida, clique no botão **Gerar Chave de API** para criar uma nova chave e **armazene** esta informação com segurança.
 6. Em **Configurações do Cliente**, na área de **Autenticação**, selecione **Chave do Cliente** e clique no botão **Gerar Chave do Cliente**.
 
-### Configurações Adicionais
+### Configurações Adicionais {#additional-configurations}
 
 - **Adicionar origem permitida**: Adicione todos os domínios que farão solicitações do lado do cliente para a Adyen. Isso inclui seu ambiente VTEX e o domínio de produção de sua loja. Você deve adicionar cada domínio separadamente.
   - **Exemplo (Ambiente VTEX)**: `https://{{account}}.myvtex.com`

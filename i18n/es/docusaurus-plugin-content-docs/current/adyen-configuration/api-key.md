@@ -18,7 +18,7 @@ Genere y configure su clave de API como se describe en [Documentación de plataf
 5. En **Configuración del servidor**, en el área de **Autenticación**, seleccione **Clave API** y luego haga clic en el botón **Generar clave API** para crear una nueva clave y **almacenar** esta información de forma segura.
 6. En **Configuración del cliente**, en el área de **Autenticación**, seleccione **Clave del cliente** y haga clic en el botón **Generar clave del cliente**.
 
-### Configuraciones adicionales
+### Configuraciones adicionales {#additional-configurations}
 
 - ***Añadir origen permitido**: Añade todos los dominios que harán solicitudes del lado del cliente a Adyen. Esto incluye su entorno VTEX y el dominio de producción de su tienda. Debe agregar cada dominio por separado.
   - **Ejemplo (entorno VTEX)**: `https://{{account}}.myvtex.com`

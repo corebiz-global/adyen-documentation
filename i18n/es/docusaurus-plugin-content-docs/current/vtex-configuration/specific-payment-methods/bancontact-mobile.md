@@ -1,12 +1,19 @@
 ---
 title: Bancontact Mobile
 description: Permite a los clientes pagar utilizando la aplicación Bancontact a través de un código QR o redirección de aplicación.
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/bancontact.svg
   subtitle: Mobile
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
 
-Este método permite a los clientes pagar utilizando la aplicación Bancontact en sus dispositivos móviles a través de un código QR o redirección de aplicación.
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 1. **En Adyen**:
    - Habilite **Bancontact Mobile** en su Área del Cliente de Adyen.
