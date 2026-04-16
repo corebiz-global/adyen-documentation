@@ -32,7 +32,16 @@ Ensure you have the necessary permissions and details of the Adyen payment gatew
 12. The **Live POS URL** field is used only for Sales APP.
 13. In **Client key** field, fill in the Client key you got on Step 6 of the [API Key](../adyen-configuration/api-key.md) section.
     ![API Credentials](/img/vtex-api-key-field.png)
-14. Click **Save**.
+14. In **Origin URL** field, enter the final URL of your store (e.g., `https://loja.com.br`).
+    - The URL must be the final domain, without subdirectories and without a trailing slash.
+    - This field is mandatory for processing 3DS transactions on the Web channel.
+    - **Do not** use the `.myvtex.com` domain for production.
+    - Character limit: 80 characters.
+    ![Origin URL](/img/vtex-origin-field.png)
+
+    > **Important:** To validate 3DS in a development workspace (e.g., `https://homolog--loja.myvtex.com`), inform the workspace URL in the **Origin URL** field and also register this URL in the Adyen panel, as described in the [Additional Configurations](../adyen-configuration/api-key.md#additional-configurations) step.
+
+15. Click **Save**.
 
 ![AdyenV3](/img/vtex-adyen-v3-installed.png)
 

@@ -1,10 +1,19 @@
 ---
 title: Boletos (Bank Slips)
 description: Boleto es el método de pago basado en efectivo utilizado en todo Brasil
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/boletos.svg
   subtitle: Efectivo
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Configurar la condición de pago
 

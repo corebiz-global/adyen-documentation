@@ -1,10 +1,19 @@
 ---
 title: BLIK
 description: BLIK es el método de pago móvil dominante en Polonia
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/blik.svg
   subtitle: Banca Online
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 1. **En Adyen**:
    - Habilite **BLIK** en su Área del Cliente de Adyen.

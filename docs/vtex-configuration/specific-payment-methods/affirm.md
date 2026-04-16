@@ -1,10 +1,20 @@
 ---
 title: Affirm
 description: Affirm offers buy now, pay later to millions of shoppers in North America
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/affirm.svg
   subtitle: Buy now pay later
 ---
+
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 Affirm is configured as a standard payment method in VTEX:
 

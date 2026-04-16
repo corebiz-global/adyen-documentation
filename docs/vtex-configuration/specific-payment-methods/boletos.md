@@ -1,10 +1,20 @@
 ---
 title: Boletos (Bank Slips)
 description: Boleto is the cash-based payment method used throughout Brazil
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/boletos.svg
   subtitle: Cash
 ---
+
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Set up the payment condition
 

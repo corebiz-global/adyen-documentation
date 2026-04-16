@@ -1,10 +1,19 @@
 ---
 title: Bancontact
 description: O Bancontact é o método de pagamento mais popular da Bélgica
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/bancontact.svg
   subtitle: Cartões
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 - Para que este método de pagamento funcione, você precisa fazer algumas configurações específicas no Painel Administrativo da VTEX:
   - **Configuração do Método de Pagamento**: Vá para o painel de administração da VTEX e acesse a seção de métodos de pagamento `https://{{account}}.myvtex.com/admin/pci-gateway/#/custom-payments` ou digite **pagamentos** na caixa de pesquisa do Admin e clique na aba **Pagamentos customizados**.

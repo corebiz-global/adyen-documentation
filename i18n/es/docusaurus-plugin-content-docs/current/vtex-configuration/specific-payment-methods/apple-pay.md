@@ -1,10 +1,20 @@
 ---
 title: Apple Pay
 description: Apple Pay es la billetera digital preferida por millones de usuarios de iOS
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/apple-pay.svg
   subtitle: Billeteras digitales, Tarjetas
 ---
+
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Configurar Apple Pay en el Área del Cliente de Adyen
 
@@ -38,3 +48,4 @@ Si la configuración es correcta, debería ver “Apple Pay” cuando lo busque 
 [<img src="/img/postman-button.svg" alt="Ejecutar en Postman" />](https://www.postman.com/suportecorebiz/adyen-apple-pay/collection/2y1c8n1/apple-pay?action=share&creator=41098825)
 
 3. Verifique si el certificado se instaló correctamente. Para verificar si el certificado se instaló correctamente en los servidores VTEX, use la siguiente url: `https://{{DominioPublicoTienda}}/.well-known/apple-developer-merchantid-domain-association`
+

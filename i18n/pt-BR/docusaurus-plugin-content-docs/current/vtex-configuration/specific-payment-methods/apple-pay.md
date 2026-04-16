@@ -1,10 +1,20 @@
 ---
 title: Apple Pay
 description: Apple Pay é a carteira digital de escolha para milhões de usuários iOS
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/apple-pay.svg
   subtitle: Carteiras digitais, Cartões
 ---
+
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 ### Configure o Apple Pay na Área do Cliente Adyen
 

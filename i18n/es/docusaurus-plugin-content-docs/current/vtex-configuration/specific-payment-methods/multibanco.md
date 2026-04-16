@@ -1,10 +1,19 @@
 ---
 title: MultiBanco
 description: El método de pago más popular en Portugal
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/multibanco.svg
   subtitle: Vouchers, prepagos y tarjetas de regalo
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 1. **En Adyen**:
    - Habilite **MultiBanco** en su Área del Cliente de Adyen.

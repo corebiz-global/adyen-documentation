@@ -1,10 +1,20 @@
 ---
 title: Affirm
 description: Affirm ofrece compras financiadas (BNPL) para millones de compradores en Norteamérica.
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/affirm.svg
   subtitle: Compre ahora, pague después
 ---
+
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 Affirm se configura como um método de pago estándar en VTEX:
 

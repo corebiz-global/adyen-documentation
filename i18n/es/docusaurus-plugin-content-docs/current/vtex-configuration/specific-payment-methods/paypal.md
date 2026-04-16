@@ -1,10 +1,19 @@
 ---
 title: PayPal
 description: PayPal es una de las principales billeteras digitales, con más de 300 millones de consumidores activos
+hide_title: true
 sidebar_custom_props:
   image: /img/icons/paypal.svg
   subtitle: Billeteras digitales
 ---
+import PaymentMethodHeader from "@site/src/components/PaymentMethodHeader";
+
+<PaymentMethodHeader 
+  title={frontMatter.title} 
+  description={frontMatter.description} 
+  image={frontMatter.sidebar_custom_props.image} 
+  subtitle={frontMatter.sidebar_custom_props.subtitle}
+/>
 
 Para ofrecer PayPal a través de Adyen en VTEX, siga estos pasos:
 
