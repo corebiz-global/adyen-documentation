@@ -8,10 +8,10 @@ slug: /release-notes
 # Adyen Connector - Release Notes
 
 ## [v2.39.1]
-### New Features
+### Novas Funcionalidades
 - Mensagens aprimoradas para lojistas que experimentam falhas de cancelamento envolvendo um Provedor de Serviço de Pagamento (PSP).
 
-### Bug Fixes
+### Correções de Bugs
 - Processo de cancelamento aprimorado em todos os fluxos de pagamentos.
 
 
