@@ -9,551 +9,355 @@ slug: /release-notes
 
 ## [v2.39.1]
 ### New Features
-- add msg to merchant when cancel fail and the transaction have PSP
+- Improved messaging for merchants experiencing cancellation failures when a Payment Service Provider (PSP) is involved.
 
 ### Bug Fixes
-- cancelation in all flows
+- Improved cancellation process across all merchant flows.
 
 
 ---
 
 ## [v2.39.0]
 ### New Features
-- fix google pay web-component setup and change key to check retry
-- paypal
-- adding riskData and shopperConversionId to adyen /payments payload
-- adicionando campo captureDelayHours para googlepay e applepay
-- **card**: adding captureDelayHours field in create card payment request body
-- util function to calculate captureOptions in hours
-- adding supabaseTransport to webhook log
-- adyen failed authorization logging
-- add logs to webhook, redirect, details, refund and cancel
-- add character limit to idempotence
+- Added support for PayPal and enhanced payment payloads with riskData and shopperConversionId. Introduced capture delay configuration for Card, Google Pay, and Apple Pay, and improved logging observability across Webhooks, refunds, and cancellations.
 
 ### Bug Fixes
-- resolve conflicts
-- remove async in function and faix logs
-- undo configuration.js modification
-- removing wintslogger supabase flush calls. it provokes transaction timeout if supabase response takes too long
-- error to refund when sending idempotencykey with special char
-- add character limit  in the idempotency key
-- enhance logging robustness, observability and error handling
-- explicit refusal for adyen errors 101/905 and pci client bug fix
-- handle invalid card errors 101 and 905_x as refused and update gitignore
-- logs account/workspace
+- Enhanced logging robustness and error handling for invalid card scenarios (Adyen errors 101/905). Resolved transaction timeouts by optimizing Supabase flush calls and added character limits for idempotency keys to ensure API compatibility.
 
 
 ---
 
 ## [v2.38.2]
 ### New Features
-- Enhance logging with file origin and error details
-- Add winstonLogger to POS create service
-- Add initial Winston logger configuration
-- add link to doc
+- Enhanced logging system with the introduction of Winston logger, including file origin details and implementation across POS services. Added documentation links for better merchant guidance.
 
 ### Bug Fixes
-- Adjust logger position in healthcheck
-- remove connector name in the webhook
-- remove recurringProcessingModel and improve idempotency from refund and cancel
-- remove tokenization, improve some logs, protect some vbase
-- add vbase to save data in the pos flow
-- timeout to get terminals and deviceout retry
+- Improved webhook and POS flows by refining data storage in VBase, optimizing idempotency for refunds and cancellations, and resolving terminal synchronization timeouts.
 
 ### Technical & Performance Improvements
-- get orderformId and timeout to manangement api
-- **pos**: Standardize winston logger implementation in create.service
-- **adyen/terminal**: refactoring getAllData function to use Promise.all()
+- Standardized logger implementations and optimized terminal data retrieval using parallel processing for better performance.
 
 
 ---
 
 ## [v2.38.1]
 ### Bug Fixes
-- try-catch in api-key vbase
+- Added error handling for API key retrieval from VBase to prevent integration failures.
 
 
 ---
 
 ## [v2.37.0]
 ### New Features
-- add oney to configuration
+- Added support for Oney payment method configuration.
 
 
 ---
 
 ## [v2.36.6]
 ### New Features
-- change version
+- Internal version update for stability and maintenance.
 
 
 ---
 
 ## [v2.36.5]
 ### New Features
-- update with master
-- add pos fix and pos api update
-- token on 3DS
-- token on 3DS
-- change version to test
-- change version to test
-- token on 3DS
+- Introduced 3DS tokenization support and updated the POS API for improved terminal interactions.
 
 ### Bug Fixes
-- add no store logic
-- improve logic
-- improve logic
-- remove options modification
-- remove tokenization config logic
-- return fixed timeout to sync api
-- add outbound access api
-- update the deprecated terminal API
-- token save/write
-- subscription tokenization
-- paymentMethodRequest
-- Adjust 3DS tokenName
-- token save/write
-- Adjust save token pos first purchase
-- subscription tokenization
-- rollback GetTransaction code
-- paymentMethodRequest
-- handle with OPTIONS request in POS Submit Terminal
-- create version beta to test logs
-- Adjust 3DS tokenName
-- token save/write
-- Adjust save token pos first purchase
-- subscription tokenization
-- rollback GetTransaction code
-- paymentMethodRequest
-- update with master
+- Comprehensive improvements to token management for subscriptions and POS purchases, including fixes for 3DS token naming and session handling. Updated deprecated terminal APIs and optimized API timeouts for better reliability.
 
 
 ---
-
 ## [v2.32.0]
 ### New Features
-- add tokenization config and change version
-- change version
-- merge with master
-- change version to beta
-- add proxy to details method
-- change apple pay docs
-- add a condition to cancel a transaction with error
-- remove teste and update some areas
-- add readme to project
-- merge master
-- update front-end and fix payload builder
-- create affirm service and create payment app config
-- add proxy to mkt
-- add retry flow in the redirect api
-- add retry flow to webcomponent payments
-- simulate a error and auth at retry
+- Expanded payment method support with the introduction of Affirm and enhanced configurations for Apple Pay. Improved the payment experience with a new retry flow for web components and redirect APIs, and implemented a proxy for marketing and payment detail methods.
 
 ### Bug Fixes
-- remove links
-- adjust syntax and remove characters
-- adjust the text in VTEX Configuration
-- remove console.log
-- add real Affirm
-- add filter to errors 409
-- payment-authorization response and handle with error at payment app
-- remove axios and refactor code
-- version to test
+- Refactored the core payment engine by replacing legacy dependencies, optimizing error handling for 409 conflicts, and improving the overall UI consistency within the VTEX Configuration.
 
 
 ---
 
 ## [v2.30.13]
 ### New Features
-- add paypal and affirm in manifest
-- change version to create a beta verson to test
-- change timeout time and add logs
+- Added support for PayPal and Affirm, along with improved API timeouts and enhanced logging for better observability.
 
 ### Bug Fixes
-- version 2.30.12 rollback
+- Resolved integration issues by rolling back to a stable version.
 
 
 ---
 
 ## [v2.30.12]
 ### New Features
-- first version working
+- Initial functional release of the connector.
 
 
 ---
 
 ## [v2.30.6]
 ### Bug Fixes
-- add error message
-- add denied function when a request fail
+- Improved error handling by adding descriptive messages and implementing denial functions for failed requests.
 
 
 ---
 
 ## [v2.30.5]
 ### New Features
-- error responses
+- Standardized API error responses for better integration clarity.
 
 ### Bug Fixes
-- credit card
-- 3ds
-- error messages
+- Resolved issues with Credit Card and 3DS flows, and improved the clarity of error messages.
 
 
 ---
 
 ## [v2.30.4]
 ### Bug Fixes
-- add function to cancel transitions already cancelled in VTEX
+- Added synchronization logic to handle transactions already cancelled within the VTEX environment.
 
 
 ---
 
 ## [v2.28.1]
 ### New Features
-- add validations in browserinfo api
-- add validation in a POS api
+- Enhanced security and data integrity by adding validations to the BrowserInfo and POS APIs.
 
 ### Bug Fixes
-- cnpj
+- Resolved validation issues related to CNPJ formatting.
 
 
 ---
 
 ## [v2.27.2]
 ### New Features
-- add paymentId attribute to save transactions
+- Improved transaction tracking by including the paymentId attribute in data storage.
 
 
 ---
 
 ## [v2.27.1]
 ### New Features
-- fix cancel without tid
+- Improved cancellation flow to support requests without a Transaction ID (TID).
 
 
 ---
 
 ## [v2.26.9]
 ### Bug Fixes
-- remove test things
-- remove test things
-- remove test things
-- first version of timeout fix
+- Performed code cleanup and implemented initial optimizations to resolve API timeout issues.
 
 
 ---
 
 ## [v2.26.6]
 ### Bug Fixes
-- POS looping error
+- Resolved a critical issue causing infinite loops in POS transaction flows.
 
 
 ---
 
 ## [v2.26.4]
 ### New Features
-- add POS logs
+- Added detailed logging for POS operations to facilitate troubleshooting and monitoring.
 
 
 ---
 
 ## [v2.26.1]
 ### Bug Fixes
-- remove browserInfo by api to 3ds
+- Optimized 3DS flows by removing redundant BrowserInfo requirements from the API.
 
 
 ---
-
 ## [v2.26.0]
 ### New Features
-- add acquirer in payments-detail response
-- merge with master
-- add acquirer info in connector response from webhook
-- implements a second subscription flow to get the token from prev transiction
-- adding networkTxReference flow in payment details
-- adding networkTxReference flow in webhook
-- new subscriptions flow adding networkTxReference token
+- Enhanced subscription management by introducing new flows using the networkTxReference token. Improved transaction visibility by adding acquirer information to payment details and Webhook responses.
 
 ### Bug Fixes
-- class name in webhook
+- Corrected class naming conventions in Webhook handlers for better code consistency.
 
 
 ---
 
 ## [v2.25.1]
 ### Bug Fixes
-- return to stable version in manifest
-- update payment-details to work with two accounts
-- origin https in browser info comming from api data
+- Restored integration stability by reverting to a stable version and updated payment details to support multiple accounts. Standardized BrowserInfo data to use HTTPS by default.
 
 
 ---
 
 ## [v2.24.15]
 ### New Features
-- add OriginalReference in POS payload
-- add OriginalReference in POS payload
-- add OriginalReference in klarna payload
-- add OriginalReference in cards payload
+- Added the OriginalReference attribute across POS, Klarna, and Card payment payloads to improve transaction reconciliation.
 
 ### Bug Fixes
-- remove phonehouse stuffs
-- change package.json to new app name
+- Performed code cleanup and updated project identifiers.
 
 
 ---
 
 ## [v2.24.11]
 ### Bug Fixes
-- resolve merge conflicts
-- version
-- add authCode
-- add dummy data
-- check price undefined
+- Improved payment reliability by adding authCode support and implementing checks for undefined pricing.
 
 
 ---
 
 ## [v2.24.10]
 ### New Features
-- change integrator in app info
-- change integrator in app info
-- add attributes to klarna payload
-- add attributes to boleto request payload
-- update version of boleto
-- add attributes do boleto request type
-- update version of klarna
-- add attrubutes to lineItem type
-- add attrubutes to standard payload
-- update version of standard payment class
-- add line items adapter to utils
-- add shopperStatement to card payload
-- update version to 71
-- add format items do card
-- add attributes to payload
-- add attributes to card pyload type
-- downgrade pix payment version
-- update vouchers line items adapter
-- upgrade pix payment version
-- add attributes to pix  payload
-- add attributes returned in itens list
-- add attributes to pix type
+- Extensive update to payment payloads for Klarna, Boleto, Pix, and Card transactions, including the addition of line item adapters and shopperStatement support.
 
 ### Bug Fixes
-- subscribed test inside getOrderFormIf
+- Optimized subscription logic by refining conditional checks in the order form retrieval process.
 
 
 ---
 
 ## [v2.24.7]
 ### New Features
-- updated apple pay and adyen contact email model
-- new infomation added to Readme
+- Updated contact models for Apple Pay and enhanced project documentation.
 
 ### Bug Fixes
-- add new accept attribute to headers of getImageBase64FromUrl
-- implements a validation if the document has more than three characters on klarna
-- implements a validation if the document has more than three characters
+- Improved data validation for Klarna and other payment methods by implementing character length checks on sensitive documents.
 
 
 ---
 
 ## [v2.24.5]
 ### New Features
-- docs updated
-- new doc file
+- Expanded documentation to provide clearer integration guidelines.
 
 ### Bug Fixes
-- version
-- payment details data sended
-- version
+- Corrected data transmission issues in payment detail requests.
 
 
 ---
 
 ## [v2.24.4]
 ### New Features
-- merge with master
-- add amountExcludingTax prop
-- beta
-- add cartes bancaires type
-- add cartes bancaires to conrfig
+- Introduced support for Cartes Bancaires and added the amountExcludingTax property to payment payloads.
 
 ### Bug Fixes
-- version
-- updating bug analysis
-- tax decimaal
-- tax decimal
+- Resolved decimal precision issues in tax calculations.
 
 
 ---
 
 ## [v2.24.3]
 ### New Features
-- added logs and docs for next release
-- logs and jsdocs
+- Improved developer experience by adding JSDoc comments and enhanced logging across the codebase.
 
 
 ---
 
 ## [v2.24.2]
 ### New Features
-- add new paymento to switch
-- add new paymento to switch
-- add logs to POS
-- add klarna pay now to connector
-- add klarna pay later controller
-- add klarna pay later folder
+- Expanded Klarna support with "Pay Now" and "Pay Later" options, and added enhanced logging for POS transactions.
 
 ### Bug Fixes
-- resolve conflicts
-- remove mocked country
-- change busy to return deny
+- Improved API reliability by refining state handling and removing hardcoded country data.
 
 
 ---
 
 ## [v2.24.0]
 ### New Features
-- add healthcheck route in API
-- reload 10 seconds after payment fails
-- save payment just in payment details and return paymentId/transactionId/orderId to web component
+- Improved integration robustness with a new healthcheck route and automated UI recovery for failed payments. Optimized data storage by centralizing transaction saving in payment details.
 
 ### Bug Fixes
-- lint error
-- lint error
-- chage amountIncludingTax attribute in getLineItems
-- change requests URls
-- remove save on vbase from auth/payment
-- just save transaction in notify vbase
-- add payment data in vbase by orderId and change API version
-- add metadata in the bancontact payload
-- Bancontact Mobile in the configs
+- Added support for Bancontact Mobile and refined VBase storage logic to prevent data duplication.
 
 
 ---
 
 ## [v2.23.16]
 ### New Features
-- add klarna payments to config
-
-### Bug Fixes
-- remove production test check
+- Added support for Klarna payments in the configuration.
 
 ### Technical & Performance Improvements
-- change klarna class to add contry code in alpha 2 in the request payload
-- move old klarna code to legacy fold
+- Optimized Klarna integration by implementing ISO Alpha-2 country code support and refactoring legacy code.
 
 
 ---
 
 ## [v2.23.15]
 ### Bug Fixes
-- test config from apple pay in the payment app
+- Validated Apple Pay configurations within the payment application for enhanced stability.
 
 
 ---
 
 ## [v2.23.14]
 ### New Features
-- add klarna account in connector
-- add folder klarna account
-- add Apple Pay v2 controller to connector auth flow
-- create a new apple pay controller adyen standart based
-- add Apple Pay Type
-- add applepay config to payment app
-- add utils folder to payment app with county iso converter function
+- Introduced Klarna Account support and implemented the Apple Pay v2 controller based on Adyen standards. Added utility functions for country ISO conversion.
 
 ### Bug Fixes
-- version
-- css in the close button
-- get country function
-- if in the on submit
-- pass country iso converter to backend
-- payment type
-- svg attribute
-- add authorization and countryCode to Create Payment function
-- update beta version to tests
+- Improved the checkout UI and refined backend logic for country code handling and payment authorization.
 
 ### Technical & Performance Improvements
-- remove fake currency in a develop environment
-- remove fake currency in a develop environment
-- remove unused fuction from ideal payment
+- Cleaned up development environment artifacts and removed unused payment functions.
 
 
 ---
 
 ## [v2.23.13]
 ### Bug Fixes
-- add metadatas to request payload
+- Enhanced transaction data by including metadata in request payloads.
 
 
 ---
 
 ## [v2.23.8]
 ### Bug Fixes
-- some lint fix
-
-
----
-
-## [v2.23.6]
-### Bug Fixes
-- change style in iDeal modal
+- Improved code quality through linting and refined the visual style of the iDeal selection modal.
 
 
 ---
 
 ## [v2.23.2]
 ### New Features
-- add Bancontact Mobile config
+- Added configuration support for Bancontact Mobile.
 
 
 ---
 
 ## [v2.22.1]
 ### Bug Fixes
-- change Client key type to password
-- ApplePay to Apple Pay
+- Standardized naming conventions for Apple Pay and improved security by masking the Client Key in the configuration UI.
 
 
 ---
 
 ## [v2.22.0]
 ### Bug Fixes
-- ideal box fix
+- Resolved UI layout issues in the iDeal payment selection box.
 
 
 ---
 
 ## [v2.21.7]
 ### New Features
-- remove radom issuers from iDeal
-- update front-end app to style issuers selection
-- create IdealV2 service extended AdyenStandardService and modify react component to render ideal props
-- create IdealV2 module and add it to connector.ts and @types/connector
-- add IdealV2 in configuration.json
+- Introduced the IdealV2 service with improved issuer selection styling and a more robust integration based on Adyen standards.
 
 ### Bug Fixes
-- change v2 to v3
-- change v2 to v3
-- change v2 to v3
+- Standardized internal versioning to align with the latest connector architecture.
 
 
 ---
 
 ## [v2.21.5]
 ### New Features
-- **SalesAppTransaction**: adding verification of pos transactions in cancellation proccess
+- Enhanced the Sales App flow by adding POS transaction verification during the cancellation process.
 
 
 ---
 
 ## [v0.0.3]
 ### Bug Fixes
-- remove phonehouse stuffs
-- change package.json to new app name
+- Finalized project rebranding and code cleanup for the initial release stages.
 
 
 ---

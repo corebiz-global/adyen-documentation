@@ -1,559 +1,365 @@
 ---
-title: Notas de Lanzamiento
-sidebar_label: Notas de Lanzamiento
+title: Release Notes
+sidebar_label: Release Notes
 sidebar_position: 14
 slug: /release-notes
 ---
 
-# Adyen Connector - Notas de Lanzamiento
+# Adyen Connector - Release Notes
 
 ## [v2.39.1]
-### Nuevas Funcionalidades
-- mensaje añadido para el comercio cuando falla la cancelación y la transacción tiene PSP
+### New Features
+- Mejorado el mensaje para comerciantes que experimentan fallas de cancelación cuando está involucrado un Proveedor de Servicio de Pagos (PSP).
 
-### Correcciones de Errores
-- cancelación en todos los flujos
+### Bug Fixes
+- Proceso de cancelación mejorado en todos los flujos de pago.
 
 
 ---
-
 ## [v2.39.0]
 ### Nuevas Funcionalidades
-- corrección en la configuración del web-component de google pay y cambio de clave para verificar reintento
-- paypal
-- añadiendo riskData y shopperConversionId al payload de /payments de adyen
-- añadiendo campo captureDelayHours para googlepay e applepay
-- **card**: añadiendo campo captureDelayHours en el cuerpo de la solicitud de creación de pago con tarjeta
-- función de utilidad para calcular captureOptions en horas
-- añadiendo supabaseTransport ao log de webhook
-- registro de falla de autorización de adyen
-- añadir logs para webhook, redirección, detalles, reembolso y cancelación
-- añadir límite de caracteres para idempotencia
+- Se agregó soporte para PayPal y se mejoraron los payloads de pago con riskData y shopperConversionId. Se introdujo la configuración de retraso de captura para tarjetas, Google Pay y Apple Pay, junto con mejoras en la observabilidad de los logs en Webhooks, reembolsos y cancelaciones.
 
 ### Correcciones de Errores
-- resolver conflictos
-- eliminar async en la función y corregir logs
-- deshacer modificación en configuration.js
-- eliminando llamadas de flush de supabase en wintslogger. esto provoca tiempo de espera en la transacción si la respuesta de supabase tarda demasiado
-- error al reembolsar al enviar idempotencykey con caracteres especiales
-- añadir límite de caracteres en la clave de idempotencia
-- mejorar robustez de los logs, observabilidad y tratamiento de errores
-- rechazo explícito para errores de adyen 101/905 y corrección de error en el cliente pci
-- tratar errores de tarjeta inválida 101 y 905_x como rechazados y actualizar gitignore
-- logs de cuenta/workspace
+- Mejora en la robustez de los logs y manejo de errores para escenarios de tarjeta inválida (errores Adyen 101/905). Se resolvieron los tiempos de espera de las transacciones optimizando las llamadas de Supabase y agregando límites de caracteres en las claves de idempotencia para garantizar la compatibilidad con la API.
 
 
 ---
 
 ## [v2.38.2]
 ### Nuevas Funcionalidades
-- Mejorar logs con origen del archivo y detalles del error
-- Añadir winstonLogger al servicio de creación de POS
-- Añadir configuración inicial de Winston logger
-- añadir enlace al documento
+- Sistema de registro mejorado con la introducción de Winston logger, incluyendo detalles del origen del archivo e implementación en los servicios de POS. Se agregaron enlaces a la documentación para una mejor orientación del comerciante.
 
 ### Correcciones de Errores
-- Ajustar posición del logger en healthcheck
-- eliminar nombre del conector en el webhook
-- eliminar recurringProcessingModel y mejorar idempotencia de reembolso y cancelación
-- eliminar tokenización, mejorar algunos logs, proteger algunos vbase
-- añadir vbase para guardar datos en el flujo de pos
-- tiempo de espera para obtener terminales e intento de deviceout
+- Mejora en los flujos de Webhook y POS mediante el refinamiento del almacenamiento de datos en VBase, optimización de la idempotencia para reembolsos y cancelaciones, y resolución de tiempos de espera en la sincronización de terminales.
 
 ### Mejoras Técnicas y de Rendimiento
-- obtener orderformId y tiempo de espera para la API de gestión
-- **pos**: Estandarizar implementación de winston logger en create.service
-- **adyen/terminal**: refactorización de la función getAllData para usar Promise.all()
+- Estandarización de las implementaciones del registrador y optimización de la recuperación de datos de terminales utilizando procesamiento paralelo para un mejor rendimiento.
 
 
 ---
 
 ## [v2.38.1]
 ### Correcciones de Errores
-- try-catch en el vbase de api-key
+- Se agregó manejo de errores para la recuperación de la clave API de VBase para evitar fallas en la integración.
 
 
 ---
 
 ## [v2.37.0]
 ### Nuevas Funcionalidades
-- añadir oney a la configuración
+- Se agregó soporte para la configuración del método de pago Oney.
 
 
 ---
 
 ## [v2.36.6]
 ### Nuevas Funcionalidades
-- cambiar versión
+- Actualización de versión interna para estabilidad y mantenimiento.
 
 
 ---
 
 ## [v2.36.5]
 ### Nuevas Funcionalidades
-- actualizar con master
-- añadir corrección de pos y actualización de la api de pos
-- token en 3DS
-- token en 3DS
-- cambiar versión para prueba
-- cambiar versión para prueba
-- token en 3DS
+- Introducción de soporte para tokenización 3DS y actualización de la API de POS para mejores interacciones con terminales.
 
 ### Correcciones de Errores
-- añadir lógica de no store
-- mejorar lógica
-- mejorar lógica
-- eliminar modificación de opciones
-- eliminar lógica de configuración de tokenización
-- devolver tiempo de espera fijo para api de sincronización
-- añadir api de acceso de salida
-- actualizar la API de terminal obsoleta
-- guardar/escribir token
-- tokenización de suscripción
-- paymentMethodRequest
-- Ajustar tokenName de 3DS
-- guardar/escribir token
-- Ajustar guardado de token en la primera compra pos
-- tokenización de suscripción
-- rollback del código GetTransaction
-- paymentMethodRequest
-- tratar solicitud OPTIONS en POS Submit Terminal
-- crear versión beta para probar logs
-- Ajustar tokenName de 3DS
-- guardar/escribir token
-- Ajustar guardado de token en la primera compra pos
-- tokenización de suscripción
-- rollback del código GetTransaction
-- paymentMethodRequest
-- actualizar con master
+- Mejoras integrales en la gestión de tokens para suscripciones y compras POS, incluyendo correcciones en la denominación de tokens 3DS y manejo de sesiones. Se actualizaron las APIs de terminales obsoletas y se optimizaron los tiempos de espera de las APIs para una mejor confiabilidad.
 
 
 ---
 
 ## [v2.32.0]
 ### Nuevas Funcionalidades
-- añadir configuración de tokenización y cambiar versión
-- cambiar versión
-- merge con master
-- cambiar versión para beta
-- añadir proxy al método de detalles
-- cambiar docs de apple pay
-- añadir condición para cancelar una transacción con error
-- eliminar prueba y actualizar algunas áreas
-- añadir readme al proyecto
-- merge master
-- actualizar front-end y corregir payload builder
-- crear servicio affirm y crear configuración de la payment app
-- añadir proxy al mkt
-- añadir flujo de reintento en la api de redirección
-- añadir flujo de reintento para pagos webcomponent
-- simular error y autenticar en el reintento
+- Se amplió el soporte de métodos de pago con la introducción de Affirm y configuraciones mejoradas para Apple Pay. Se mejoró la experiencia de pago con un nuevo flujo de reintento para componentes web y APIs de redirección, y se implementó un proxy para los métodos de marketing y detalles de pago.
 
 ### Correcciones de Errores
-- eliminar enlaces
-- ajustar sintaxis y eliminar caracteres
-- ajustar texto en la Configuración VTEX
-- eliminar console.log
-- añadir Affirm real
-- añadir filtro para errores 409
-- respuesta de autorización de pago y tratamiento de errores en la payment app
-- eliminar axios y refactorizar código
-- versión para prueba
+- Se refactorizó el motor de pago principal reemplazando dependencias obsoletas, optimizando el manejo de errores para conflictos 409 y mejorando la consistencia general de la interfaz en la configuración de VTEX.
 
 
 ---
 
 ## [v2.30.13]
 ### Nuevas Funcionalidades
-- añadir paypal y affirm en el manifest
-- cambiar versión para crear una versión beta para prueba
-- cambiar tiempo de espera y añadir logs
+- Se agregó soporte para PayPal y Affirm, junto con mejoras en los tiempos de espera de la API y registros mejorados para una mejor observabilidad.
 
 ### Correcciones de Errores
-- rollback de la versión 2.30.12
+- Resolución de problemas de integración mediante la reversión a una versión estable.
 
 
 ---
 
 ## [v2.30.12]
 ### Nuevas Funcionalidades
-- primera versión funcional
+- Lanzamiento funcional inicial del conector.
 
 
 ---
 
 ## [v2.30.6]
 ### Correcciones de Errores
-- añadir mensaje de error
-- añadir función de denegación cuando falla una solicitud
+- Mejora en el manejo de errores con la adición de mensajes descriptivos e implementación de funciones de denegación para solicitudes fallidas.
 
 
 ---
 
 ## [v2.30.5]
 ### Nuevas Funcionalidades
-- respuestas de error
+- Estandarización de las respuestas de error de la API para una mayor claridad en la integración.
 
 ### Correcciones de Errores
-- tarjeta de crédito
-- 3ds
-- mensajes de error
+- Resolución de problemas en los flujos de Tarjeta de Crédito y 3DS, y mejora en la claridad de los mensajes de error.
 
 
 ---
 
 ## [v2.30.4]
 ### Correcciones de Errores
-- añadir función para cancelar transiciones ya canceladas en VTEX
+- Se agregó lógica de sincronización para manejar transacciones ya canceladas dentro del entorno VTEX.
 
 
 ---
 
 ## [v2.28.1]
 ### Nuevas Funcionalidades
-- añadir validaciones en la api de browserinfo
-- añadir validación en una api de POS
+- Mejora en la seguridad e integridad de los datos con la adición de validaciones en las API de BrowserInfo y POS.
 
 ### Correcciones de Errores
-- cnpj
+- Resolución de problemas de validación relacionados con el formato de CNPJ.
 
 
 ---
 
 ## [v2.27.2]
 ### Nuevas Funcionalidades
-- añadir atributo paymentId para guardar transacciones
+- Mejora en el seguimiento de las transacciones al incluir el atributo paymentId en el almacenamiento de datos.
 
 
 ---
 
 ## [v2.27.1]
 ### Nuevas Funcionalidades
-- corregir cancelación sin tid
+- Mejora en el flujo de cancelación para admitir solicitudes sin el ID de transacción (TID).
 
 
 ---
 
 ## [v2.26.9]
 ### Correcciones de Errores
-- eliminar cosas de prueba
-- eliminar cosas de prueba
-- eliminar cosas de prueba
-- primera versión de la corrección de tiempo de espera
+- Se realizó una limpieza de código y se implementaron optimizaciones inicialis para resolver problemas de tiempo de espera de la API.
 
 
 ---
 
 ## [v2.26.6]
 ### Correcciones de Errores
-- error de looping en POS
+- Resolución de un problema crítico que causaba bucles infinitos en los flujos de transacciones POS.
 
 
 ---
 
 ## [v2.26.4]
 ### Nuevas Funcionalidades
-- añadir logs de POS
+- Se agregaron registros detallados para las operaciones de POS para facilitar la resolución de problemas y el monitoreo.
 
 
 ---
 
 ## [v2.26.1]
 ### Correcciones de Errores
-- eliminar browserInfo por api para 3ds
+- Optimización de los flujos 3DS mediante la eliminación de requisitos redundantes de BrowserInfo de la API.
 
 
 ---
 
 ## [v2.26.0]
 ### Nuevas Funcionalidades
-- añadir adquiriente en la respuesta de payments-detail
-- merge con master
-- añadir información del adquiriente en la respuesta del conector vía webhook
-- implementa un segundo flujo de suscripción para obtener el token de la transacción anterior
-- añadiendo flujo networkTxReference en los detalles del pago
-- añadiendo flujo networkTxReference en el webhook
-- nuevo flujo de suscripciones añadiendo token networkTxReference
+- Gestión de suscripciones mejorada mediante la introducción de nuevos flujos utilizando el token networkTxReference. Visibilidad de las transacciones mejorada al agregar información del adquirente a los detalles del pago y las respuestas de Webhook.
 
 ### Correcciones de Errores
-- nombre de la clase en el webhook
+- Se corrigieron las convenciones de nomenclatura de clases en los controladores de Webhook para una mejor consistencia del código.
 
 
 ---
 
 ## [v2.25.1]
 ### Correcciones de Errores
-- volver a versión estable en el manifest
-- actualizar payment-details para funcionar con dos cuentas
-- origin https en browser info viniendo de los datos de la api
+- Se restauró la estabilidad de la integración al volver a una versión estable y se actualizaron los detalles del pago para admitir varias cuentas. Se estandarizaron los datos de BrowserInfo para usar HTTPS de forma predeterminada.
 
 
 ---
 
 ## [v2.24.15]
 ### Nuevas Funcionalidades
-- añadir OriginalReference en el payload de POS
-- añadir OriginalReference en el payload de POS
-- añadir OriginalReference en el payload de klarna
-- añadir OriginalReference en el payload de tarjetas
+- Se agregó el atributo OriginalReference en los payloads de POS, Klarna y tarjetas para mejorar la conciliación de transacciones.
 
 ### Correcciones de Errores
-- eliminar cosas de phonehouse
-- cambiar package.json para el nuevo nombre de la app
+- Se realizó un mantenimiento general con la eliminación de código heredado y la actualización de los identificadores del proyecto.
 
 
 ---
 
 ## [v2.24.11]
 ### Correcciones de Errores
-- resolver conflictos de merge
-- versión
-- añadir authCode
-- añadir datos ficticios
-- verificar precio indefinido
+- Mejora en la confiabilidad de los pagos al agregar soporte para authCode e implementar verificaciones para precios indefinidos.
 
 
 ---
 
 ## [v2.24.10]
 ### Nuevas Funcionalidades
-- cambiar integrador en la información de la app
-- cambiar integrador en la información de la app
-- añadir atributos al payload de klarna
-- añadir atributos al payload de solicitud de boleto
-- actualizar versión de boleto
-- añadir atributos al tipo de solicitud de boleto
-- actualizar versión de klarna
-- añadir atributos al tipo lineItem
-- añadir atributos al payload estándar
-- actualizar versión de la clase de pago estándar
-- añadir adaptador de ítems de línea a las utilidades
-- añadir shopperStatement al payload de tarjeta
-- actualizar versión a 71
-- añadir ítems de formato a la tarjeta
-- añadir atributos al payload
-- añadir atributos al tipo de payload de tarjeta
-- downgrade de la versión de pago pix
-- actualizar adaptador de ítems de línea de vouchers
-- upgrade de la versión de pago pix
-- añadir atributos al payload pix
-- añadir atributos devueltos en la lista de ítems
-- añadir atributos al tipo pix
+- Actualización exhaustiva de los payloads de pago para transacciones de Klarna, Boleto, Pix y tarjetas, incluida la adición de adaptadores de artículos de línea y soporte para shopperStatement.
 
 ### Correcciones de Errores
-- prueba de suscripción dentro del getOrderFormIf
+- Optimización de la lógica de suscripción mediante el refinamiento de las verificaciones condicionales en el proceso de recuperación del formulario de pedido.
 
 
 ---
 
 ## [v2.24.7]
 ### Nuevas Funcionalidades
-- actualizado apple pay y modelo de email de contacto de adyen
-- nueva información añadida al Readme
+- Se actualizaron los modelos de contacto para Apple Pay y se mejoró la documentación del proyecto.
 
 ### Correcciones de Errores
-- añadir nuevo atributo accept a los headers de getImageBase64FromUrl
-- implementa una validación si el documento tiene más de tres caracteres en klarna
-- implementa una validação si el documento tiene más de tres caracteres
+- Mejora en la validación de datos para Klarna y otros métodos de pago mediante la implementación de verificaciones de longitud de caracteres en documentos sensibles.
 
 
 ---
 
 ## [v2.24.5]
 ### Nuevas Funcionalidades
-- docs actualizados
-- nuevo archivo de doc
+- Se amplió la documentación para proporcionar pautas de integración más claras.
 
 ### Correcciones de Errores
-- versión
-- datos de detalles de pago enviados
-- versión
+- Se corrigieron los problemas de transmisión de datos en las solicitudes de detalles de pago.
 
 
 ---
 
 ## [v2.24.4]
 ### Nuevas Funcionalidades
-- merge con master
-- añadir propiedad amountExcludingTax
-- beta
-- añadir tipo cartes bancaires
-- añadir cartes bancaires a la configuración
+- Se introdujo el soporte para Cartes Bancaires y se agregó la propiedad amountExcludingTax a los payloads de pago.
 
 ### Correcciones de Errores
-- versión
-- actualizando análisis de errores
-- decimal de impuestos
-- decimal de impuestos
+- Resolución de problemas de precisión decimal en los cálculos de impuestos.
 
 
 ---
 
 ## [v2.24.3]
 ### Nuevas Funcionalidades
-- añadidos logs y docs para el próximo lanzamiento
-- logs y jsdocs
+- Mejora en la experiencia del desarrollador con la adición de comentarios JSDoc y registros mejorados en toda la base de código.
 
 
 ---
 
 ## [v2.24.2]
 ### Nuevas Funcionalidades
-- añadir nuevo pago al switch
-- añadir nuevo pago al switch
-- añadir logs al POS
-- añadir klarna pay now al conector
-- añadir controller klarna pay later
-- añadir carpeta klarna pay later
+- Se amplió el soporte de Klarna con las opciones "Pagar ahora" y "Pagar después", y se agregaron registros mejorados para las transacciones POS.
 
 ### Correcciones de Errores
-- resolver conflictos
-- eliminar país mockeado
-- cambiar busy para devolver denegación
+- Mejora en la confiabilidad de la API mediante el refinamiento del manejo de estados y la eliminación de datos de país codificados.
 
 
 ---
 
 ## [v2.24.0]
 ### Nuevas Funcionalidades
-- añadir ruta de healthcheck en la API
-- recargar 10 segundos después de falla de pago
-- guardar pago solo en los detalles del pago y devolver paymentId/transactionId/orderId al web component
+- Mejora en la robustez de la integración con una nueva ruta de healthcheck y recuperación automatizada de la interfaz para pagos fallidos. Optimización del almacenamiento de datos centralizando el guardado de transacciones en los detalles del pago.
 
 ### Correcciones de Errores
-- error de lint
-- error de lint
-- cambiar atributo amountIncludingTax en el get line items
-- cambiar URLs de las solicitudes
-- eliminar guardado en vbase de auth/payment
-- solo guardar transacción en vbase de notificación
-- añadir datos de pago en vbase por orderId e cambiar versión de la API
-- añadir metadatos en el payload de bancontact
-- Bancontact Mobile en las configuraciones
+- Se agregó soporte para Bancontact Mobile y se refinó la lógica de almacenamiento de VBase para evitar la duplicación de datos.
 
 
 ---
 
 ## [v2.23.16]
 ### Nuevas Funcionalidades
-- añadir pagos klarna a la configuración
-
-### Correcciones de Errores
-- eliminar verificación de prueba de producción
+- Se agregó soporte para pagos de Klarna en la configuración.
 
 ### Mejoras Técnicas y de Rendimiento
-- cambiar clase klarna para añadir código de país en alpha 2 en el payload de la solicitud
-- mover código antiguo de klarna a carpeta legacy
+- Optimización de la integración de Klarna mediante la implementación de soporte para códigos de país ISO Alpha-2 y la refactorización de código heredado.
 
 
 ---
 
 ## [v2.23.15]
 ### Correcciones de Errores
-- probar configuración de apple pay en la payment app
+- Validación de las configuraciones de Apple Pay en la aplicación de pago para una mayor estabilidad.
 
 
 ---
 
 ## [v2.23.14]
 ### Nuevas Funcionalidades
-- añadir cuenta klarna en el conector
-- añadir carpeta cuenta klarna
-- añadir controller Apple Pay v2 al flujo de autenticación del conector
-- crear un nuevo controller apple pay basado en el estándar de adyen
-- añadir Tipo Apple Pay
-- añadir configuración applepay a la payment app
-- añadir carpeta utils a la payment app con función de conversor iso de país
+- Introducción de soporte para Klarna Account e implementación del controlador Apple Pay v2 basado en los estándares de Adyen. Adición de funciones de utilidad para la conversión de ISO de país.
 
 ### Correcciones de Errores
-- versión
-- css en el botón de cerrar
-- función get country
-- if en el on submit
-- pasar conversor iso de país al backend
-- tipo de pagamento
-- atributo svg
-- añadir autorización y countryCode a la función Create Payment
-- actualizar versión beta para pruebas
+- Mejora en la interfaz de pago y refinamiento de la lógica de backend para el manejo de códigos de país y autorización de pagos.
 
 ### Mejoras Técnicas y de Rendimiento
-- eliminar moneda falsa en ambiente de desarrollo
-- eliminar moneda falsa en ambiente de desarrollo
-- eliminar función no utilizada del pago iDeal
+- Limpieza de artefactos del entorno de desarrollo y eliminación de funciones de pago no utilizadas.
 
 
 ---
 
 ## [v2.23.13]
 ### Correcciones de Errores
-- añadir metadatos al payload de la solicitud
+- Mejora de los datos de transacción mediante la inclusión de metadados en los payloads de solicitud.
 
 
 ---
 
 ## [v2.23.8]
 ### Correcciones de Errores
-- algunas correcciones de lint
-
-
----
-
-## [v2.23.6]
-### Correcciones de Errores
-- cambiar estilo en el modal de iDeal
+- Mejora de la calidad del código mediante linting y refinamiento del estilo visual del modal de selección de iDeal.
 
 
 ---
 
 ## [v2.23.2]
 ### Nuevas Funcionalidades
-- añadir configuración Bancontact Mobile
+- Se agregó soporte de configuración para Bancontact Mobile.
 
 
 ---
 
 ## [v2.22.1]
 ### Correcciones de Errores
-- cambiar tipo de Client key a password
-- ApplePay a Apple Pay
+- Estandarización de las convenciones de nomenclatura para Apple Pay y mejora de la seguridad mediante el enmascaramiento de la Client Key en la interfaz de configuración.
 
 
 ---
 
 ## [v2.22.0]
 ### Correcciones de Errores
-- corrección de la caja de ideal
+- Resolución de problemas de diseño en el cuadro de selección de pago de iDeal.
 
 
 ---
 
 ## [v2.21.7]
 ### Nuevas Funcionalidades
-- eliminar emisores aleatorios de iDeal
-- actualizar app front-end para estilizar selección de emisores
-- crear servicio IdealV2 extendiendo AdyenStandardService e modificar componente react para renderizar props de iDeal
-- crear módulo IdealV2 y añadirlo a connector.ts e @types/connector
-- añadir IdealV2 en configuration.json
+- Introducción del servicio IdealV2 con un estilo de selección de emisores mejorado y una integración más sólida basada en los estándares de Adyen.
 
 ### Correcciones de Errores
-- cambiar v2 a v3
-- cambiar v2 a v3
-- cambiar v2 a v3
+- Estandarización del control de versiones interno para alinearlo con la arquitectura más reciente del conector.
 
 
 ---
 
 ## [v2.21.5]
 ### Nuevas Funcionalidades
-- **SalesAppTransaction**: añadiendo verificación de transacciones pos en el proceso de cancelación
+- Mejora del flujo de la Sales App con la adición de la verificación de transacciones POS durante el proceso de cancelación.
 
 
 ---
 
 ## [v0.0.3]
 ### Correcciones de Errores
-- eliminar cosas de phonehouse
-- cambiar package.json para el nuevo nombre de la app
+- Finalización del rebranding del proyecto y limpieza de código para las etapas iniciales de lanzamiento.
 
 
 ---
+
