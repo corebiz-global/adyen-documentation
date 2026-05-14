@@ -7,6 +7,68 @@ slug: /release-notes
 
 # Adyen Connector - Release Notes
 
+## [v2.39.7]
+### Melhorias Técnicas e de Performance
+- Memória do serviço aumentada de 256MB para 512MB para melhorar a estabilidade e suportar maiores volumes de transações sem degradação de performance.
+
+
+---
+
+## [v2.39.6]
+### Novas Funcionalidades
+- Introduzida a integração do Google Pay via VTEX Wallet com integração headless, permitindo o processamento fluido de transações Google Pay com suporte a 3DS dataOnly e exibição precisa da origem do pagamento no Adyen CA.
+- Melhorias na autorização do PayPal com campos enriquecidos no payload e logs de erro detalhados para melhor diagnóstico e suporte.
+- Implementado roteamento via proxy de URL de workspace e adicionado o campo orderformId na rota saveCheckoutInfo, melhorando o rastreamento de sessão e a confiabilidade da integração.
+- Adicionados logs de transação Pix e de pagamento recusado para maior observabilidade nos fluxos de pagamento.
+
+### Correções de Bugs
+- Corrigido o código de resposta do proxy de payment-details para garantir a correta propagação do status HTTP para a VTEX.
+- Corrigida a estrutura do payload authenticationData e o campo additionalData no corpo da requisição de cartão para melhorar a compatibilidade com 3DS.
+
+### Melhorias Técnicas e de Performance
+- Habilitada autenticação 3DS forçada como opção configurável para maior conformidade de segurança.
+- Atributos de log atualizados nos serviços de pagamento para consistência e melhor depuração.
+
+
+---
+
+## [v2.39.5]
+### Melhorias Técnicas e de Performance
+- Release de estabilidade interna sem alterações visíveis ao usuário.
+
+
+---
+
+## [v2.39.4]
+### Novas Funcionalidades
+- Aprimorada a geração do ID de masterdata para tokenização: o identificador de cartão agora utiliza merchantId+accountId em vez de userId+cardBin, evitando conflitos quando múltiplos cartões com o mesmo BIN são utilizados pelo mesmo cliente.
+
+### Correções de Bugs
+- Corrigida a configuração de interação do comprador para transações tokenizadas para garantir o correto processamento do pagamento.
+- Corrigida a referência de versão do cliente de payment-details e alinhado o campo vtexUserId com o identificador de token no masterdata.
+
+
+---
+
+## [v2.39.3]
+### Correções de Bugs
+- Corrigidos os fluxos de reembolso e cancelamento na versão de tokenização para garantir a correta finalização das transações.
+- Resolvido o processamento de tokenização ativa para evitar falhas em tentativas de pagamento tokenizadas.
+- Corrigida a configuração de timeout para 5 segundos e alinhada a nomenclatura de atributos de log (usando transactionId) para consistência entre os serviços.
+
+### Melhorias Técnicas e de Performance
+- Adicionados logs de observabilidade no fluxo de tokenização para diagnósticos aprimorados.
+
+
+---
+
+## [v2.39.2]
+### Novas Funcionalidades
+- Adicionado suporte à configuração de tokenização, permitindo que lojistas configurem a tokenização de cartão salvo para clientes recorrentes.
+
+
+---
+
 ## [v2.39.1]
 ### Novas Funcionalidades
 - Mensagens aprimoradas para lojistas que experimentam falhas de cancelamento envolvendo um Provedor de Serviço de Pagamento (PSP).
@@ -43,13 +105,6 @@ slug: /release-notes
 ## [v2.38.1]
 ### Correções de Bugs
 - Adição de tratamento de erros na recuperação da chave de API do VBase para evitar falhas na integração.
-
-
----
-
-## [v2.37.0]
-### Novas Funcionalidades
-- Adição de suporte para a configuração do método de pagamento Oney.
 
 
 ---

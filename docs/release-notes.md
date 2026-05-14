@@ -7,6 +7,68 @@ slug: /release-notes
 
 # Adyen Connector - Release Notes
 
+## [v2.39.7]
+### Technical & Performance Improvements
+- Increased service memory allocation from 256MB to 512MB to improve stability and support higher transaction volumes without performance degradation.
+
+
+---
+
+## [v2.39.6]
+### New Features
+- Introduced Google Pay via VTEX Wallet and headless integration, enabling seamless processing of Google Pay transactions with 3DS dataOnly support and accurate payment origin display in Adyen CA.
+- Delivered PayPal authorization improvements, including enriched payload fields and detailed error logging for better diagnostics and support.
+- Implemented proxy workspace URL routing and added the orderformId field to the saveCheckoutInfo route, improving session tracking and integration reliability.
+- Added Pix transaction logging and payment refused log entries to increase observability across payment flows.
+
+### Bug Fixes
+- Fixed the payment-details proxy response code to ensure correct HTTP status propagation to VTEX.
+- Corrected the authenticationData payload structure and additionalData in the card request body to improve 3DS compatibility.
+
+### Technical & Performance Improvements
+- Enabled forced 3DS authentication as a configurable option for enhanced security compliance.
+- Updated log attributes across payment services for consistency and improved debugging.
+
+
+---
+
+## [v2.39.5]
+### Technical & Performance Improvements
+- Internal stability release with no user-facing changes.
+
+
+---
+
+## [v2.39.4]
+### New Features
+- Improved tokenization masterdata ID generation: the card identifier now uses merchantId+accountId instead of userId+cardBin, preventing conflicts when multiple cards sharing the same BIN are used by the same customer.
+
+### Bug Fixes
+- Fixed shopper interaction configuration for tokenized transactions to ensure correct payment processing.
+- Corrected the payment-details client version reference and aligned the vtexUserId field with the masterdata token identifier.
+
+
+---
+
+## [v2.39.3]
+### Bug Fixes
+- Fixed refund and cancellation flows in the tokenization version to ensure correct transaction finalization.
+- Resolved active tokenization processing to prevent failures in tokenized payment attempts.
+- Corrected timeout configuration to 5 seconds and aligned log attribute naming (using transactionId) for consistency across services.
+
+### Technical & Performance Improvements
+- Added observability logging across the tokenization flow for improved diagnostics.
+
+
+---
+
+## [v2.39.2]
+### New Features
+- Added tokenization configuration support, enabling merchants to set up card-on-file tokenization for returning customers.
+
+
+---
+
 ## [v2.39.1]
 ### New Features
 - Improved messaging for merchants experiencing cancellation failures when a Payment Service Provider (PSP) is involved.
@@ -43,13 +105,6 @@ slug: /release-notes
 ## [v2.38.1]
 ### Bug Fixes
 - Added error handling for API key retrieval from VBase to prevent integration failures.
-
-
----
-
-## [v2.37.0]
-### New Features
-- Added support for Oney payment method configuration.
 
 
 ---
